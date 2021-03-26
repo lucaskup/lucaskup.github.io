@@ -18,13 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Lucas Silveira Kupssinskü
+title: Ainda Não Sei
 email: lucas.kup@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Um pouco de CV e aleatoriedades minhas, aka Lucas Silveira Kupssinskü.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lucaskup.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: lucaskup
+#twitter_username: lucaskup
 github_username:  lucaskup
 author: Lucas Silveira Kupssinskü
 
