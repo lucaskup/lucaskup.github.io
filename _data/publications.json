@@ -1,0 +1,145 @@
+[
+  {
+    "Authors": "R Veronez, Maurício; Kupssinskü, Lucas S; T Guimarães, Tainá; Koste, Emilie C; Da Silva, Juarez M; De Souza, Laís V; Oliverio, William FM; Jardim, Rogélio S; Koch, Ismael É; De Souza, Jonas G;",
+    "Title": "Proposal of a method to determine the correlation between total suspended solids and dissolved organic matter in water bodies from spectral imaging and artificial neural networks",
+    "Publication": "Sensors",
+    "Volume": 18,
+    "Number": 1,
+    "Pages": 159,
+    "Year": 2018,
+    "Publisher": "Multidisciplinary Digital Publishing Institute",
+    "DoiLink": "https://doi.org/10.3390/s18010159"
+  },
+  {
+    "Authors": "Chagas, Michael William; Farias, Kleinner; Gonçales, Lucian; Kupssinskü, Lucas; Gluz, João Carlos;",
+    "Title": "Hermes: A Natural Language Interface Model for Software Transformation",
+    "Publication": "Proceedings of the XV Brazilian Symposium on Information Systems",
+    "Volume": "",
+    "Number": "",
+    "Pages": "1-8",
+    "Year": 2019,
+    "Publisher": "",
+    "DoiLink": "https://doi.org/10.1145/3330204.3330253"
+  },
+  {
+    "Authors": "Figueiredo, Rodrigo Marques; Veronez, Maurício Roberto; Wohnrath, Francisco Manoel; da Silva, Márcio Rosa; Gonzaga, Luiz; Kupssinskü, Lucas Silveira; Bordin, Fabiane; Brum, Diego; Cazarin, Caroline Lessio;",
+    "Title": "Artificial neural network–based method to classify sedimentary rocks",
+    "Publication": "2018 12th International Conference on Sensing Technology (ICST)",
+    "Volume": "",
+    "Number": "",
+    "Pages": "282-286",
+    "Year": 2018,
+    "Publisher": "IEEE",
+    "DoiLink": "https://doi.org/10.1109/ICSensT.2018.8603576"
+  },
+  {
+    "Authors": "Veronez, Mauricio Roberto; Gonzaga, Luiz; Bordin, Fabiane; Inocencio, Leonardo Campos; Eliane, Graciela; Kupssinskü, Lucas Silveira; Rossa, Pedro; Scalco, Leonardo;",
+    "Title": "Imspector: Immersive System of Inspection of Bridges/Viaducts",
+    "Publication": "2019 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)",
+    "Volume": "",
+    "Number": "",
+    "Pages": "1203-1204",
+    "Year": 2019,
+    "Publisher": "IEEE",
+    "DoiLink": "https://doi.org/10.1109/VR.2019.8798295"
+  },
+  {
+    "Authors": "Veronez, Mauricio R; Gonzaga, Luiz; Bordin, Fabiane; Kupssinsku, Lucas; Kannenberg, Gabriel Lanzer; Duarte, Tiago; Santana, Leonardo G; de Fraga, Lean Luca; Alves, Demétrius Nunes; Marson, Fernando Pinho;",
+    "Title": "RIDERS: Road Inspection & Driver Simulation",
+    "Publication": "2018 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)",
+    "Volume": "",
+    "Number": "",
+    "Pages": "715-716",
+    "Year": 2018,
+    "Publisher": "IEEE",
+    "DoiLink": "https://doi.org/10.1109/VR.2018.8446207"
+  },
+  {
+    "Authors": "Rossa, Pedro; Horota, Rafael Kenji; Aires, Alysson Soares; Kupssinskü, Lucas Silveira; Kremer, Carolina Jung; Souza, Eniuce Menezes de; Marques Jr, Ademir; Jr, Luiz Gonzaga; Veronez, Mauricio Roberto; Cazarin, Caroline Lessio;",
+    "Title": "VROffice: interactive and immersive 3D visualization, manipulation and correlation of multivariable georeferenced datasets in virtual reality (Demo Paper)",
+    "Publication": "Proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems",
+    "Volume": "",
+    "Number": "",
+    "Pages": "600-603",
+    "Year": 2019,
+    "Publisher": "",
+    "DoiLink": "https://doi.org/10.1145/3347146.3359373"
+  },
+  {
+    "Authors": "Marques, Ademir; Rossa, Pedro; Horota, Rafael Kenji; Brum, Diego; De Souza, Eniuce Menezes; Aires, Alyson Soares; Kupssinskü, Lucas; Veronez, Maurício Roberto; Gonzaga, Luis; Cazarin, Caroline Lessio;",
+    "Title": "Improving spatial resolution of LANDSAT spectral bands from a single RGB image using artificial neural network",
+    "Publication": "2019 13th International Conference on Sensing Technology (ICST)",
+    "Volume": "",
+    "Number": "",
+    "Pages": "1-6",
+    "Year": 2019,
+    "Publisher": "IEEE",
+    "DoiLink": "https://doi.org/10.1109/ICST46873.2019.9047670"
+  },
+  {
+    "Authors": "Kupssinskü, Lucas Silveira; Guimarães, Tainá Thomassim; de Freitas, Rafael; De Souza, Eniuce Menezes; Rossa, Pedro; Marques, Ademir; Veronez, Maurício Roberto; Gonzaga, Luiz; Cazarin, Caroline Lessio; Mauad, Frederico Fábio;",
+    "Title": "Prediction of chlorophyll-a and suspended solids through remote sensing and artificial neural networks",
+    "Publication": "2019 13th International Conference on Sensing Technology (ICST)",
+    "Volume": "",
+    "Number": "",
+    "Pages": "1-6",
+    "Year": 2019,
+    "Publisher": "IEEE",
+    "DoiLink": "https://doi.org/10.1109/ICST46873.2019.9047682"
+  },
+  {
+    "Authors": "Silveira Kupssinskü, Lucas; Thomassim Guimarães, Tainá; Menezes de Souza, Eniuce; C Zanotta, Daniel; Roberto Veronez, Mauricio; Gonzaga, Luiz; Mauad, Frederico Fabio;",
+    "Title": "A method for chlorophyll-a and suspended solids prediction through remote sensing and machine learning",
+    "Publication": "Sensors",
+    "Volume": 20,
+    "Number": 7,
+    "Pages": 2125,
+    "Year": 2020,
+    "Publisher": "Multidisciplinary Digital Publishing Institute",
+    "DoiLink": "https://doi.org/10.3390/s20072125"
+  },
+  {
+    "Authors": "Marques Junior, Ademir; Menezes de Souza, Eniuce; Müller, Marianne; Brum, Diego; Capella Zanotta, Daniel; Horota, Rafael Kenji; Silveira Kupssinskü, Lucas; Veronez, Maurício Roberto; Gonzaga, Luiz; Lessio Cazarin, Caroline;",
+    "Title": "Improving Spatial Resolution of Multispectral Rock Outcrop Images Using RGB Data and Artificial Neural Networks",
+    "Publication": "Sensors",
+    "Volume": 20,
+    "Number": 12,
+    "Pages": 3559,
+    "Year": 2020,
+    "Publisher": "Multidisciplinary Digital Publishing Institute",
+    "DoiLink": "https://doi.org/10.3390/s20123559"
+  },
+  {
+    "Authors": "Marques Jr, Ademir; Horota, Rafael Kenji; de Souza, Eniuce Menezes; Kupssinskü, Lucas; Rossa, Pedro; Aires, Alysson Soares; Bachi, Leonardo; Veronez, Mauricio Roberto; Gonzaga Jr, Luiz; Cazarin, Caroline Lessio;",
+    "Title": "Virtual and digital outcrops in the petroleum industry: A systematic review",
+    "Publication": "Earth-Science Reviews",
+    "Volume": "",
+    "Number": "",
+    "Pages": 103260,
+    "Year": 2020,
+    "Publisher": "Elsevier",
+    "DoiLink": "https://doi.org/10.1016/j.earscirev.2020.103260"
+  },
+  {
+    "Authors": "Gonçales, Lucian José; Farias, Kleinner; Kupssinskü, Lucas Silveira; Segalotto, Matheus;",
+    "Title": "Evaluation of machine learning techniques to classify code comprehension based on developers' EEG data",
+    "Publication": "Proceedings of the 19th Brazilian Symposium on Human Factors in Computing Systems",
+    "Volume": "",
+    "Number": "",
+    "Pages": "1-10",
+    "Year": 2020,
+    "Publisher": "",
+    "DoiLink": "https://doi.org/10.1145/3424953.3426481"
+  },
+  {
+    "Authors": "de Souza, Eniuce Menezes; Marques, Ademir; Horota, Rafael K; Kupssinsku, Lucas; Rossa, Pedro; Aires, Alysson S; Silveira, Luiz Gonzaga; Veronez, Maurício R; Cazarin, Carol L;",
+    "Title": "How Much Wavelet Decomposition can Improve the Detection of Surface Fractures in Remote Sensing Images?",
+    "Publication": "IGARSS 2020-2020 IEEE International Geoscience and Remote Sensing Symposium",
+    "Volume": "",
+    "Number": "",
+    "Pages": "2619-2622",
+    "Year": 2020,
+    "Publisher": "IEEE",
+    "DoiLink": "https://doi.org/10.1109/IGARSS39084.2020.9324506"
+  }
+]
