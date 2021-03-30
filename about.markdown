@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Já fui chamado de **Estagiário**, **Programador**, **Analista de Sistemas**, **Professor** e **Pesquisador**.
+I've already been called **Programmer**, **Systems Analyst**, **Scrum Master**, **Professor**, and **Researcher**.
 
-Mas no geral sou uma pessoa curiosa, que gosta de aprender e que está buscando mais _skin in the game_.
+In general, I am a curious person who likes to learn. I'm currently looking for more _skin in the game_.
 
-![Esse sou eu](/assets/images/eu.jpg)
+![This is me](/assets/images/eu.jpg)

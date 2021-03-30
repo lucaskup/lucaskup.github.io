@@ -4,9 +4,9 @@ title: Scientific Publications
 permalink: /publications/
 ---
 <link rel="stylesheet" type="text/css" href="/assets/css/publication.css" />
-<a href = "https://scholar.google.com/citations?user=Uona1HYAAAAJ">Google Scholar</a>
+See my profile on <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ">Google Scholar</a>.
 
-Produção científica com *peer review*.
+Scientific *peer reviewed* publications:
 
 [comment]: # (Had tp group publications to apply filter by year and title.)
 {% assign sortedYears = site.data.publications | group_by:"Year" | sort:"Year" | reverse %}
