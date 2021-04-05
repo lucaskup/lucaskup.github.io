@@ -21,7 +21,7 @@
 title: Ainda Não Sei
 email: lucas.kup@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Um pouco de CV e aleatoriedades minhas.
+  Some CV and a biased sample on some interests of mine.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lucaskup.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: lucaskup

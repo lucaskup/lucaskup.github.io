@@ -15,8 +15,8 @@ Scientific *peer reviewed* publications:
   {% for yearGroup in sortedYears %}
     {% if forloop.first %}
     <tr>
-        <th>Título</th>
-        <th>Ano</th>
+        <th>Title</th>
+        <th>Year</th>
     </tr>
     {% endif %}
     {% assign sortedPubs = yearGroup.items | sort:"Title" %}
