@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Titanic Dataset"
+title:  "Visualization Using the Titanic Dataset"
 date:   2021-04-21 05:00:00 -0300
 categories: data-science visualization
 ---
@@ -16,28 +16,29 @@ plt.style.use('seaborn-pastel')
 
 ```
 
-  # Lets load the data
-  Okay, we got our libraries loaded, now it is time to use pandas to read
-  the train.csv file that is located in the data folder.
+## Lets load the data
+ 
+Okay, we got our libraries loaded, now it is time to use pandas to read 
+the train.csv file that is located in the data folder.
 
-  Pandas read_csv command is able to read and parse csv files into dataframes,
-  you can see the dataframe as a matrix on steroids.
+Pandas read_csv command is able to read and parse csv files into dataframes,
+you can see the dataframe as a matrix on steroids.
 
-  ## Data Dictionary
+### Data Dictionary
 
 
-  | Variable | Definition | Key |
-  | :-: | :-: | :-: |
-  | survival | Survival | 0 = No, 1 = Yes|
-  | pclass | Ticket class | 1 = 1st, 2 = 2nd, 3 = 3rd|
-  | sex | Sex | |
-  | Age | Age in years | |
-  | sibsp | # of siblings / spouses aboard the Titanic | |
-  | parch | # of parents / children aboard the Titanic | |
-  | ticket | Ticket number | |
-  | fare | Passenger fare | |
-  | cabin | Cabin number | |
-  | embarked | Port of Embarkation | C = Cherbourg, Q = Queenstown, S = Southampton |
+| Variable | Definition | Key |
+| :-: | :-: | :-: |
+| survival | Survival | 0 = No, 1 = Yes|
+| pclass | Ticket class | 1 = 1st, 2 = 2nd, 3 = 3rd|
+| sex | Sex | |
+| Age | Age in years | |
+| sibsp | # of siblings / spouses aboard the Titanic | |
+| parch | # of parents / children aboard the Titanic | |
+| ticket | Ticket number | |
+| fare | Passenger fare | |
+| cabin | Cabin number | |
+| embarked | Port of Embarkation | C = Cherbourg, Q = Queenstown, S = Southampton |
 
 
 ```python
@@ -162,17 +163,13 @@ dataset.head()
 </div>
 
 
+## Some Terminology
 
-  # Some Terminology
-  In our *dataset* we distinguish between the variables that gives us information that we are going to use
-  in the estimation and we call them *features*, the variable we are trying to estimate is called target.
+In our *dataset* we distinguish between the variables that gives us information that we are going to use in the estimation and we call them *features*, the variable we are trying to estimate is called target.
 
-  In formal machine learning books, you will often see the dataset expressed as a set $$D$$ composed of
-  $$n$$ tuples $$(\textbf{x},y)$$ where $$\textbf{x}$$ is the feature vector (or predictors) and $$y$$ is the target variable.
+In formal machine learning books, you will often see the dataset expressed as a set $$D$$ composed of $$n$$ tuples $$(\textbf{x},y)$$ where $$\textbf{x}$$ is the feature vector (or predictors) and $$y$$ is the target variable.
 
-  In this specific problem, **Survived** is the attribute that is our *target* value, all the other attributes from the
-  dataset are *features*. However we don't need (and in this case we should not) use all the avaliable attributes as features for
-  our model.
+In this specific problem, **Survived** is the attribute that is our *target* value, all the other attributes from the dataset are *features*. However we don't need (and in this case we should not) use all the avaliable attributes as features for our model.
 
 
 ```python
@@ -180,8 +177,6 @@ dataset.drop(labels=['Name', 'Ticket'],
              axis=1,
              inplace=True)
 dataset.head()
-
-
 ```
 
 
@@ -304,7 +299,6 @@ print(
     f'Total Survived: {totalSurvived}\nTotal Not Survived: {totalNotSurvived}')
 print(f'Ratio NS/S: {totalNotSurvived / totalSurvived :.2f}')
 
-
 ```
 
     Total Survived: 342
@@ -325,11 +319,10 @@ for column in dataset.columns.values:
     Column: Cabin has missing values
     Column: Embarked has missing values
 
+## Some helper functions
 
- # Some helper functions
- Lets define two auxiliary functions to help us plot some pie charts
- to see how are the how many observations on the dataset are categorized according to
- the attributes ** Sex ** and **Embarked** as well as the ** Survived ** target.
+Lets define two auxiliary functions to help us plot some pie charts 
+to see how are the how many observations on the dataset are categorized according to the attributes ** Sex ** and **Embarked** as well as the ** Survived ** target.
 
 
 ```python
@@ -368,7 +361,6 @@ def getFrequenciesInCategoricalColumn(dataframe, columnName):
                      labels))
     return labels, count
 
-
 ```
 
 
@@ -376,8 +368,6 @@ def getFrequenciesInCategoricalColumn(dataframe, columnName):
 columnName = 'Survived'
 labels, count = getFrequenciesInCategoricalColumn(dataset, columnName)
 drawPieChart(labels, count, columnName)
-
-
 ```
 
 
@@ -392,7 +382,6 @@ columnName = 'Sex'
 labels, count = getFrequenciesInCategoricalColumn(dataset, columnName)
 drawPieChart(labels, count, columnName)
 
-
 ```
 
 
@@ -406,7 +395,6 @@ drawPieChart(labels, count, columnName)
 columnName = 'Embarked'
 labels, count = getFrequenciesInCategoricalColumn(dataset, columnName)
 drawPieChart(labels, count, columnName)
-
 
 ```
 
@@ -434,7 +422,6 @@ labelsMale = list(
 
 drawPieChart(list(labelsFemale) + list(labelsMale),
              countFemale + countMale, columnName)
-
 
 ```
 
@@ -470,7 +457,6 @@ ax.bar_label(p2, label_type='center')
 ax.bar_label(p2)
 
 plt.show()
-
 
 ```
 
@@ -520,7 +506,6 @@ ax1.set_ylabel('Age')
 
 plt.show()
 
-
 ```
 
 
@@ -567,7 +552,6 @@ plt.legend(loc='upper right')
 plt.ylabel('Nº People')
 plt.xlabel('Fare')
 plt.show()
-
 
 ```
 
@@ -631,12 +615,13 @@ plt.show()
 ![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_16_0.svg)
     
 
+## Feature Engineering + DataVis
 
- # Feature Engineering + DataVis
- By combining feature engineering to datavis we can see if different age groups have different survival rates.
- We compute the age group by doing an integer division of age by 10, this way we categorize 0-9 years passenger in group 0, 10-19 years in group 1, and so on.
+By combining feature engineering to datavis we can see if different age groups have different survival rates.
 
- Then we use the **groupby** function in pandas (similar to the *SQL* groupby) and we aggregate values with the np.mean function;
+We compute the age group by doing an integer division of age by 10, this way we categorize 0-9 years passenger in group 0, 10-19 years in group 1, and so on.
+
+Then we use the **groupby** function in pandas (similar to the *SQL* groupby) and we aggregate values with the np.mean function;
 
 
 ```python
@@ -646,7 +631,6 @@ datasetAges = datasetAges.assign(AgeGroup=datasetAges['Age'].apply(
 # There is a trick here, since Survived is a boolean attribute
 # the Survived mean is the same as Rate of Survival (do the math smarty pants!)
 ageGroup = datasetAges.groupby(['AgeGroup']).aggregate([np.mean, np.var])
-
 
 ```
 
