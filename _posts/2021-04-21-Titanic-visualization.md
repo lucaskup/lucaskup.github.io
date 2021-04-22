@@ -372,7 +372,7 @@ drawPieChart(labels, count, columnName)
 
 
     
-![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_9_0.svg)
+![svg](/assets/jupyter-aux-files/TitanicDataExploration_files/TitanicDataExploration_9_0.svg)
     
 
 
@@ -386,7 +386,7 @@ drawPieChart(labels, count, columnName)
 
 
     
-![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_10_0.svg)
+![svg](/assets/jupyter-aux-files/TitanicDataExploration_files/TitanicDataExploration_10_0.svg)
     
 
 
@@ -400,7 +400,7 @@ drawPieChart(labels, count, columnName)
 
 
     
-![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_11_0.svg)
+![svg](/assets/jupyter-aux-files/TitanicDataExploration_files/TitanicDataExploration_11_0.svg)
     
 
 
@@ -427,7 +427,7 @@ drawPieChart(list(labelsFemale) + list(labelsMale),
 
 
     
-![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_12_0.svg)
+![svg](/assets/jupyter-aux-files/TitanicDataExploration_files/TitanicDataExploration_12_0.svg)
     
 
 
@@ -462,7 +462,7 @@ plt.show()
 
 
     
-![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_13_0.svg)
+![svg](/assets/jupyter-aux-files/TitanicDataExploration_files/TitanicDataExploration_13_0.svg)
     
 
 
@@ -510,7 +510,7 @@ plt.show()
 
 
     
-![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_14_0.svg)
+![svg](/assets/jupyter-aux-files/TitanicDataExploration_files/TitanicDataExploration_14_0.svg)
     
 
 
@@ -557,13 +557,13 @@ plt.show()
 
 
     
-![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_15_0.svg)
+![svg](/assets/jupyter-aux-files/TitanicDataExploration_files/TitanicDataExploration_15_0.svg)
     
 
 
 
     
-![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_15_1.svg)
+![svg](/assets/jupyter-aux-files/TitanicDataExploration_files/TitanicDataExploration_15_1.svg)
     
 
 
@@ -612,7 +612,7 @@ plt.show()
 
 
     
-![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_16_0.svg)
+![svg](/assets/jupyter-aux-files/TitanicDataExploration_files/TitanicDataExploration_16_0.svg)
     
 
 ## Feature Engineering + DataVis
@@ -667,6 +667,6 @@ fig.show()
 
 
     
-![svg](/assets/TitanicDataExploration_files/TitanicDataExploration_19_0.svg)
+![svg](/assets/jupyter-aux-files/TitanicDataExploration_files/TitanicDataExploration_19_0.svg)
     
 

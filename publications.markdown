@@ -3,7 +3,6 @@ layout: page
 title: Scientific Publications
 permalink: /publications/
 ---
-<link rel="stylesheet" type="text/css" href="/assets/css/publication.css" />
 See my profile on <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ">Google Scholar</a>.
 
 Scientific *peer reviewed* publications:
