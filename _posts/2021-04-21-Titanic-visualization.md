@@ -322,7 +322,7 @@ for column in dataset.columns.values:
 ## Some helper functions
 
 Lets define two auxiliary functions to help us plot some pie charts 
-to see how are the how many observations on the dataset are categorized according to the attributes ** Sex ** and **Embarked** as well as the ** Survived ** target.
+to see how are the how many observations on the dataset are categorized according to the attributes **Sex** and **Embarked** as well as the **Survived** target.
 
 
 ```python
