@@ -16,4 +16,4 @@ I kind of see this as a byproduct of my *Feynman Technique* playground. I want t
 
 So let's see where I go until I hit some *absorbing barrier*. :)
 
-![Random Walk](https://www.mit.edu/~kardar/teaching/projects/chemotaxis(AndreaSchmidt)/rand_2D.gif){: .centered-post-image}
+![Random Walk](/assets/images/randomwalk.gif){: .centered-post-image}
