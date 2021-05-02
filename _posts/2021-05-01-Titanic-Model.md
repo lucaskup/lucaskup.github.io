@@ -9,7 +9,7 @@ This was my first attempt at a Kaggle Playground Series, I've entered quite late
 
 This notebook contains code for data pre-processing, feature engineering, model optimization (through hyperparameter grid search), and an ensemble of kNN, Random Forest, SVM, LDA, and MLP classifiers. This was far from the best submission in the competition but was under 3% accuracy from the best.
 
-The competition was hosted [here](https://www.kaggle.com/c/tabular-playground-series-apr-2021).
+The notebook used in this competition is found [here](https://www.kaggle.com/lucaskup/feature-eng-plus-ensemble-knn-rf-lda-svm-mlp).
 
 I have a [notebook that has sample code for visualization of this dataset]({% post_url 2021-04-21-Titanic-visualization %})
 
