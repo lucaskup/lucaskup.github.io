@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Model Creation Titanic Synthetic Dataset"
-date:   2021-05-01 05:00:00 -0300
-categories: data-science model-creation
+title: "Model Creation Titanic Synthetic Dataset"
+date: 2021-05-01 05:00:00 -0300
+img: regression-analysis.svg
+description: Jupyter Notebook that creates an ensemble of models for Kaggle Playground Series
+tags: [data-science, model-creation]
 ---
 
 This was my first attempt at a Kaggle Playground Series, I've entered quite late at the competition but it was fun nevertheless.

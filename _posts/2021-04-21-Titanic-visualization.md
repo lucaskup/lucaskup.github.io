@@ -2,7 +2,9 @@
 layout: post
 title:  "Visualization Using the Titanic Dataset"
 date:   2021-04-21 05:00:00 -0300
-categories: data-science visualization
+img: titanic.jpg
+description: A Jupyter Notebook with lots of examples on data visualization
+tags: [data-science, visualization]
 ---
 
 Lets see what we can do with titanic dataset

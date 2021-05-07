@@ -2,7 +2,8 @@
 layout: post
 title:  "What is this about?"
 date:   2021-03-30 05:00:00 -0300
-categories: news non-tech
+description: Read a litle about what to expect in my page!
+tags: [news, non-tech]
 ---
 
 What am I doing in here and why am I writing this?
@@ -16,4 +17,4 @@ I kind of see this as a byproduct of my *Feynman Technique* playground. I want t
 
 So let's see where I go until I hit some *absorbing barrier*. :)
 
-![Random Walk](/assets/images/randomwalk.gif){: .centered-post-image}
+![Random Walk](/assets/img/randomwalk.gif){: .centered-post-image}
