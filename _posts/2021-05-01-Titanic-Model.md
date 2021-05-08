@@ -180,8 +180,6 @@ datasetTrain.head()
 
 ```python
 # Defines the function that preprocess the data
-
-
 def preprocessData(df: pd.DataFrame,
                    columnTransformer: ColumnTransformer = None,
                    complementarySetForNull: pd.DataFrame = None) -> (np.ndarray, np.ndarray, ColumnTransformer):
