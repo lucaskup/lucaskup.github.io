@@ -79,11 +79,11 @@ table tbody td {
   font-size: 13px;
 }
 table tr:nth-child(even) {
-  background: #ccadc4;
+  background: white;
 }
 table thead {
   background: #a9c4d1;
-  background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
+  //background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
   border-bottom: 1px solid #8c8c8c;
 }
 table thead th {

@@ -10,7 +10,7 @@ Scientific *peer reviewed* publications:
 [comment]: # (Had tp group publications to apply filter by year and title.)
 {% assign sortedYears = site.data.publications | group_by:"Year" | sort:"Year" | reverse %}
 
-<table>
+<table class="sci-pub">
   {% for yearGroup in sortedYears %}
     {% if forloop.first %}
     <tr>

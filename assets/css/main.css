@@ -815,15 +815,11 @@ table tbody td {
 }
 
 table tr:nth-child(even) {
-  background: #ccadc4;
+  background: white;
 }
 
 table thead {
   background: #a9c4d1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#bed3dc), color-stop(66%, #b1cad5), to(#A9C4D1));
-  background: -webkit-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
-  background: -o-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
-  background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
   border-bottom: 1px solid #8c8c8c;
 }
 
@@ -944,15 +940,15 @@ table tfoot td {
   position: relative;
   padding-bottom: 15px;
   font-size: 16px;
-  text-transform: uppercase;
   color: #333030;
   font-weight: 700;
 }
 
 .about .author-name::after {
   content: "";
-  position: absolute;
-  left: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);

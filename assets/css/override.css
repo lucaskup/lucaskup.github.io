@@ -1,4 +1,4 @@
-table {
+table.sci-pub {
   margin-bottom: 30px;
   width: 100%;
   text-align: left;
@@ -7,25 +7,25 @@ table {
   border: 1px solid #e8e8e8
 }
 
-table tr:nth-child(even) {
+table.sci-pub tr:nth-child(even) {
   background-color: #f7f7f7
 }
-table tr:nth-child(odd) {
+table.sci-pub tr:nth-child(odd) {
   background-color: white
 }
 
-table th,table td {
+table.sci-pub th,table td {
   padding: 10px 15px
 }
 
-table th {
+table.sci-pub th {
   background-color: #f0f0f0;
   border: 1px solid #dedede;
   border-bottom-color: #c9c9c9;
   color: #3f3f3f;
 }
 
-table td {
+table.sci-pub td {
   border: 1px solid #e8e8e8
 }
 
@@ -49,6 +49,9 @@ a.paper-titulo:link{
 .centered-post-image{
     margin: 0 auto;
     display: block;
+}
+div.sci-pub{
+  text-align: center;
 }
 
 

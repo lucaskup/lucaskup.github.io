@@ -15,7 +15,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 plt.style.use('seaborn-pastel')
-
 ```
 
 ## Lets load the data
@@ -46,7 +45,6 @@ you can see the dataframe as a matrix on steroids.
 ```python
 dataset = pd.read_csv('data/train.csv')
 dataset.head()
-
 ```
 
 
@@ -63,12 +61,12 @@ dataset.head()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: center;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr style="text-align: center;">
       <th></th>
       <th>PassengerId</th>
       <th>Survived</th>
@@ -195,12 +193,12 @@ dataset.head()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: center;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr style="text-align: center;">
       <th></th>
       <th>PassengerId</th>
       <th>Survived</th>
@@ -300,7 +298,6 @@ totalNotSurvived = len(notSurvivedSubset)
 print(
     f'Total Survived: {totalSurvived}\nTotal Not Survived: {totalNotSurvived}')
 print(f'Ratio NS/S: {totalNotSurvived / totalSurvived :.2f}')
-
 ```
 
     Total Survived: 342
@@ -314,7 +311,6 @@ for column in dataset.columns.values:
     hasMissingValues = dataset[column].isnull().values.any()
     if hasMissingValues:
         print(f'Column: {column} has missing values')
-
 ```
 
     Column: Age has missing values
@@ -328,8 +324,6 @@ to see how are the how many observations on the dataset are categorized accordin
 
 
 ```python
-
-
 def drawPieChart(labels,
                  count,
                  title=' '):
@@ -362,7 +356,6 @@ def getFrequenciesInCategoricalColumn(dataframe, columnName):
     count = list(map(sumatoryFunction,
                      labels))
     return labels, count
-
 ```
 
 
@@ -383,7 +376,6 @@ drawPieChart(labels, count, columnName)
 columnName = 'Sex'
 labels, count = getFrequenciesInCategoricalColumn(dataset, columnName)
 drawPieChart(labels, count, columnName)
-
 ```
 
 
@@ -397,7 +389,6 @@ drawPieChart(labels, count, columnName)
 columnName = 'Embarked'
 labels, count = getFrequenciesInCategoricalColumn(dataset, columnName)
 drawPieChart(labels, count, columnName)
-
 ```
 
 
@@ -424,7 +415,6 @@ labelsMale = list(
 
 drawPieChart(list(labelsFemale) + list(labelsMale),
              countFemale + countMale, columnName)
-
 ```
 
 
@@ -459,7 +449,6 @@ ax.bar_label(p2, label_type='center')
 ax.bar_label(p2)
 
 plt.show()
-
 ```
 
 
@@ -507,7 +496,6 @@ ax1.set_xlabel('Survived')
 ax1.set_ylabel('Age')
 
 plt.show()
-
 ```
 
 
@@ -554,7 +542,6 @@ plt.legend(loc='upper right')
 plt.ylabel('Nº People')
 plt.xlabel('Fare')
 plt.show()
-
 ```
 
 
@@ -609,7 +596,6 @@ ax.bar_label(p2, labels=labelsNotSurvived, label_type='center')
 ax.bar_label(p2)
 
 plt.show()
-
 ```
 
 
@@ -633,12 +619,10 @@ datasetAges = datasetAges.assign(AgeGroup=datasetAges['Age'].apply(
 # There is a trick here, since Survived is a boolean attribute
 # the Survived mean is the same as Rate of Survival (do the math smarty pants!)
 ageGroup = datasetAges.groupby(['AgeGroup']).aggregate([np.mean, np.var])
-
 ```
 
 
 ```python
-
 fig, ax = plt.subplots()
 survivedRatio = ageGroup['Survived']['mean'].values
 ax.scatter(ageGroup.index.values,
@@ -664,7 +648,6 @@ for i in range(len(survivedRatio)):
 # (ageGroup['Survived']['mean'].values)
 
 fig.show()
-
 ```
 
 

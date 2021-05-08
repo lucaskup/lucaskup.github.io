@@ -49,7 +49,6 @@ from sklearn.neighbors import DistanceMetric
 
 from sklearn.model_selection import cross_validate
 from sklearn.model_selection import GridSearchCV
-
 ```
 
 
@@ -59,7 +58,6 @@ from sklearn.model_selection import GridSearchCV
 datasetTrain = pd.read_csv('data/train.csv')
 datasetTest = pd.read_csv('data/test.csv')
 datasetTrain.head()
-
 ```
 
 
@@ -76,12 +74,12 @@ datasetTrain.head()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: center;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr style="text-align: center;">
       <th></th>
       <th>PassengerId</th>
       <th>Survived</th>
@@ -246,8 +244,6 @@ def preprocessData(df: pd.DataFrame,
         X = columnTransformer.transform(X)
 
     return X, Y, columnTransformer
-
-
 ```
 
 
@@ -308,7 +304,6 @@ gsCV.fit(X_sample, Y_sample)
 print(
     f'Best Random Forst Classifier:\n   Score > {gsCV.best_score_}\n   Params > {gsCV.best_params_}')
 ensembleOfModels.append(gsCV.best_estimator_)
-
 ```
 
     Best Random Forst Classifier:
@@ -363,7 +358,6 @@ cv = cross_validate(model, X_sample, Y_sample, scoring='accuracy', cv=10)
 print(np.mean(cv['test_score']))
 
 ensembleOfModels.append(model)
-
 ```
 
     0.7957178526841449
@@ -413,7 +407,6 @@ gsCV.fit(X_sample, Y_sample)
 print(
     f'Best MLP:\n   Score > {gsCV.best_score_}\n   Params > {gsCV.best_params_}')
 ensembleOfModels.append(gsCV.best_estimator_)
-
 ```
 
     Best MLP:
@@ -443,7 +436,6 @@ dataForSubmission = pd.DataFrame(np.concatenate((passengerIdTest,
                                                  predictionsEnsemble.reshape(-1, 1)), axis=1), columns=['PassengerId', 'Survived'])
 dataForSubmission['Survived'] = dataForSubmission['Survived'].apply(
     lambda x: 1 if x >= 3 else 0)
-
 ```
 
 
@@ -454,7 +446,6 @@ dataForSubmission.to_csv('submission/TabularTitanic.csv',
                          decimal='.',
                          index=False)
 dataForSubmission.head()
-
 ```
 
 
@@ -471,12 +462,12 @@ dataForSubmission.head()
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: center;
     }
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr style="text-align: center;">
       <th></th>
       <th>PassengerId</th>
       <th>Survived</th>
