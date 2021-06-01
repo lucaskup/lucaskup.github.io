@@ -4,9 +4,13 @@ title: "MNIST trained model in the FrontEnd"
 date: 2021-05-26 05:00:00 -0300
 img: mnist.png
 description: Taking your Pytorch trained model to the front end with onnx js
-tags: [data-science, model-creation]
+tags: [deep-learning, model-in-production]
 custom_css: mnist
 ---
+
+Using ONNX and ONNX.js we can port our *conv nets* to the browser.
+
+This implementation was developed by [Elliot Waite](https://github.com/elliotwaite/pytorch-to-javascript-with-onnx-js). I will try and add the visualization of the feature maps to it in the future.
 
 <div class="card elevation">
     <canvas
@@ -90,5 +94,5 @@ custom_css: mnist
 </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
-<script src="/assets/js/mnist.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js" defer></script>
+<script type="text/javascript" src="/assets/js/mnist.js" defer></script>
