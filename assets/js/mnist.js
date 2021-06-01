@@ -65,15 +65,12 @@ async function updatePredictions() {
   }
 }
 
-function canvasMouseDown(event) {
+function doMouseDown(x,y){
   isMouseDown = true;
   if (hasIntroText) {
     clearCanvas();
     hasIntroText = false;
   }
-  const x = event.offsetX / CANVAS_SCALE;
-  const y = event.offsetY / CANVAS_SCALE;
-
   // To draw a dot on the mouse down event, we set laxtX and lastY to be
   // slightly offset from x and y, and then we call `canvasMouseMove(event)`,
   // which draws a line from (laxtX, lastY) to (x, y) that shows up as a
@@ -82,18 +79,30 @@ function canvasMouseDown(event) {
   // 0.001 offset is added.
   lastX = x + 0.001;
   lastY = y + 0.001;
-  canvasMouseMove(event);
+
+  doMouseMove(x, y);
+}
+
+function canvasMouseDown(event) {
+  const x = event.offsetX / CANVAS_SCALE; 
+  const y = event.offsetY / CANVAS_SCALE;
+  doMouseDown(x,y);
 }
 
 function canvasMouseMove(event) {
-  const x = event.offsetX / CANVAS_SCALE;
+  const x = event.offsetX / CANVAS_SCALE; 
   const y = event.offsetY / CANVAS_SCALE;
+  doMouseMove(x,y);
+}
+  
+function doMouseMove(x, y){
   if (isMouseDown) {
     drawLine(lastX, lastY, x, y);
   }
   lastX = x;
   lastY = y;
 }
+
 
 function bodyMouseUp() {
   isMouseDown = false;
@@ -117,16 +126,15 @@ loadingModelPromise.then(() => {
   document.body.addEventListener("mouseout", bodyMouseOut);
   clearButton.addEventListener("mousedown", clearCanvas);
 
+
+
   canvas.addEventListener('touchstart', function (e) {
     e.preventDefault();
     e.stopPropagation();
     var touch = e.touches[0];
-    var mouseEvent = new MouseEvent("mousedown", {
-      clientX: touch.clientX,
-      clientY: touch.clientY
-    });
-    canvas.dispatchEvent(mouseEvent);
-
+    const x = (touch.pageX - e.target.offsetLeft) / CANVAS_SCALE;
+    const y = (touch.pageY - e.target.offsetTop) / CANVAS_SCALE;
+    doMouseDown(x,y);
   }, false); //canvasMouseDown, false);
   
   document.body.addEventListener('touchend', bodyMouseUp, false);
@@ -135,11 +143,9 @@ loadingModelPromise.then(() => {
     e.preventDefault();
     e.stopPropagation();
     var touch = e.touches[0];
-    var mouseEvent = new MouseEvent("mousemove", {
-      clientX: touch.clientX,
-      clientY: touch.clientY
-    });
-    canvas.dispatchEvent(mouseEvent);
+    const x = (touch.pageX - e.target.offsetLeft) / CANVAS_SCALE;
+    const y = (touch.pageY - e.target.offsetTop) / CANVAS_SCALE;
+    doMouseMove(x,y);
   }, false);
 
 
