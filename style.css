@@ -1,0 +1,381 @@
+/* ── Dracula Palette ─────────────────────────────────────── */
+:root {
+  --bg:        #282a36;
+  --surface:   #21222c;
+  --card:      #2d2f3f;
+  --line:      #44475a;
+  --fg:        #f8f8f2;
+  --comment:   #6272a4;
+  --cyan:      #8be9fd;
+  --green:     #50fa7b;
+  --orange:    #ffb86c;
+  --pink:      #ff79c6;
+  --purple:    #bd93f9;
+  --red:       #ff5555;
+  --yellow:    #f1fa8c;
+}
+
+/* ── Reset & Base ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a { color: var(--cyan); text-decoration: none; transition: color .2s; }
+a:hover { color: var(--purple); }
+
+h1, h2, h3, h4 { font-weight: 700; line-height: 1.3; }
+
+/* ── Nav ─────────────────────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+  border-bottom: 2px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 56px;
+}
+
+.nav-brand {
+  color: var(--purple);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.6rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--fg);
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .3px;
+}
+
+.nav-links a:hover { color: var(--cyan); }
+
+/* ── Layout ──────────────────────────────────────────────── */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section { padding: 72px 0; }
+
+section + section { border-top: 1px solid var(--line); }
+
+/* ── Section Headings ────────────────────────────────────── */
+.section-title {
+  font-size: 1.6rem;
+  color: var(--purple);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+#about {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid var(--purple);
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--comment);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-info h1 {
+  font-size: 2rem;
+  color: var(--fg);
+}
+
+.hero-info h1 span { color: var(--cyan); }
+
+.hero-role {
+  color: var(--orange);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: .3rem 0 .8rem;
+  letter-spacing: .4px;
+}
+
+.hero-institution {
+  color: var(--comment);
+  font-size: .95rem;
+  margin-bottom: 1rem;
+}
+
+.hero-bio {
+  color: var(--fg);
+  font-size: .95rem;
+  max-width: 680px;
+  margin-bottom: 1.4rem;
+}
+
+/* Profile Links */
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .4rem .9rem;
+  border-radius: 6px;
+  font-size: .82rem;
+  font-weight: 600;
+  border: 1.5px solid transparent;
+  transition: all .2s;
+}
+
+.btn-scholar  { border-color: var(--cyan);   color: var(--cyan); }
+.btn-pucrs    { border-color: var(--green);  color: var(--green); }
+.btn-lattes   { border-color: var(--yellow); color: var(--yellow); }
+.btn-email    { border-color: var(--orange); color: var(--orange); }
+
+.btn:hover {
+  background: var(--line);
+  color: var(--fg);
+  border-color: var(--fg);
+}
+
+/* ── Research Interests ──────────────────────────────────── */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.tag {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: .3rem .85rem;
+  font-size: .83rem;
+  color: var(--fg);
+  transition: border-color .2s;
+}
+
+.tag:hover { border-color: var(--purple); color: var(--purple); }
+
+/* ── Publications ────────────────────────────────────────── */
+.pub-list { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.pub-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--purple);
+  border-radius: 8px;
+  padding: 1.1rem 1.3rem;
+  transition: border-color .2s, transform .2s;
+}
+
+.pub-card:hover {
+  border-left-color: var(--cyan);
+  transform: translateX(3px);
+}
+
+.pub-title {
+  font-size: .97rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: .25rem;
+}
+
+.pub-title a { color: var(--fg); }
+.pub-title a:hover { color: var(--cyan); }
+
+.pub-authors {
+  font-size: .82rem;
+  color: var(--comment);
+  margin-bottom: .25rem;
+}
+
+.pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8rem;
+}
+
+.pub-venue { color: var(--orange); font-style: italic; }
+.pub-year  { color: var(--green);  font-weight: 700; }
+
+.badge {
+  padding: .15rem .55rem;
+  border-radius: 4px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.badge-conf    { background: rgba(139,233,253,.15); color: var(--cyan); }
+.badge-journal { background: rgba(189,147,249,.15); color: var(--purple); }
+.badge-workshop{ background: rgba(255,184,108,.15); color: var(--orange); }
+
+/* ── People (Advisees / Alumni) ──────────────────────────── */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.person-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.1rem;
+  transition: border-color .2s;
+}
+
+.person-card:hover { border-color: var(--purple); }
+
+.person-name {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: .2rem;
+}
+
+.person-degree {
+  font-size: .8rem;
+  color: var(--cyan);
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+
+.person-topic {
+  font-size: .8rem;
+  color: var(--comment);
+}
+
+.person-year {
+  font-size: .75rem;
+  color: var(--green);
+  margin-top: .4rem;
+}
+
+/* ── Advisee Groups ──────────────────────────────────────── */
+.advisee-group { margin-bottom: 2rem; }
+.advisee-group:last-child { margin-bottom: 0; }
+
+.group-label {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: var(--comment);
+  margin-bottom: .8rem;
+}
+
+/* ── Lectures ────────────────────────────────────────────── */
+.lecture-list { display: flex; flex-direction: column; gap: 1rem; }
+
+.lecture-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.1rem 1.3rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .5rem;
+  align-items: start;
+  transition: border-color .2s;
+}
+
+.lecture-card:hover { border-color: var(--green); }
+
+.lecture-name {
+  font-size: .97rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: .2rem;
+}
+
+.lecture-desc {
+  font-size: .83rem;
+  color: var(--comment);
+}
+
+.lecture-level {
+  font-size: .75rem;
+  font-weight: 700;
+  padding: .2rem .6rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  align-self: start;
+}
+
+.level-grad  { background: rgba(189,147,249,.18); color: var(--purple); }
+.level-under { background: rgba(80,250,123,.18);  color: var(--green); }
+
+/* ── Footer ──────────────────────────────────────────────── */
+footer {
+  background: var(--surface);
+  border-top: 2px solid var(--line);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: .83rem;
+  color: var(--comment);
+}
+
+footer span { color: var(--purple); }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 620px) {
+  .hero { grid-template-columns: 1fr; }
+  .avatar { width: 100px; height: 100px; }
+  .nav-links { gap: 1rem; }
+  .nav-brand { display: none; }
+}
