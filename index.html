@@ -96,56 +96,7 @@
         <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
       </p>
 
-      <div class="pub-list">
-
-        <!-- ── Publication 1 ── -->
-        <div class="pub-card">
-          <p class="pub-title">
-            <a href="#" target="_blank">Title of Your Most Recent Paper</a>
-          </p>
-          <p class="pub-authors">
-            <strong>Kupssinsku, L. S.</strong>, Co-Author A., Co-Author B.
-          </p>
-          <div class="pub-meta">
-            <span class="pub-venue">Journal / Conference Name</span>
-            <span class="pub-year">2025</span>
-            <span class="badge badge-journal">Journal</span>
-          </div>
-        </div>
-
-        <!-- ── Publication 2 ── -->
-        <div class="pub-card">
-          <p class="pub-title">
-            <a href="#" target="_blank">Title of a Conference Paper</a>
-          </p>
-          <p class="pub-authors">
-            Co-Author A., <strong>Kupssinsku, L. S.</strong>, Co-Author C.
-          </p>
-          <div class="pub-meta">
-            <span class="pub-venue">Conference Name (CONF'YY)</span>
-            <span class="pub-year">2024</span>
-            <span class="badge badge-conf">Conference</span>
-          </div>
-        </div>
-
-        <!-- ── Publication 3 ── -->
-        <div class="pub-card">
-          <p class="pub-title">
-            <a href="#" target="_blank">Title of Another Paper</a>
-          </p>
-          <p class="pub-authors">
-            <strong>Kupssinsku, L. S.</strong>, Co-Author D.
-          </p>
-          <div class="pub-meta">
-            <span class="pub-venue">Workshop / Journal Name</span>
-            <span class="pub-year">2023</span>
-            <span class="badge badge-workshop">Workshop</span>
-          </div>
-        </div>
-
-        <!-- TODO: duplicate a .pub-card block above for each additional publication -->
-
-      </div>
+      <div id="publications-container" class="pub-list"></div>
     </div>
   </section>
 
@@ -243,6 +194,30 @@
         <p class="person-year">${m.year}</p>
       </div>`;
     }
+
+    const badgeLabel = { journal: "Journal", conference: "Conference", workshop: "Workshop" };
+
+    function pubCard(p) {
+      const authors = p.authors
+        .map(a => a.startsWith('*') ? `<strong>${a.slice(1)}</strong>` : a)
+        .join(', ');
+      return `<div class="pub-card">
+        <p class="pub-title"><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></p>
+        <p class="pub-authors">${authors}</p>
+        <div class="pub-meta">
+          <span class="pub-venue">${p.venue}</span>
+          <span class="pub-year">${p.year}</span>
+          <span class="badge badge-${p.type}">${badgeLabel[p.type]}</span>
+        </div>
+      </div>`;
+    }
+
+    fetch('publications.json')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('publications-container').innerHTML =
+          data.map(pubCard).join('');
+      });
 
     fetch('advisees.json')
       .then(r => r.json())

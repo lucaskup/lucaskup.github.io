@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Title of Your Most Recent Paper",
+    "url": "#",
+    "authors": ["*Kupssinsku, L. S.", "Co-Author A.", "Co-Author B."],
+    "venue": "Journal / Conference Name",
+    "year": 2025,
+    "type": "journal"
+  },
+  {
+    "title": "Title of a Conference Paper",
+    "url": "#",
+    "authors": ["Co-Author A.", "*Kupssinsku, L. S.", "Co-Author C."],
+    "venue": "Conference Name (CONF'YY)",
+    "year": 2024,
+    "type": "conference"
+  },
+  {
+    "title": "Title of Another Paper",
+    "url": "#",
+    "authors": ["*Kupssinsku, L. S.", "Co-Author D."],
+    "venue": "Workshop / Journal Name",
+    "year": 2023,
+    "type": "workshop"
+  }
+]
