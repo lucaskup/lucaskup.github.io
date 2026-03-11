@@ -1,0 +1,48 @@
+{
+  "current": [
+    {
+      "level": "Ph.D.",
+      "members": [
+        { "name": "Marcelo Mussi Delucis",     "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
+        { "name": "Luís Vieira de Souza",       "coadvisee": true,  "topic": "Research topic or thesis title goes here", "year": 2024 },
+        { "name": "Amanda Pestana da Silva",    "coadvisee": true,  "topic": "Research topic or thesis title goes here", "year": 2024 }
+      ]
+    },
+    {
+      "level": "Master's",
+      "members": [
+        { "name": "Arthur Sperhacke Bianchessi",      "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
+        { "name": "Vladimir Barcelos Dorneles Junior","coadvisee": true,  "topic": "Research topic or thesis title goes here", "year": 2024 },
+        { "name": "Lucas Monteiro Fraga",             "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
+        { "name": "Pedro Wagner",                     "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
+        { "name": "Marco Bochemitsan",                "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
+        { "name": "Vitor Hugo",                       "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
+        { "name": "Wolfgang Ricardo Rowell Junior",   "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
+        { "name": "Jerusa Finatto",                   "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
+        { "name": "Marcelo Mussi",                    "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 }
+      ]
+    },
+    {
+      "level": "Undergraduate",
+      "members": [
+        { "name": "João Pedro Druschel Martins",      "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
+        { "name": "Yasmin Aguirre",                   "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
+        { "name": "Arthur Domingues Fachel Nunes",    "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
+        { "name": "Arthur Sperhacke Bianchessi",      "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
+        { "name": "Bernardo Zamin",                   "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
+        { "name": "Vitor Lamas Esposito",             "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
+        { "name": "Luiza Dal Mas Pasini",             "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 }
+      ]
+    }
+  ],
+  "alumni": [
+    { "name": "Ramiro N. Barros",  "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
+    { "name": "Vinicius Turani",   "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
+    { "name": "Camila Ilges",      "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
+    { "name": "Lucas Andreotti",   "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
+    { "name": "Luis Lima",         "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
+    { "name": "Daniela Rigoli",    "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
+    { "name": "Luigi Carvalho",    "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
+    { "name": "Morgana Weber",     "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 }
+  ]
+}
