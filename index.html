@@ -212,14 +212,14 @@
       </div>`;
     }
 
-    fetch('publications.json')
+    fetch('data/publications.json')
       .then(r => r.json())
       .then(data => {
         document.getElementById('publications-container').innerHTML =
           data.map(pubCard).join('');
       });
 
-    fetch('advisees.json')
+    fetch('data/advisees.json')
       .then(r => r.json())
       .then(data => {
         // Current advisees
