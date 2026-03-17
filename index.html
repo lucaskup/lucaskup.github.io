@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lucas Silveira Kupssinskü — Associate Professor at PUCRS, researcher in Machine Learning, Deep Learning, Fairness, and LLMs." />
+  <meta property="og:title" content="Lucas Silveira Kupssinskü" />
+  <meta property="og:description" content="Associate Professor at PUCRS. Research in ML, Deep Learning, Fairness, and LLMs." />
+  <meta property="og:type" content="website" />
   <title>Lucas Silveira Kupssinskü</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -26,8 +30,7 @@
     <div class="container">
       <div class="hero">
 
-        <!-- Replace the emoji below with an <img src="photo.jpg"> tag once you add your photo -->
-        <div class="avatar"><img src="img/perfilpucrs.jpg" alt="Lucas Kupssinskü" /></div>
+        <div class="avatar"><img src="img/perfilpucrs.jpg" alt="Lucas Silveira Kupssinskü, Associate Professor at PUCRS" /></div>
 
         <div class="hero-info">
           <h1>Lucas Silveira <span>Kupssinskü</span></h1>
@@ -39,9 +42,9 @@
             I am an Associate Professor and researcher at the Graduate Program in Computer Science at PUCRS,
             where I co-lead the Machine Learning Theory and Applications Research Group (MALTA).
             I hold a Ph.D. in Applied Computing from Unisinos. My research focuses on machine learning
-            and deep learning, with applications in fairness, health, generative models, LLMs, and
-            disinformation detection, supported by institutions such as Petrobras, Motorola, and the
-            Michael J. Fox Foundation.
+            and deep learning, with applications in fairness, health, generative models, LLMs, 
+            and Machine Unlearning, supported by institutions such as Petrobras, Motorola,
+            Michael J. Fox Foundation, and Kunumi.
           </p>
           <div class="profile-links">
             <a class="btn btn-scholar"
@@ -60,7 +63,7 @@
               📄 Lattes CV
             </a>
             <a class="btn btn-email"
-               href="mailto:lucas.kup@gmail.com">
+               href="mailto:lucas.kupssinsku@pucrs.br">
               ✉️ Email
             </a>
           </div>
@@ -93,7 +96,7 @@
         <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
       </p>
 
-      <div id="publications-container" class="pub-list"></div>
+      <div id="publications-container"></div>
     </div>
   </section>
 
@@ -109,7 +112,7 @@
   <section id="alumni">
     <div class="container">
       <h2 class="section-title">Alumni</h2>
-      <div id="alumni-container" class="people-grid"></div>
+      <div id="alumni-container"></div>
     </div>
   </section>
 
@@ -167,7 +170,7 @@
 
   <!-- ── Footer ── -->
   <footer>
-    <p>© 2026 <span>Lucas Silveira Kupssinsku</span> · PUCRS · Porto Alegre, Brazil</p>
+    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, Brazil</p>
     <p style="margin-top:.4rem;">
       <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
       <a href="https://www.pucrs.br/pesquisadores/lucas-silveira-kupssinsku/" target="_blank" rel="noopener">PUCRS Profile</a> ·
@@ -183,20 +186,22 @@
     };
 
     function personCard(m, level) {
+      const topic = m.topic && m.topic !== 'A definir' ? `<p class="person-topic">${m.topic}</p>` : '';
       return `<div class="person-card">
         <p class="person-name">${m.name}</p>
         <p class="person-degree">${degreeLabel[level](m)}</p>
-        <p class="person-topic">${m.topic}</p>
-        <p class="person-year">Since ${m.year}</p>
+        ${topic}
+        <p class="person-year">Since ${m.start}</p>
       </div>`;
     }
 
     function alumniCard(m) {
+      const coLabel = m.coadvisee ? ' · Co-advisee' : '';
       return `<div class="person-card">
         <p class="person-name">${m.name}</p>
-        <p class="person-degree">${m.level} — Completed</p>
+        <p class="person-degree">${m.level} — Completed${coLabel}</p>
         <p class="person-topic">${m.topic}</p>
-        <p class="person-year">${m.year}</p>
+        <p class="person-year">${m.start} – ${m.finish}</p>
       </div>`;
     }
 
@@ -220,28 +225,80 @@
     fetch('data/publications.json')
       .then(r => r.json())
       .then(data => {
+        const featured = data.filter(p => p.featured === true);
+        const types = [...new Set(featured.map(p => p.type))];
+        const tabDefs = [
+          { label: 'All', html: featured.map(pubCard).join('') },
+          ...types.map(t => ({
+            label: t.charAt(0).toUpperCase() + t.slice(1),
+            html: featured.filter(p => p.type === t).map(pubCard).join('')
+          }))
+        ];
+        buildTabs(document.getElementById('publications-container'), tabDefs, 'pub-list');
+      })
+      .catch(() => {
         document.getElementById('publications-container').innerHTML =
-          data.map(pubCard).join('');
+          '<p style="color:var(--comment)">Could not load publications.</p>';
       });
+
+    function buildTabs(container, tabs, innerClass = 'people-grid') {
+      const btnRow = document.createElement('div');
+      btnRow.className = 'tabs';
+      const panels = [];
+
+      tabs.forEach(({ label, html }, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+        btn.textContent = label;
+
+        const panel = document.createElement('div');
+        panel.className = 'tab-panel' + (i === 0 ? ' active' : '');
+        panel.innerHTML = `<div class="${innerClass}">${html}</div>`;
+
+        btn.addEventListener('click', () => {
+          btnRow.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+          panels.forEach(p => p.classList.remove('active'));
+          btn.classList.add('active');
+          panel.classList.add('active');
+        });
+
+        btnRow.appendChild(btn);
+        panels.push(panel);
+      });
+
+      container.appendChild(btnRow);
+      panels.forEach(p => container.appendChild(p));
+    }
+
+    document.getElementById('copy-year').textContent = new Date().getFullYear();
 
     fetch('data/advisees.json')
       .then(r => r.json())
       .then(data => {
-        // Current advisees
-        const adviseeContainer = document.getElementById('advisees-container');
-        data.current.forEach(group => {
-          adviseeContainer.innerHTML += `
-            <div class="advisee-group">
-              <p class="group-label">${group.level}</p>
-              <div class="people-grid">
-                ${group.members.map(m => personCard(m, group.level)).join('')}
-              </div>
-            </div>`;
-        });
+        // Current advisees — one tab per degree level
+        buildTabs(
+          document.getElementById('advisees-container'),
+          data.current.map(group => ({
+            label: group.level,
+            html:  group.members.map(m => personCard(m, group.level)).join('')
+          }))
+        );
 
-        // Alumni
-        const alumniContainer = document.getElementById('alumni-container');
-        alumniContainer.innerHTML = data.alumni.map(alumniCard).join('');
+        // Alumni — one tab per degree level
+        const levels = [...new Set(data.alumni.map(m => m.level))];
+        buildTabs(
+          document.getElementById('alumni-container'),
+          levels.map(lvl => ({
+            label: lvl,
+            html:  data.alumni.filter(m => m.level === lvl).map(alumniCard).join('')
+          }))
+        );
+      })
+      .catch(() => {
+        ['advisees-container', 'alumni-container'].forEach(id => {
+          document.getElementById(id).innerHTML =
+            '<p style="color:var(--comment)">Could not load data.</p>';
+        });
       });
   </script>
 </body>

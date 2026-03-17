@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.pucrs.br)"
+      "WebFetch(domain:www.pucrs.br)",
+      "Bash(py -m http.server 8000)",
+      "Bash(npx --version)"
     ]
   }
 }

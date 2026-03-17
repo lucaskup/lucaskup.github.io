@@ -260,9 +260,9 @@ section + section { border-top: 1px solid var(--line); }
   letter-spacing: .3px;
 }
 
-.badge-conf    { background: rgba(139,233,253,.15); color: var(--cyan); }
-.badge-journal { background: rgba(189,147,249,.15); color: var(--purple); }
-.badge-workshop{ background: rgba(255,184,108,.15); color: var(--orange); }
+.badge-conference { background: rgba(255,184,108,.15); color: var(--orange); }
+.badge-journal    { background: rgba(189,147,249,.15); color: var(--purple); }
+.badge-workshop   { background: rgba(139,233,253,.15); color: var(--cyan); }
 
 /* ── People (Advisees / Alumni) ──────────────────────────── */
 .people-grid {
@@ -306,18 +306,25 @@ section + section { border-top: 1px solid var(--line); }
   margin-top: .4rem;
 }
 
-/* ── Advisee Groups ──────────────────────────────────────── */
-.advisee-group { margin-bottom: 2rem; }
-.advisee-group:last-child { margin-bottom: 0; }
+/* ── Tabs (Advisees / Alumni) ────────────────────────────── */
+.tabs { display: flex; gap: .5rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
 
-.group-label {
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .8px;
-  text-transform: uppercase;
+.tab-btn {
+  padding: .35rem .9rem;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: var(--surface);
   color: var(--comment);
-  margin-bottom: .8rem;
+  cursor: pointer;
+  font-size: .82rem;
+  transition: border-color .2s, color .2s;
 }
+
+.tab-btn:hover { border-color: var(--cyan); color: var(--cyan); }
+.tab-btn.active { border-color: var(--cyan); color: var(--cyan); }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
 
 /* ── Lectures ────────────────────────────────────────────── */
 .lecture-list { display: flex; flex-direction: column; gap: 1rem; }
