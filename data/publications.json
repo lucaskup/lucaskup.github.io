@@ -1,26 +1,445 @@
 [
   {
-    "title": "Title of Your Most Recent Paper",
-    "url": "#",
-    "authors": ["*Kupssinsku, L. S.", "Co-Author A.", "Co-Author B."],
-    "venue": "Journal / Conference Name",
+    "title": "Fairness in deep learning: A survey on vision and language research",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:dhFuZR0502QC",
+    "authors": ["Otavio Parraga", "Martin D. More", "Christian M. Oliveira", "Nathan S. Gavenski", "*Lucas S. Kupssinskü", "Adilson Medronha", "Luis V. Moura", "Gabriel S. Simões", "Rodrigo C. Barros"],
+    "venue": "ACM Computing Surveys",
     "year": 2025,
-    "type": "journal"
+    "type": "journal",
+    "featured": true
   },
   {
-    "title": "Title of a Conference Paper",
-    "url": "#",
-    "authors": ["Co-Author A.", "*Kupssinsku, L. S.", "Co-Author C."],
-    "venue": "Conference Name (CONF'YY)",
+    "title": "Bayesian Attention Mechanism: A Probabilistic Framework for Positional Encoding and Context Length Extrapolation",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:k_IJM867U9cC",
+    "authors": ["Arthur S. Bianchessi", "Yasmin C. Aguirre", "Rodrigo C. Barros", "*Lucas S. Kupssinskü"],
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": 2026,
+    "type": "conference",
+    "featured": true
+  },
+  {
+    "title": "A Framework for Benchmarking Fairness-Utility Trade-offs in Text-to-Image Models via Pareto Frontiers",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:M3NEmzRMIkIC",
+    "authors": ["Marco N. Bochernitsan", "Rodrigo C. Barros", "*Lucas S. Kupssinskü"],
+    "venue": "arXiv preprint arXiv:2508.16752",
+    "year": 2025,
+    "type": "preprint"
+  },
+  {
+    "title": "Resolvendo problemas? Sem problemas! Uma análise de ferramentas gamificadas com pontuação e ranqueamento no ensino de programação",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:blknAaTinKkC",
+    "authors": ["Igor Ferreira", "Pedro P. Wagner", "*Lucas S. Kupssinskü", "Milene S. Silveira"],
+    "venue": "Simpósio Brasileiro de Informática na Educação (SBIE)",
+    "year": 2025,
+    "type": "conference"
+  },
+  {
+    "title": "A Comparative Analysis of CNN Models and Vision Transformers for Skin Lesion Classification",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:BqipwSGYUEgC",
+    "authors": ["Yasmin C. Aguirre", "Ashiley Bianca S. de Oliveira", "Rodrigo C. Barros", "*Lucas S. Kupssinskü"],
+    "venue": "Escola Regional de Aprendizado de Máquina e Inteligência Artificial da Região Sul (ERAMIA-RS)",
+    "year": 2025,
+    "type": "workshop"
+  },
+  {
+    "title": "Detection of Expiration Dates in Product Images Using YOLO",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:YFjsv_pBGBYC",
+    "authors": ["Lucas Andreotti", "Lucas M. Fraga", "Rodrigo C. Barros", "*Lucas S. Kupssinskü"],
+    "venue": "Escola Regional de Aprendizado de Máquina e Inteligência Artificial da Região Sul (ERAMIA-RS)",
+    "year": 2025,
+    "type": "workshop"
+  },
+  {
+    "title": "Evaluation of 3D Convolutional Neural Networks on Isolated Brazilian Sign Language Recognition",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:NMxIlDl6LWMC",
+    "authors": ["Lorenzo C. Lazzarotto", "Marcelo M. Delucis", "Pedro T. Barcelos", "Rodrigo C. Barros", "*Lucas S. Kupssinskü"],
+    "venue": "Escola Regional de Aprendizado de Máquina e Inteligência Artificial da Região Sul (ERAMIA-RS)",
+    "year": 2025,
+    "type": "workshop"
+  },
+  {
+    "title": "Comparing Speech Embeddings and Acoustic Features for Unsupervised Subtyping of Parkinson's Disease",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:O3NaXMp0MMsC",
+    "authors": ["Jerusa D. Finatto", "Rafaela C. Ravazio", "Christian Mattjie", "Rodrigo C. Barros", "Artur Schuh", "Vanessa B. dos Santos", "Maira R. Olchik", "*Lucas S. Kupssinskü"],
+    "venue": "2025 IEEE 25th International Conference on Bioinformatics and Bioengineering (BIBE)",
+    "year": 2025,
+    "type": "conference"
+  },
+  {
+    "title": "Subtyping Parkinson's Disease Via Probabilistic Neuroimaging Data Clustering",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:GnPB-g6toBAC",
+    "authors": ["Christian Mattjie", "Rafaela Ravazio", "Joana Pasquali", "*Lucas S. Kupssinskü", "Luís V. de Moura", "Rodrigo C. Barros", "Daniel Teixeira-dos-Santos", "Gabriela M. Pereira", "Artur Schuh", "Álvaro O. Franco", "Marco A.M. Schlindwein", "Andrei Bieger", "Marco Antônio de Bastiani", "Eduardo Zimmer", "Thomas H. Schlickmann", "Lara A. Souza"],
+    "venue": "2025 IEEE 25th International Conference on Bioinformatics and Bioengineering (BIBE)",
+    "year": 2025,
+    "type": "conference"
+  },
+  {
+    "title": "Evaluating Odor Selectivity in α-Synucleinopathy: ML-Based Odor Profiling",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:RGFaLdJalmkC",
+    "authors": ["Christian Mattjie", "Rafaela Ravazio", "Eleanor Mitchell", "Jonathan Bestwick", "*Lucas Silveira Kupssinskü", "Alastair Noyce", "Artur Schumacher Schuh", "Rodrigo C. Barros"],
+    "venue": "Brazilian Conference on Intelligent Systems (BRACIS)",
+    "year": 2025,
+    "type": "conference"
+  },
+  {
+    "title": "Automated Fact-Checking in Brazilian Portuguese: Resources and Baselines",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:JV2RwH3_ST0C",
+    "authors": ["Marcelo M. Delucis", "Lucas Fraga", "Otávio Parraga", "Christian Mattjie", "Rafaela Ravazio", "Rodrigo C. Barros", "*Lucas S. Kupssinskü"],
+    "venue": "Simpósio Brasileiro de Tecnologia da Informação e da Linguagem Humana (STIL)",
+    "year": 2025,
+    "type": "conference"
+  },
+  {
+    "title": "Which is the Best LLM for Geosciences?",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:hMod-77fHWUC",
+    "authors": ["Vitor Hugo Garcez", "Otávio Parraga", "Ademir Marques", "Andre L. Durante Spigolon", "George De Barros", "Luiz Gonzaga", "Maurício Roberto Veronez", "Rodrigo C. Barros", "*Lucas Silveira Kupssinskü"],
+    "venue": "IGARSS 2025 – IEEE International Geoscience and Remote Sensing Symposium",
+    "year": 2025,
+    "type": "conference"
+  },
+  {
+    "title": "PROCESSAMENTO DE LINGUAGEM NATURAL NA IDENTIFICAÇÃO DE QUEDAS EM PRONTUÁRIOS ELETRÔNICOS DOS PACIENTES: CASO-CONTROLE",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:bEWYMUwI8FkC",
+    "authors": ["Amanda Pestana da Silva", "Filipe Rocha Lopes", "Henrique Dias Pereira dos Santos", "*Lucas Silveira Kupssinskü", "Janete de Souza Urbanetto"],
+    "venue": "Galoá",
+    "year": 2025,
+    "type": "other"
+  },
+  {
+    "title": "Isolated Sign Language Recognition in Libras",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:RYcK_YlVTxYC",
+    "authors": ["Marcelo M. Delucis", "Otávio Parraga", "Rodrigo C. Barros"],
+    "venue": "Intelligent Systems: 35th Brazilian Conference, BRACIS 2025, Proceedings, Part III",
+    "year": 2026,
+    "type": "conference"
+  },
+  {
+    "title": "Inference Time Debiasing Concepts",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:ns9cj8rnVeAC",
+    "authors": ["*Lucas S. Kupssinskü", "Marco N. Bochernitsan", "Jordan Kopper"],
+    "venue": "Intelligent Systems: 35th Brazilian Conference, BRACIS 2025, Proceedings, Part II",
+    "year": 2026,
+    "type": "conference"
+  },
+  {
+    "title": "Quantization-Robust LLM Unlearning via Low-Rank Adaptation",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:J_g5lzvAfSwC",
+    "authors": ["João Vitor Boer Abitante", "Joana Meneguzzo Pasquali", "Luan Fonseca Garcia", "Ewerton de Oliveira", "Thomas da Silva Paula", "Rodrigo C. Barros", "*Lucas S. Kupssinskü"],
+    "venue": "arXiv preprint arXiv:2602.13151",
+    "year": 2026,
+    "type": "preprint"
+  },
+  {
+    "title": "Unlocking the potential of vision-language models for mammography analysis",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:HDshCWvjkbEC",
+    "authors": ["Luís Vinícius de Moura", "Rafaela Ravazio", "Christian Mattjie", "*Lucas Silveira Kupssinskü", "Carla Maria Dal Sasso Freitas", "Rodrigo C. Barros"],
+    "venue": "2024 IEEE International Symposium on Biomedical Imaging (ISBI)",
     "year": 2024,
     "type": "conference"
   },
   {
-    "title": "Title of Another Paper",
-    "url": "#",
-    "authors": ["*Kupssinsku, L. S.", "Co-Author D."],
-    "venue": "Workshop / Journal Name",
+    "title": "LERMO: a novel web game for AI-enhanced sign language recognition",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:-f6ydRqryjwC",
+    "authors": ["Adilson Medronha", "Luís Lima", "Janaína Claudio", "*Lucas Kupssinskü", "Rodrigo C. Barros"],
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "year": 2024,
+    "type": "conference"
+  },
+  {
+    "title": "Semi-supervised learning for mRALE score prediction in COVID-19 chest radiographs",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:hFOr9nPyWt4C",
+    "authors": ["Christian Mattjie", "Luis V. de Moura", "Rafaela C. Ravazio", "Otavio Parraga", "*Lucas S. Kupssinskü", "Adilson Medronha", "Ana M.M. da Silva", "Rodrigo C. Barros"],
+    "venue": "Medical Imaging 2024: Computer-Aided Diagnosis (SPIE)",
+    "year": 2024,
+    "type": "conference"
+  },
+  {
+    "title": "One against many: exploring multi-task learning generalization in source-code tasks",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:TQgYirikUcIC",
+    "authors": ["Otávio Parraga", "*Lucas S. Kupssinskü", "Christian Mattjie", "Rodrigo C. Barros"],
+    "venue": "2024 International Joint Conference on Neural Networks (IJCNN)",
+    "year": 2024,
+    "type": "conference"
+  },
+  {
+    "title": "From Images to Insights: Subtyping Parkinson's Disease Using Unsupervised Learning on MRI Data",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:j3f4tGmQtD8C",
+    "authors": ["D. Teixeira-dos-Santos", "A. de-Oliveira-Franco", "A. Bieger", "C. Mattjie", "F. Suzuki", "G. Magalhaes Pereira", "J. Rossi Catao", "L. Angi Souza", "*L. Silveira Kupssinskü", "L. Vinicius Moura", "M. Schlindwein", "R. Ravazio", "S. Duarte Pinto", "T. Hugentobler Schlickmann", "E.R. Zimmer", "M.A. De Bastiani", "R.C. Barros", "A.F. Schumacher Schuh"],
+    "venue": "Movement Disorders",
+    "year": 2024,
+    "type": "journal"
+  },
+  {
+    "title": "Clinical and Neuroimaging Biomarker Predictors of Cognitive Dysfunction in Parkinson's Disease: A Study Using PPMI Data",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:RHpTSmoSYBkC",
+    "authors": ["M. Schlindwein", "A. Franco", "J. Catao", "D. Teixeira-dos-Santos", "A. Bieger", "T. Hugentobler Schlickmann", "L. Angi Souza", "C. Mattjie", "F. Suzuki", "G. Magalhaes Pereira", "*L. Silveira Kupssinskü", "L. Vinicius Moura", "R. Ravazio", "S. Duarte Pinto", "M. Bastiani", "R. Barros", "E.R. Zimmer", "A. Schuh"],
+    "venue": "Movement Disorders",
+    "year": 2024,
+    "type": "journal"
+  },
+  {
+    "title": "Zero-shot performance of the Segment Anything Model (SAM) in 2D medical imaging: A comprehensive evaluation and practical guidelines",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:ZeXyd9-uunAC",
+    "authors": ["Christian Mattjie", "Luis Vinicius De Moura", "Rafaela Ravazio", "*Lucas Kupssinsku", "Otávio Parraga", "Marcelo Mussi Delucis", "Rodrigo C. Barros"],
+    "venue": "2023 IEEE 23rd International Conference on Bioinformatics and Bioengineering (BIBE)",
     "year": 2023,
-    "type": "workshop"
+    "type": "conference",
+    "featured": true
+  },
+  {
+    "title": "An assisted multi-frame approach for super-resolution in hyperspectral images of rock samples",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:9ZlFYXVOiuMC",
+    "authors": ["Daniel C. Zanotta", "Ademir Marques Junior", "João Gabriel Motta", "Vinícius Sales", "Tainá T. Guimarães", "*Lucas S. Kupssinsku", "Graciela Racolte", "Fabiane Bordin", "Caroline L. Cazarin", "Luiz Gonzaga Jr", "Maurício R. Veronez"],
+    "venue": "Computers & Geosciences",
+    "year": 2023,
+    "type": "journal"
+  },
+  {
+    "title": "Radiomics for predicting oxygen necessity in COVID-19 patients using longitudinal lung computed tomography",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:7PzlFSSx8tAC",
+    "authors": ["Rafaela Ravazio", "Christian Mattjie", "Luis Vinicius De Moura", "*Lucas Kupssinskü", "Rodrigo C. Barros", "Denise Cantarelli Machado", "Ana Maria Marques Da Silva"],
+    "venue": "2023 IEEE 23rd International Conference on Bioinformatics and Bioengineering (BIBE)",
+    "year": 2023,
+    "type": "conference"
+  },
+  {
+    "title": "An empirical evaluation of machine learning techniques to classify code comprehension based on EEG data",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:MXK_kJrjxJIC",
+    "authors": ["Lucian Jose Goncales", "Kleinner Farias", "*Lucas Silveira Kupssinskü", "Matheus Segalotto"],
+    "venue": "Expert Systems with Applications",
+    "year": 2022,
+    "type": "journal"
+  },
+  {
+    "title": "Hyperspectral data as a proxy for porosity estimation of carbonate rocks",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:5nxA0vEk-isC",
+    "authors": ["*L.S. Kupssinskü", "T.T. Guimarães", "M.d.B. Cardoso", "L. Bachi", "D. Zanotta", "I. Estilon de Souza", "A.X. Falcão", "R.Q. Velloso", "C.L. Cazarin", "M.R. Veronez", "L. Gonzaga Jr"],
+    "venue": "Australian Journal of Earth Sciences",
+    "year": 2022,
+    "type": "journal"
+  },
+  {
+    "title": "A nondestructive alternative for kerogen type determination in potential hydrocarbon source rocks using hyperspectral data and machine learning",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:kNdYIx-mwKoC",
+    "authors": ["Tainá T. Guimarães", "*Lucas S. Kupssinskü", "Milena B. Cardoso", "Leonardo Bachi", "Alysson S. Aires", "Emilie C. Koste", "André L.D. Spigolon", "Luiz Gonzaga", "Mauricio R. Veronez"],
+    "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+    "year": 2022,
+    "type": "journal"
+  },
+  {
+    "title": "Estimativa de Porosidade de Rochas Utilizando Aprendizado de Máquina e Dados Hiperespectrais",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:qxL8FJ1GzNcC",
+    "authors": ["*Lucas Silveira Kupssinskü"],
+    "venue": "Universidade do Vale do Rio dos Sinos (PhD Thesis)",
+    "year": 2022,
+    "type": "thesis"
+  },
+  {
+    "title": "Modelos de afloramentos inteligentes a partir da inferência de dados geológicos utilizando aprendizado de máquina",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:Zph67rFs4hoC",
+    "authors": ["Ademir Marques Jr", "Graciela Eliane dos Reis Racolte", "*Lucas Silveira Kupssinsku", "Tainá Thomassim"],
+    "venue": "Technical Report",
+    "year": 2022,
+    "type": "other"
+  },
+  {
+    "title": "The effects of applying filters on EEG signals for classifying developers' code comprehension",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:0EnyYjriUFMC",
+    "authors": ["Lucian Jose Gonçales", "Kleinner Farias", "*Lucas Kupssinskü", "Matheus Segalotto"],
+    "venue": "Journal of Applied Research and Technology",
+    "year": 2021,
+    "type": "journal"
+  },
+  {
+    "title": "Mosis Lab Hyperspectral – Visualization and correlation of hyperspectral data on immersive virtual reality",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:roLk4NBRz8UC",
+    "authors": ["Tainá Thomassim Guimarães", "Diego Henrique Diemmer Mariani", "*Lucas Silveira Kupssinskü", "Pedro Rossa", "Rafael Kenji Horota", "Rafael De Freitas", "Luiz Roupinha", "Branda Eloá Weppo", "Aline Weschenfelder", "André Luiz Durante Spigolon", "Luiz Gonzaga", "Maurício Roberto Veronez"],
+    "venue": "2021 IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
+    "year": 2021,
+    "type": "conference"
+  },
+  {
+    "title": "Kerogen type classification in hydrocarbon source rocks using hyperspectral data and machine learning",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:Se3iqnhoufwC",
+    "authors": ["Tainá Thomassim Guimarães", "*Lucas Silveira Kupssinskü", "Daniel Capella Zanotta", "João Gabriel Motta", "André Luiz Durante Spigolon", "Luiz Gonzaga", "Maurício Roberto Veronez"],
+    "venue": "2021 IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
+    "year": 2021,
+    "type": "conference"
+  },
+  {
+    "title": "Vizspectraldata: A web-based application for hyperspectral data visualization",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:UebtZRa9Y70C",
+    "authors": ["*Lucas Silveira Kupssinskü", "Tainá Thomassim Guimarães", "Caroline Lessio Cazarin", "Luiz Gonzaga", "Maurício Roberto Veronez"],
+    "venue": "2021 IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
+    "year": 2021,
+    "type": "conference"
+  },
+  {
+    "title": "A Multi-Looking Approach for Spatial Super-Resolution on Laboratory-Based Hyperspectral Images",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:LkGwnXOMwfcC",
+    "authors": ["Daniel Capella Zanotta", "Ademir Marques Júnior", "Alysson Soares Aires", "Fabiane Bordin", "Graciela Racolte", "João Gabriel Motta", "*Lucas Kupssinskü", "Marianne Muller", "Rafael Kenji Horota", "Tainá Thomassin Guimarães", "Vinícius Sales", "Caroline Lessio Cazarin", "Luiz Gonzaga", "Maurício Roberto Veronez"],
+    "venue": "2021 IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
+    "year": 2021,
+    "type": "conference"
+  },
+  {
+    "title": "Parthenos: A source code injection approach for software transformation",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:Wp0gIr-vW9MC",
+    "authors": ["Gabriel Lopes Nunes", "Kleinner Farias", "*Lucas Silveira Kupssinski"],
+    "venue": "arXiv preprint arXiv:2105.05407",
+    "year": 2021,
+    "type": "preprint"
+  },
+  {
+    "title": "From the Cloud to the Digital Outcrop Model: Lithostratigraphic Interpretation in Mosis Suite",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:8k81kl-MbHgC",
+    "authors": ["*Lucas Silveira Kupssinskü", "Milena de Barcelos Cardoso", "Demétrius Nunes Alves", "Rafael de Freitas", "Gabriel Adamski", "Wendel Blank Jeske", "Tainá Thomassim Guimarães", "André Luiz Durante Spigolon", "Luiz Gonzaga Jr", "Mauricio Roberto Veronez"],
+    "venue": "Virtual Geoscience Conference (VGC 2021)",
+    "year": 2021,
+    "type": "conference"
+  },
+  {
+    "title": "Evaluation of machine learning techniques to classify code comprehension based on developers' EEG data",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:eQOLeE2rZwMC",
+    "authors": ["Lucian José Gonçales", "Kleinner Farias", "*Lucas Silveira Kupssinskü", "Matheus Segalotto"],
+    "venue": "19th Brazilian Symposium on Human Factors in Computing Systems (IHC)",
+    "year": 2020,
+    "type": "conference"
+  },
+  {
+    "title": "A method for chlorophyll-a and suspended solids prediction through remote sensing and machine learning",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:Y0pCki6q_DkC",
+    "authors": ["*Lucas Silveira Kupssinskü", "Tainá Thomassim Guimarães", "Eniuce Menezes de Souza", "Daniel C. Zanotta", "Mauricio Roberto Veronez", "Luiz Gonzaga Jr", "Frederico Fabio Mauad"],
+    "venue": "Sensors",
+    "year": 2020,
+    "type": "journal"
+  },
+  {
+    "title": "Virtual and digital outcrops in the petroleum industry: A systematic review",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:YsMSGLbcyi4C",
+    "authors": ["Ademir Marques Jr", "Rafael Kenji Horota", "Eniuce Menezes de Souza", "*Lucas Kupssinskü", "Pedro Rossa", "Alysson Soares Aires", "Leonardo Bachi", "Mauricio Roberto Veronez", "Luiz Gonzaga Jr", "Caroline Lessio Cazarin"],
+    "venue": "Earth-Science Reviews",
+    "year": 2020,
+    "type": "journal"
+  },
+  {
+    "title": "Improving spatial resolution of multispectral rock outcrop images using RGB data and artificial neural networks",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:hC7cP41nSMkC",
+    "authors": ["Ademir Marques Junior", "Eniuce Menezes De Souza", "Marianne Müller", "Diego Brum", "Daniel Capella Zanotta", "Rafael Kenji Horota", "*Lucas Silveira Kupssinskü", "Maurício Roberto Veronez", "Luiz Gonzaga Jr", "Caroline Lessio Cazarin"],
+    "venue": "Sensors",
+    "year": 2020,
+    "type": "journal"
+  },
+  {
+    "title": "How much wavelet decomposition can improve the detection of surface fractures in remote sensing images?",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:ufrVoPGSRksC",
+    "authors": ["Eniuce Menezes De Souza", "Ademir Marques", "Rafael K. Horota", "*Lucas Kupssinsku", "Pedro Rossa", "Alysson S. Aires", "Luiz Gonzaga Silveira", "Maurício R. Veronez", "Carol L. Cazarin"],
+    "venue": "IGARSS 2020 – IEEE International Geoscience and Remote Sensing Symposium",
+    "year": 2020,
+    "type": "conference"
+  },
+  {
+    "title": "Prediction of chlorophyll-a and suspended solids through remote sensing and artificial neural networks",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:Tyk-4Ss8FVUC",
+    "authors": ["*Lucas Silveira Kupssinskü", "Tainá Thomassim Guimarães", "Rafael de Freitas", "Eniuce Menezes De Souza", "Pedro Rossa", "Ademir Marques", "Maurício Roberto Veronez", "Luiz Gonzaga", "Caroline Lessio Cazarin", "Frederico Fábio Mauad"],
+    "venue": "2019 13th International Conference on Sensing Technology (ICST)",
+    "year": 2019,
+    "type": "conference"
+  },
+  {
+    "title": "Imspector: Immersive system of inspection of bridges/viaducts",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:qjMakFHDy7sC",
+    "authors": ["Mauricio Roberto Veronez", "Luiz Gonzaga", "Fabiane Bordin", "Leonardo Campos Inocencio", "Graciela Eliane dos Reis Racolte", "*Lucas Silveira Kupssinskü", "Pedro Rossa", "Leonardo Scalco"],
+    "venue": "2019 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)",
+    "year": 2019,
+    "type": "conference"
+  },
+  {
+    "title": "VROffice: Interactive and immersive 3D visualization, manipulation and correlation of multivariable georeferenced datasets in virtual reality",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:IjCSPb-OGe4C",
+    "authors": ["Pedro Rossa", "Rafael Kenji Horota", "Alysson Soares Aires", "*Lucas Silveira Kupssinskü", "Carolina Jung Kremer", "Eniuce Menezes de Souza", "Ademir Marques Jr", "Luiz Gonzaga Jr", "Mauricio Roberto Veronez", "Caroline Lessio Cazarin"],
+    "venue": "Proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems",
+    "year": 2019,
+    "type": "conference"
+  },
+  {
+    "title": "Improving spatial resolution of LANDSAT spectral bands from a single RGB image using artificial neural network",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:qUcmZB5y_30C",
+    "authors": ["Ademir Marques", "Pedro Rossa", "Rafael Kenji Horota", "Diego Brum", "Eniuce Menezes De Souza", "Alyson Soares Aires", "*Lucas Kupssinskü", "Maurício Roberto Veronez", "Luis Gonzaga", "Caroline Lessio Cazarin"],
+    "venue": "2019 13th International Conference on Sensing Technology (ICST)",
+    "year": 2019,
+    "type": "conference"
+  },
+  {
+    "title": "Hermes: A Natural Language Interface Model for Software Transformation",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:u-x6o8ySG0sC",
+    "authors": ["Michael William Chagas", "Kleinner Farias", "Lucian Gonçales", "*Lucas Kupssinskü", "João Carlos Gluz"],
+    "venue": "Proceedings of the XV Brazilian Symposium on Information Systems (SBSI)",
+    "year": 2019,
+    "type": "conference"
+  },
+  {
+    "title": "Hermes: Um Modelo de Interface de Linguagem Natural para Transformação em Software",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:WF5omc3nYNoC",
+    "authors": ["Michael William Chagas", "Kleinner Farias", "Lucian Gonçales", "*Lucas Kupssinskü", "João Carlos Gluz"],
+    "venue": "Simpósio Brasileiro de Sistemas de Informação (SBSI)",
+    "year": 2019,
+    "type": "conference"
+  },
+  {
+    "title": "Modelagem e Simulação de uma Equipe de Desenvolvimento Scrum",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:d1gkVwhDpl0C",
+    "authors": ["*Lucas Silveira Kupssinskü", "Gustavo Souza", "José Ernesto da Silva Barbosa"],
+    "venue": "Anais do Computer on the Beach",
+    "year": 2019,
+    "type": "conference"
+  },
+  {
+    "title": "MITRAS: modelo inteligente para transformação de aplicações de software",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:2osOgNQ5qMEC",
+    "authors": ["*Lucas Silveira Kupssinskü"],
+    "venue": "Universidade do Vale do Rio dos Sinos (Master's Thesis)",
+    "year": 2019,
+    "type": "thesis"
+  },
+  {
+    "title": "Proposal of a method to determine the correlation between total suspended solids and dissolved organic matter in water bodies from spectral imaging and artificial neural networks",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:u5HHmVD_uO8C",
+    "authors": ["Maurício R. Veronez", "*Lucas S. Kupssinskü", "Tainá T. Guimarães", "Emilie C. Koste", "Juarez M. Da Silva", "Laís V. De Souza", "William F.M. Oliverio", "Rogélio S. Jardim", "Ismael É. Koch", "Jonas G. De Souza", "Luiz Gonzaga Jr", "Frederico F. Mauad", "Leonardo C. Inocencio", "Fabiane Bordin"],
+    "venue": "Sensors",
+    "year": 2018,
+    "type": "journal"
+  },
+  {
+    "title": "RIDERS: Road inspection & driver simulation",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:UeHWp8X0CEIC",
+    "authors": ["Mauricio R. Veronez", "Luiz Gonzaga", "Fabiane Bordin", "*Lucas Kupssinsku", "Gabriel Lanzer Kannenberg", "Tiago Duarte", "Leonardo G. Santana", "Lean Luca de Fraga", "Demétrius Nunes Alves", "Fernando Pinho Marson"],
+    "venue": "2018 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)",
+    "year": 2018,
+    "type": "conference"
+  },
+  {
+    "title": "MITRAS Intelligent Model for Software Transformation",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:mVmsd5A6BfQC",
+    "authors": ["*Lucas Silveira Kupssinskü", "João Carlos Gluz"],
+    "venue": "Computer on the Beach",
+    "year": 2018,
+    "type": "conference"
+  },
+  {
+    "title": "Artificial neural network–based method to classify sedimentary rocks",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:9yKSN-GCB0IC",
+    "authors": ["Rodrigo Marques Figueiredo", "Maurício Roberto Veronez", "Francisco Manoel Wohnrath", "Márcio Rosa da Silva", "Luiz Gonzaga", "*Lucas Silveira Kupssinskü", "Fabiane Bordin", "Diego Brum", "Caroline Lessio Cazarin"],
+    "venue": "2018 12th International Conference on Sensing Technology (ICST)",
+    "year": 2018,
+    "type": "conference"
+  },
+  {
+    "title": "Detection of Cigarette Cabinet Openings Using CCTV: A Supermarket Case Study",
+    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:iH-uZ7U-co4C",
+    "authors": ["Daniela Pereira Rigoli", "Luigi Carvalho", "*Lucas Silveira Kupssinskü"],
+    "venue": "Unpublished",
+    "year": null,
+    "type": "other"
   }
 ]

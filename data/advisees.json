@@ -3,46 +3,195 @@
     {
       "level": "Ph.D.",
       "members": [
-        { "name": "Marcelo Mussi Delucis",     "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
-        { "name": "Luís Vieira de Souza",       "coadvisee": true,  "topic": "Research topic or thesis title goes here", "year": 2024 },
-        { "name": "Amanda Pestana da Silva",    "coadvisee": true,  "topic": "Research topic or thesis title goes here", "year": 2024 }
+        {
+          "name": "Marcelo Mussi Delucis",
+          "coadvisee": false,
+          "topic": "Identificação de Desinformação com LLMs",
+          "start": 2025
+        },
+        {
+          "name": "Laís Vieira de Souza",
+          "coadvisee": true,
+          "topic": "Modelagem preditiva de parâmetros geoquímicos de rochas geradoras de hidrocarbonetos com integração de dados espectrais e aprendizado de máquina",
+          "start": 2025
+        },
+        {
+          "name": "Amanda Pestana da Silva",
+          "coadvisee": true,
+          "topic": "Comparação Do Desempenho Entre Modelos Desenvolvidos Por Meio De Aprendizado De Máquina E A Morse Fall Scale Versão Brasileira Na Predição De Quedas Em Pacientes Adultos E Pessoas Idosas Hospitalizadas",
+          "start": 2024
+        }
       ]
     },
     {
       "level": "Master's",
       "members": [
-        { "name": "Arthur Sperhacke Bianchessi",      "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
-        { "name": "Vladimir Barcelos Dorneles Junior","coadvisee": true,  "topic": "Research topic or thesis title goes here", "year": 2024 },
-        { "name": "Lucas Monteiro Fraga",             "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
-        { "name": "Pedro Wagner",                     "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
-        { "name": "Marco Bochemitsan",                "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
-        { "name": "Vitor Hugo",                       "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
-        { "name": "Wolfgang Ricardo Rowell Junior",   "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
-        { "name": "Jerusa Finatto",                   "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 },
-        { "name": "Marcelo Mussi",                    "coadvisee": false, "topic": "Research topic or thesis title goes here", "year": 2024 }
+        {
+          "name": "Arthur Sperhacke Bianchessi",
+          "coadvisee": false,
+          "topic": "A definir",
+          "start": 2025
+        },
+        {
+          "name": "Vladimir Barcelos Dorneles Junior",
+          "coadvisee": true,
+          "topic": "Aplicação De Ciência De Dados E Inteligência Artificial Na Análise De Dados De Correntes De Densidade Gerados Por Simulação Computacional",
+          "start": 2025
+        },
+        {
+          "name": "Lucas Monteiro Fraga",
+          "coadvisee": false,
+          "topic": "A definir",
+          "start": 2025
+        },
+        {
+          "name": "Pedro Wagner",
+          "coadvisee": false,
+          "topic": "A definir",
+          "start": 2024
+        },
+        {
+          "name": "Vitor Hugo",
+          "coadvisee": false,
+          "topic": "A Method For Generating Structured Data From The Composite Logs Of Oil Wells",
+          "start": 2024
+        },
+        {
+          "name": "Wolfgang Ricardo Rowell Junior",
+          "coadvisee": false,
+          "topic": "A definir",
+          "start": 2024
+        },
+        {
+          "name": "Jerusa Finatto",
+          "coadvisee": false,
+          "topic": "Clusterização De Embeddings De Áudio E Variáveis Clínicas Para Identificar Subtipos Da Doença De Parkinson",
+          "start": 2024
+        }
       ]
     },
     {
       "level": "Undergraduate",
       "members": [
-        { "name": "João Pedro Druschel Martins",      "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
-        { "name": "Yasmin Aguirre",                   "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
-        { "name": "Arthur Domingues Fachel Nunes",    "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
-        { "name": "Arthur Sperhacke Bianchessi",      "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
-        { "name": "Bernardo Zamin",                   "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
-        { "name": "Vitor Lamas Esposito",             "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 },
-        { "name": "Luiza Dal Mas Pasini",             "coadvisee": false, "topic": "Research topic or project title goes here", "year": 2025 }
+        {
+          "name": "João Pedro Druschel Martins",
+          "coadvisee": false,
+          "topic": "LLM para Avaliação de Qualidade de Relacionamento",
+          "start": 2024
+        },
+        {
+          "name": "Yasmin Aguirre",
+          "coadvisee": false,
+          "topic": "Aplicação de Machine Learning com Radiômica e Deep Learning na Classificação de Lesões de Pele",
+          "start": 2024
+        },
+        {
+          "name": "Arthur Domingues Fachel Nunes",
+          "coadvisee": false,
+          "topic": "Vision Language Models aplicados às Geociências",
+          "start": 2024
+        }
       ]
     }
   ],
   "alumni": [
-    { "name": "Ramiro N. Barros",  "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
-    { "name": "Vinicius Turani",   "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
-    { "name": "Camila Ilges",      "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
-    { "name": "Lucas Andreotti",   "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
-    { "name": "Luis Lima",         "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
-    { "name": "Daniela Rigoli",    "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
-    { "name": "Luigi Carvalho",    "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 },
-    { "name": "Morgana Weber",     "level": "Undergraduate", "topic": "Project title goes here", "year": 2024 }
+    {
+      "name": "Marco Bochernitsan",
+      "level": "Master's",
+      "topic": "Evaluating the Effects of Fairness Enhancement Methods in Text-to-Image Models",
+      "start": 2024,
+      "finish": 2026
+    },
+    {
+      "name": "Marcelo Mussi",
+      "level": "Master's",
+      "topic": "Isolated Sign Language Recognition in LIBRAS",
+      "start": 2021,
+      "finish": 2023
+    },
+    {
+      "name": "Ramiro N. Barros",
+      "level": "Undergraduate",
+      "topic": "Diffused Embeddings: Exploring Sentence Representations from DLMs",
+      "start": 2025,
+      "finish": 2025
+    },
+    {
+      "name": "Vinicius Turani",
+      "level": "Undergraduate",
+      "topic": "Diffused Embeddings: Exploring Sentence Representations from DLMs",
+      "start": 2025,
+      "finish": 2025
+    },
+    {
+      "name": "Camila Ilges",
+      "level": "Undergraduate",
+      "topic": "Agente Baseado em LLM para Suporte no Pós-Acordo de Mediação de Conflitos Extrajudiciais",
+      "start": 2024,
+      "finish": 2024
+    },
+    {
+      "name": "Lucas Andreotti",
+      "level": "Undergraduate",
+      "topic": "Detecção da Data de Validade em embalagens com Redes Neurais YOLO",
+      "start": 2024,
+      "finish": 2024
+    },
+    {
+      "name": "Luís Lima",
+      "level": "Undergraduate",
+      "topic": "Lermo",
+      "start": 2023,
+      "finish": 2023
+    },
+    {
+      "name": "Daniela Rigoli",
+      "level": "Undergraduate",
+      "topic": "Detection of Cigarette Cabinet Openings Using Surveillance Camera Footage and Pre-trained VGG Models",
+      "start": 2023,
+      "finish": 2023
+    },
+    {
+      "name": "Luigi Carvalho",
+      "level": "Undergraduate",
+      "topic": "Detection of Cigarette Cabinet Openings Using Surveillance Camera Footage and Pre-trained VGG Models",
+      "start": 2023,
+      "finish": 2023
+    },
+    {
+      "name": "Morgana Weber",
+      "level": "Undergraduate",
+      "topic": "Predição do Tempo de Internação de Pacientes para Realocação de Pacientes em Leitos de UTI",
+      "start": 2023,
+      "finish": 2023
+    },
+    {
+      "name": "Arthur Sperhacke Bianchessi",
+      "level": "Undergraduate",
+      "topic": "Bayesian Attention Mechanism - A Framework for Context Length Generalization",
+      "start": 2025,
+      "finish": 2025
+    },
+    {
+      "name": "Bernardo Zamin",
+      "level": "Undergraduate",
+      "topic": "Aplicação de Keypoints em Videos de Linguagem de Sinais (Libras)",
+      "start": 2024,
+      "finish": 2024
+    },
+    {
+      "name": "Vitor Lamas Esposito",
+      "level": "Undergraduate",
+      "topic": "Vision Language Models aplicados às Geociências",
+      "start": 2024,
+      "finish": 2024
+    },
+    {
+      "name": "Luiza Dal Mas Pasini",
+      "level": "Undergraduate",
+      "topic": "Vision Language Models aplicados às Geociências",
+      "start": 2024,
+      "finish": 2024
+    }
   ]
 }
