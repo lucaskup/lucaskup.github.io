@@ -185,12 +185,20 @@
       "Undergraduate":m => "Undergraduate Researcher"
     };
 
+    function personLinks(m) {
+      const links = [];
+      if (m.github)  links.push(`<a href="${m.github}"  target="_blank" rel="noopener">GitHub</a>`);
+      if (m.website) links.push(`<a href="${m.website}" target="_blank" rel="noopener">Profile</a>`);
+      return links.length ? `<p class="person-links">${links.join(' · ')}</p>` : '';
+    }
+
     function personCard(m, level) {
       const topic = m.topic && m.topic !== 'A definir' ? `<p class="person-topic">${m.topic}</p>` : '';
       return `<div class="person-card">
         <p class="person-name">${m.name}</p>
         <p class="person-degree">${degreeLabel[level](m)}</p>
         ${topic}
+        ${personLinks(m)}
         <p class="person-year">Since ${m.start}</p>
       </div>`;
     }
@@ -201,6 +209,7 @@
         <p class="person-name">${m.name}</p>
         <p class="person-degree">${m.level} — Completed${coLabel}</p>
         <p class="person-topic">${m.topic}</p>
+        ${personLinks(m)}
         <p class="person-year">${m.start} – ${m.finish}</p>
       </div>`;
     }

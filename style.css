@@ -300,6 +300,11 @@ section + section { border-top: 1px solid var(--line); }
   color: var(--comment);
 }
 
+.person-links {
+  font-size: .78rem;
+  margin-top: .35rem;
+}
+
 .person-year {
   font-size: .75rem;
   color: var(--green);
