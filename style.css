@@ -1,4 +1,4 @@
-/* ── Dracula Palette ─────────────────────────────────────── */
+/* ── Dracula Palette (default / dark) ────────────────────── */
 :root {
   --bg:        #282a36;
   --surface:   #21222c;
@@ -14,6 +14,29 @@
   --red:       #ff5555;
   --yellow:    #f1fa8c;
 }
+
+/* ── Light Palette ───────────────────────────────────────── */
+:root[data-theme="light"] {
+  --bg:        #fafafa;
+  --surface:   #ffffff;
+  --card:      #ffffff;
+  --line:      #e2e4e9;
+  --fg:        #1f2330;
+  --comment:   #6b7280;
+  --cyan:      #0e7490;
+  --green:     #15803d;
+  --orange:    #c2410c;
+  --pink:      #be185d;
+  --purple:    #6d28d9;
+  --red:       #b91c1c;
+  --yellow:    #a16207;
+}
+
+:root[data-theme="light"] .badge-conference { background: rgba(194,65,12,.10); }
+:root[data-theme="light"] .badge-journal    { background: rgba(109,40,217,.10); }
+:root[data-theme="light"] .badge-workshop   { background: rgba(14,116,144,.10); }
+:root[data-theme="light"] .level-grad       { background: rgba(109,40,217,.10); }
+:root[data-theme="light"] .level-under      { background: rgba(21,128,61,.10); }
 
 /* ── Reset & Base ────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -68,6 +91,27 @@ nav {
 }
 
 .nav-links a:hover { color: var(--cyan); }
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--fg);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: .95rem;
+  line-height: 1;
+  transition: border-color .2s, transform .2s, background .2s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--cyan);
+  transform: rotate(15deg);
+}
 
 /* ── Layout ──────────────────────────────────────────────── */
 .container {
