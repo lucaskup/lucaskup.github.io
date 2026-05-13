@@ -15,19 +15,24 @@
   <!-- ── Navigation ── -->
   <nav>
     <span class="nav-brand">Lucas Kupssinskü</span>
-    <ul class="nav-links">
+    <ul id="nav-links" class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#advisees">Advisees</a></li>
       <li><a href="#alumni">Alumni</a></li>
       <li><a href="#lectures">Lectures</a></li>
-      <li>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light mode" title="Toggle light mode">
-          <span class="theme-icon">🌙</span>
-        </button>
-      </li>
     </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light mode" title="Toggle light mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
   </nav>
 
   <!-- ── About ── -->
@@ -305,6 +310,26 @@
         const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
         apply(next);
         localStorage.setItem('theme', next);
+      });
+    })();
+
+    (function () {
+      const toggle = document.getElementById('nav-toggle');
+      const links  = document.getElementById('nav-links');
+      if (!toggle || !links) return;
+
+      function setOpen(open) {
+        links.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+
+      toggle.addEventListener('click', () => {
+        setOpen(!links.classList.contains('open'));
+      });
+
+      links.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') setOpen(false);
       });
     })();
 

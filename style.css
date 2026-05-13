@@ -41,6 +41,8 @@
 /* ── Reset & Base ────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+html, body { overflow-x: hidden; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -81,6 +83,8 @@ nav {
   display: flex;
   gap: 1.6rem;
   list-style: none;
+  margin-left: auto;
+  margin-right: 1rem;
 }
 
 .nav-links a {
@@ -111,6 +115,49 @@ nav {
 .theme-toggle:hover {
   border-color: var(--cyan);
   transform: rotate(15deg);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color .2s;
+}
+
+.nav-toggle:hover { border-color: var(--cyan); }
+
+.nav-toggle-bar {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: var(--fg);
+  border-radius: 1px;
+  transition: transform .2s, opacity .2s;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* ── Layout ──────────────────────────────────────────────── */
@@ -429,9 +476,35 @@ footer {
 footer span { color: var(--purple); }
 
 /* ── Responsive ──────────────────────────────────────────── */
-@media (max-width: 620px) {
+@media (max-width: 720px) {
   .hero { grid-template-columns: 1fr; }
   .avatar { width: 100px; height: 100px; }
-  .nav-links { gap: 1rem; }
-  .nav-brand { display: none; }
+
+  nav { padding: 0 1rem; flex-wrap: wrap; }
+
+  .nav-toggle { display: inline-flex; }
+
+  .nav-links {
+    order: 3;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s ease;
+    border-top: 1px solid var(--line);
+    margin: 0 -1rem;
+    background: var(--surface);
+  }
+
+  .nav-links.open { max-height: 70vh; }
+
+  .nav-links li { width: 100%; }
+
+  .nav-links a {
+    display: block;
+    padding: .9rem 1rem;
+    border-bottom: 1px solid var(--line);
+    font-size: 1rem;
+  }
 }
