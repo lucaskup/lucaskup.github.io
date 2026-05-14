@@ -1,5 +1,23 @@
 [
   {
+    "title": "Inference-Time Machine Unlearning via Gated Activation Redirection",
+    "url": "https://arxiv.org/abs/2605.12765",
+    "authors": ["Vinícius Conte Turani", "Otávio Parraga", "João Vitor Boer Abitante", "Kristen K. Arguello", "Joana Pasquali", "Ramiro N. Barros", "Flavio du Pin Calmon", "Christian Mattjie", "Rodrigo C. Barros", "*Lucas S. Kupssinskü"],
+    "venue": "arXiv preprint arXiv:2605.12765",
+    "year": 2026,
+    "type": "preprint",
+    "featured": true
+  },
+  {
+    "title": "Low-Rank Adapters Initialization via Gradient Surgery for Continual Learning",
+    "url": "https://arxiv.org/abs/2605.12752",
+    "authors": ["Joana Pasquali", "Ramiro N. Barros", "Arthur S. Bianchessi", "Vinícius Conte Turani", "João Vitor Boer Abitante", "Rafaela Cappelari Ravazio", "Christian Mattjie", "Otávio Parraga", "*Lucas S. Kupssinskü", "Rodrigo C. Barros"],
+    "venue": "arXiv preprint arXiv:2605.12752",
+    "year": 2026,
+    "type": "preprint",
+    "featured": true
+  },
+  {
     "title": "Fairness in deep learning: A survey on vision and language research",
     "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:dhFuZR0502QC",
     "authors": ["Otavio Parraga", "Martin D. More", "Christian M. Oliveira", "Nathan S. Gavenski", "*Lucas S. Kupssinskü", "Adilson Medronha", "Luis V. Moura", "Gabriel S. Simões", "Rodrigo C. Barros"],

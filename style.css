@@ -35,6 +35,7 @@
 :root[data-theme="light"] .badge-conference { background: rgba(194,65,12,.10); }
 :root[data-theme="light"] .badge-journal    { background: rgba(109,40,217,.10); }
 :root[data-theme="light"] .badge-workshop   { background: rgba(14,116,144,.10); }
+:root[data-theme="light"] .badge-preprint   { background: rgba(190,24,93,.10); }
 :root[data-theme="light"] .level-grad       { background: rgba(109,40,217,.10); }
 :root[data-theme="light"] .level-under      { background: rgba(21,128,61,.10); }
 
@@ -354,6 +355,7 @@ section + section { border-top: 1px solid var(--line); }
 .badge-conference { background: rgba(255,184,108,.15); color: var(--orange); }
 .badge-journal    { background: rgba(189,147,249,.15); color: var(--purple); }
 .badge-workshop   { background: rgba(139,233,253,.15); color: var(--cyan); }
+.badge-preprint   { background: rgba(255,121,198,.15); color: var(--pink); }
 
 /* ── People (Advisees / Alumni) ──────────────────────────── */
 .people-grid {
