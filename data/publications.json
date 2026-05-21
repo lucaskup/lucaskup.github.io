@@ -6,7 +6,8 @@
     "venue": "arXiv preprint arXiv:2605.12765",
     "year": 2026,
     "type": "preprint",
-    "featured": true
+    "featured": true,
+    "project": "low-resource-ml"
   },
   {
     "title": "Low-Rank Adapters Initialization via Gradient Surgery for Continual Learning",
@@ -15,7 +16,8 @@
     "venue": "arXiv preprint arXiv:2605.12752",
     "year": 2026,
     "type": "preprint",
-    "featured": true
+    "featured": true,
+    "project": "low-resource-ml"
   },
   {
     "title": "Fairness in deep learning: A survey on vision and language research",
@@ -28,12 +30,13 @@
   },
   {
     "title": "Bayesian Attention Mechanism: A Probabilistic Framework for Positional Encoding and Context Length Extrapolation",
-    "url": "https://scholar.google.com/citations?view_op=view_citation&hl=pt-BR&user=Uona1HYAAAAJ&citation_for_view=Uona1HYAAAAJ:k_IJM867U9cC",
+    "url": "https://openreview.net/forum?id=dXJB9O8fLd",
     "authors": ["Arthur S. Bianchessi", "Yasmin C. Aguirre", "Rodrigo C. Barros", "*Lucas S. Kupssinskü"],
     "venue": "International Conference on Learning Representations (ICLR)",
     "year": 2026,
     "type": "conference",
-    "featured": true
+    "featured": true,
+    "project": "low-resource-ml"
   },
   {
     "title": "A Framework for Benchmarking Fairness-Utility Trade-offs in Text-to-Image Models via Pareto Frontiers",

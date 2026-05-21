@@ -477,6 +477,213 @@ footer {
 
 footer span { color: var(--purple); }
 
+/* ── Language toggle (EN/PT) ─────────────────────────────── */
+[data-lang="en"] .lang-pt { display: none; }
+[data-lang="pt"] .lang-en { display: none; }
+/* Default before JS sets data-lang: show English, hide Portuguese. */
+html:not([data-lang]) .lang-pt { display: none; }
+
+.lang-toggle {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--fg);
+  height: 32px;
+  min-width: 32px;
+  padding: 0 .55rem;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  line-height: 1;
+  transition: border-color .2s, color .2s;
+}
+
+.lang-toggle:hover { border-color: var(--cyan); color: var(--cyan); }
+
+/* ── Projects: listing cards ─────────────────────────────── */
+.project-list { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--purple);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  transition: border-color .2s, transform .2s;
+}
+
+.project-card:hover {
+  border-left-color: var(--cyan);
+  transform: translateX(3px);
+}
+
+.project-card h3 {
+  font-size: 1.05rem;
+  color: var(--fg);
+  margin-bottom: .3rem;
+}
+
+.project-card .project-funder {
+  font-size: .8rem;
+  color: var(--orange);
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.project-card .project-blurb {
+  font-size: .9rem;
+  color: var(--comment);
+  margin-bottom: .8rem;
+}
+
+.project-link {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+.project-link:hover { color: var(--purple); }
+
+/* ── Project detail page ─────────────────────────────────── */
+.project-hero h1 {
+  font-size: 2rem;
+  color: var(--fg);
+  margin-bottom: .4rem;
+}
+
+.project-hero .project-subtitle {
+  color: var(--orange);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .4px;
+}
+
+.project-body {
+  font-size: .95rem;
+  color: var(--fg);
+  max-width: 760px;
+  margin-top: 1.4rem;
+}
+
+.project-body p { margin-bottom: 1rem; }
+
+/* Funder logo plate — fixed light background so the dark PNG
+   stays visible in both dark and light themes. */
+.funder { margin-top: 1.6rem; }
+
+.funder-label {
+  font-size: .8rem;
+  color: var(--comment);
+  margin-bottom: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+}
+
+.funder-logo {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.4rem 1.8rem;
+  display: inline-flex;
+  max-width: 100%;
+}
+
+.funder-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Research axes */
+.axes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.axis-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.1rem;
+  transition: border-color .2s;
+}
+
+.axis-card:hover { border-color: var(--purple); }
+
+.axis-card .axis-name {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: .35rem;
+}
+
+.axis-card .axis-desc {
+  font-size: .82rem;
+  color: var(--comment);
+}
+
+/* Metadata list */
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.meta-item .meta-key {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--comment);
+  margin-bottom: .2rem;
+}
+
+.meta-item .meta-val {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.placeholder-note {
+  font-size: .88rem;
+  color: var(--comment);
+  font-style: italic;
+}
+
+/* Team (grouped by level) */
+.team-group { margin-bottom: 1.8rem; }
+.team-group:last-child { margin-bottom: 0; }
+
+.team-level {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--orange);
+  margin-bottom: .8rem;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: .6rem;
+}
+
+.member-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: .6rem .9rem;
+  font-size: .88rem;
+  color: var(--fg);
+  transition: border-color .2s;
+}
+
+.member-card:hover { border-color: var(--purple); }
+
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 720px) {
   .hero { grid-template-columns: 1fr; }

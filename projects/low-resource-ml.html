@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Low Resource ML — low computational cost machine learning for LLMs, funded by Kunumi in partnership with PUCRS." />
+  <title>Low Resource ML · Lucas Silveira Kupssinskü</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <a class="nav-brand" href="../index.html">Lucas Kupssinskü</a>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="../index.html">
+        <span class="lang lang-en">Home</span>
+        <span class="lang lang-pt">Início</span>
+      </a></li>
+      <li><a href="../index.html#research">
+        <span class="lang lang-en">Research</span>
+        <span class="lang lang-pt">Pesquisa</span>
+      </a></li>
+      <li><a href="../index.html#projects">
+        <span class="lang lang-en">Projects</span>
+        <span class="lang lang-pt">Projetos</span>
+      </a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Mudar para português" title="Mudar para português">
+        <span class="lang-label">PT</span>
+      </button>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light mode" title="Toggle light mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Hero + Description ── -->
+  <section id="overview">
+    <div class="container">
+      <div class="project-hero">
+        <h1>Low Resource ML</h1>
+        <p class="project-subtitle">
+          <span class="lang lang-en">Funded by Kunumi · PUCRS</span>
+          <span class="lang lang-pt">Financiado pela Kunumi · PUCRS</span>
+        </p>
+      </div>
+
+      <!-- Funder logo (light plate keeps the dark logo visible in both themes) -->
+      <div class="funder">
+        <p class="funder-label">
+          <span class="lang lang-en">Funded by</span>
+          <span class="lang lang-pt">Financiamento</span>
+        </p>
+        <div class="funder-logo">
+          <img src="../img/kunuminst.png" alt="Kunumi Institute (kunuminst) and PUCRS" />
+        </div>
+      </div>
+
+      <div class="project-body">
+        <div class="lang lang-en">
+          <p>
+            The project aims to investigate and develop new machine learning techniques with low
+            computational cost applied to Large Language Models (LLMs). It focuses on three main
+            axes: inference-time model editing (model editing/steering), machine unlearning, and
+            context window extrapolation. The research seeks to create efficient methods to modify
+            or update already-trained LLMs, allowing information to be corrected, new knowledge to
+            be incorporated, or specific content to be removed without the need for extensive or
+            expensive retraining.
+          </p>
+          <p>
+            In parallel, the project proposes selective unlearning mechanisms, enabling the
+            controlled and traceable removal of unwanted data from the model, contributing to
+            questions of privacy, security, and model governance. Finally, it explores context
+            window extrapolation, an approach that aims to let LLMs trained on short contexts
+            operate effectively over much longer contexts, expanding their capabilities without
+            proportionally increasing the cost of training.
+          </p>
+          <p>
+            Together, these research lines aim to make experimentation with LLMs more accessible,
+            sustainable, and adaptable, promoting theoretical and practical advances in machine
+            learning under resource constraints.
+          </p>
+        </div>
+        <div class="lang lang-pt">
+          <p>
+            O projeto tem como objetivo investigar e desenvolver novas técnicas de aprendizado de
+            máquina de baixo custo computacional aplicadas a Modelos de Linguagem de Grande Escala
+            (LLMs). O foco está em três eixos principais: edição de modelos em tempo de inferência
+            (model editing/steering), desaprendizado de máquina (machine unlearning) e extrapolação
+            de janelas de contexto. A pesquisa busca criar métodos eficientes para modificar ou
+            atualizar LLMs já treinados, permitindo corrigir informações, incorporar novos
+            conhecimentos ou remover conteúdos específicos sem necessidade de retreinamentos
+            extensos ou caros.
+          </p>
+          <p>
+            Em paralelo, o projeto propõe mecanismos de desaprendizado seletivo, viabilizando a
+            remoção de dados indesejados do modelo de forma controlada e rastreável, contribuindo
+            para questões de privacidade, segurança e governança de modelos. Por fim, será
+            explorada a extrapolação de janelas de contexto, uma abordagem que visa permitir que
+            LLMs treinados com contextos curtos operem de maneira eficaz em contextos muito mais
+            extensos, ampliando suas capacidades sem aumentar proporcionalmente o custo de
+            treinamento.
+          </p>
+          <p>
+            Em conjunto, essas linhas de pesquisa buscam tornar a experimentação com LLMs mais
+            acessível, sustentável e adaptável, promovendo avanços teóricos e práticos na área de
+            aprendizado de máquina sob restrições de recursos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Research Axes ── -->
+  <section id="axes">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Research Axes</span>
+        <span class="lang lang-pt">Eixos de Pesquisa</span>
+      </h2>
+      <div class="axes-grid">
+
+        <div class="axis-card">
+          <p class="axis-name">
+            <span class="lang lang-en">Inference-time Model Editing</span>
+            <span class="lang lang-pt">Edição de Modelos em Tempo de Inferência</span>
+          </p>
+          <p class="axis-desc">
+            <span class="lang lang-en">Model editing/steering: correcting information and incorporating new knowledge in trained LLMs without expensive retraining.</span>
+            <span class="lang lang-pt">Model editing/steering: corrigir informações e incorporar novos conhecimentos em LLMs já treinados sem retreinamentos caros.</span>
+          </p>
+        </div>
+
+        <div class="axis-card">
+          <p class="axis-name">
+            <span class="lang lang-en">Machine Unlearning</span>
+            <span class="lang lang-pt">Desaprendizado de Máquina</span>
+          </p>
+          <p class="axis-desc">
+            <span class="lang lang-en">Selective, controlled, and traceable removal of unwanted data, supporting privacy, security, and model governance.</span>
+            <span class="lang lang-pt">Remoção seletiva, controlada e rastreável de dados indesejados, apoiando privacidade, segurança e governança de modelos.</span>
+          </p>
+        </div>
+
+        <div class="axis-card">
+          <p class="axis-name">
+            <span class="lang lang-en">Context Window Extrapolation</span>
+            <span class="lang lang-pt">Extrapolação de Janelas de Contexto</span>
+          </p>
+          <p class="axis-desc">
+            <span class="lang lang-en">Letting LLMs trained on short contexts operate effectively over much longer ones, without proportionally raising training cost.</span>
+            <span class="lang lang-pt">Permitir que LLMs treinados com contextos curtos operem de forma eficaz em contextos muito mais extensos, sem aumentar proporcionalmente o custo de treinamento.</span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Project details ── -->
+  <section id="details">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Project Details</span>
+        <span class="lang lang-pt">Detalhes do Projeto</span>
+      </h2>
+      <div class="project-meta">
+        <div class="meta-item">
+          <p class="meta-key">
+            <span class="lang lang-en">Funder</span>
+            <span class="lang lang-pt">Financiador</span>
+          </p>
+          <p class="meta-val">Kunumi</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-key">
+            <span class="lang lang-en">Institution</span>
+            <span class="lang lang-pt">Instituição</span>
+          </p>
+          <p class="meta-val">PUCRS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Team ── -->
+  <section id="team">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Team</span>
+        <span class="lang lang-pt">Equipe</span>
+      </h2>
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Coordinator</span>
+          <span class="lang lang-pt">Coordenador</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Lucas S. Kupssinskü</div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Professor / Researcher</span>
+          <span class="lang lang-pt">Professor / Pesquisador</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Rodrigo C. Barros</div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Postdoctoral Researcher</span>
+          <span class="lang lang-pt">Pós-Doutorado</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Christian Mattjie</div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Ph.D. Students</span>
+          <span class="lang lang-pt">Doutorado</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Joana Meneguzzo Pasquali</div>
+          <div class="member-card">Marcelo M. Delucis</div>
+          <div class="member-card">Otávio Parraga</div>
+          <div class="member-card">Rafaela C. Ravazio</div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Master's Students</span>
+          <span class="lang lang-pt">Mestrado</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Arthur Merode Germano</div>
+          <div class="member-card">Arthur S. Bianchessi</div>
+          <div class="member-card">Arthur Sudbrack Ibarra</div>
+          <div class="member-card">Eduardo Enes Traunig</div>
+          <div class="member-card">Eduardo Villarinho Curia</div>
+          <div class="member-card">Giuliano Barbosa</div>
+          <div class="member-card">João Vitor Boer Abitante</div>
+          <div class="member-card">Luan da Silva Nunes</div>
+          <div class="member-card">Lucas M. Fraga</div>
+          <div class="member-card">Pedro P. Wagner</div>
+          <div class="member-card">Raíssa Xavier Contassot</div>
+          <div class="member-card">Ramiro N. Barros</div>
+          <div class="member-card">Vinicius Conte Turani</div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Undergraduate Researchers</span>
+          <span class="lang lang-pt">Graduação</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Augusto Ochoa Ughini</div>
+          <div class="member-card">Diogo Luiz Zago</div>
+          <div class="member-card">João Pedro Druschel Martins</div>
+          <div class="member-card">Pedro T. Barcelos</div>
+          <div class="member-card">Yasmin C. Aguirre</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related Publications ── -->
+  <section id="related-publications">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Related Publications</span>
+        <span class="lang lang-pt">Publicações Relacionadas</span>
+      </h2>
+      <div id="related-pubs"></div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, Brazil</p>
+  </footer>
+
+  <script src="../js/toggles.js"></script>
+  <script>
+    document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+    // Related publications: pulled from the shared publications data, filtered by project tag.
+    (function () {
+      const container = document.getElementById('related-pubs');
+      if (!container) return;
+
+      const badgeLabel = { journal: "Journal", conference: "Conference", workshop: "Workshop", preprint: "Preprint" };
+      const typeOrder  = { conference: 0, journal: 1, workshop: 2, preprint: 3 };
+
+      function pubCard(p) {
+        const authors = p.authors
+          .map(a => a.startsWith('*') ? `<strong>${a.slice(1)}</strong>` : a)
+          .join(', ');
+        return `<div class="pub-card">
+          <p class="pub-title"><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></p>
+          <p class="pub-authors">${authors}</p>
+          <div class="pub-meta">
+            <span class="pub-venue">${p.venue}</span>
+            <span class="pub-year">${p.year}</span>
+            <span class="badge badge-${p.type}">${badgeLabel[p.type] || p.type}</span>
+          </div>
+        </div>`;
+      }
+
+      fetch('../data/publications.json')
+        .then(r => r.json())
+        .then(data => {
+          const pubs = data
+            .filter(p => p.project === 'low-resource-ml')
+            .sort((a, b) => (typeOrder[a.type] ?? 9) - (typeOrder[b.type] ?? 9) || b.year - a.year);
+
+          if (!pubs.length) {
+            container.innerHTML =
+              '<p class="placeholder-note">' +
+              '<span class="lang lang-en">Related publications to be added.</span>' +
+              '<span class="lang lang-pt">Publicações relacionadas em breve.</span></p>';
+            return;
+          }
+          container.innerHTML = `<div class="pub-list">${pubs.map(pubCard).join('')}</div>`;
+        })
+        .catch(() => {
+          container.innerHTML =
+            '<p class="placeholder-note">' +
+            '<span class="lang lang-en">Could not load related publications.</span>' +
+            '<span class="lang lang-pt">Não foi possível carregar as publicações relacionadas.</span></p>';
+        });
+    })();
+  </script>
+</body>
+</html>

@@ -16,14 +16,18 @@
   <nav>
     <span class="nav-brand">Lucas Kupssinskü</span>
     <ul id="nav-links" class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#advisees">Advisees</a></li>
-      <li><a href="#alumni">Alumni</a></li>
-      <li><a href="#lectures">Lectures</a></li>
+      <li><a href="#about"><span class="lang lang-en">About</span><span class="lang lang-pt">Sobre</span></a></li>
+      <li><a href="#research"><span class="lang lang-en">Research</span><span class="lang lang-pt">Pesquisa</span></a></li>
+      <li><a href="#projects"><span class="lang lang-en">Projects</span><span class="lang lang-pt">Projetos</span></a></li>
+      <li><a href="#publications"><span class="lang lang-en">Publications</span><span class="lang lang-pt">Publicações</span></a></li>
+      <li><a href="#advisees"><span class="lang lang-en">Advisees</span><span class="lang lang-pt">Orientandos</span></a></li>
+      <li><a href="#alumni"><span class="lang lang-en">Alumni</span><span class="lang lang-pt">Egressos</span></a></li>
+      <li><a href="#lectures"><span class="lang lang-en">Lectures</span><span class="lang lang-pt">Disciplinas</span></a></li>
     </ul>
     <div class="nav-actions">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Mudar para português" title="Mudar para português">
+        <span class="lang-label">PT</span>
+      </button>
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light mode" title="Toggle light mode">
         <span class="theme-icon">🌙</span>
       </button>
@@ -44,17 +48,31 @@
 
         <div class="hero-info">
           <h1>Lucas Silveira <span>Kupssinskü</span></h1>
-          <p class="hero-role">Associate Professor · Deep Learning Researcher</p>
+          <p class="hero-role">
+            <span class="lang lang-en">Associate Professor · Deep Learning Researcher</span>
+            <span class="lang lang-pt">Professor Adjunto · Pesquisador em Aprendizado Profundo</span>
+          </p>
           <p class="hero-institution">
-            School of Technology · Pontifical Catholic University of Rio Grande do Sul (PUCRS) · Porto Alegre, Brazil
+            <span class="lang lang-en">School of Technology · Pontifical Catholic University of Rio Grande do Sul (PUCRS) · Porto Alegre, Brazil</span>
+            <span class="lang lang-pt">Escola Politécnica · Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS) · Porto Alegre, Brasil</span>
           </p>
           <p class="hero-bio">
-            I am an Associate Professor and researcher at the Graduate Program in Computer Science at PUCRS,
-            where I co-lead the Machine Learning Theory and Applications Research Group (MALTA).
-            I hold a Ph.D. in Applied Computing from Unisinos. My research focuses on machine learning
-            and deep learning, with applications in fairness, health, generative models, LLMs, 
-            and Machine Unlearning, supported by institutions such as Petrobras, Motorola,
-            Michael J. Fox Foundation, and Kunumi.
+            <span class="lang lang-en">
+              I am an Associate Professor and researcher at the Graduate Program in Computer Science at PUCRS,
+              where I co-lead the Machine Learning Theory and Applications Research Group (MALTA).
+              I hold a Ph.D. in Applied Computing from Unisinos. My research focuses on machine learning
+              and deep learning, with applications in fairness, health, generative models, LLMs,
+              and Machine Unlearning, supported by institutions such as Petrobras, Motorola,
+              Michael J. Fox Foundation, and Kunumi.
+            </span>
+            <span class="lang lang-pt">
+              Sou Professor Adjunto e pesquisador no Programa de Pós-Graduação em Ciência da Computação da PUCRS,
+              onde coordeno, em conjunto, o Grupo de Pesquisa em Teoria e Aplicações de Aprendizado de Máquina (MALTA).
+              Tenho doutorado em Computação Aplicada pela Unisinos. Minha pesquisa concentra-se em aprendizado de máquina
+              e aprendizado profundo, com aplicações em fairness, saúde, modelos geradores, LLMs
+              e Machine Unlearning, com apoio de instituições como Petrobras, Motorola,
+              Michael J. Fox Foundation e Kunumi.
+            </span>
           </p>
           <div class="profile-links">
             <a class="btn btn-scholar"
@@ -65,16 +83,16 @@
             <a class="btn btn-pucrs"
                href="https://www.pucrs.br/pesquisadores/lucas-silveira-kupssinsku/"
                target="_blank" rel="noopener">
-              🎓 PUCRS Profile
+              🎓 <span class="lang lang-en">PUCRS Profile</span><span class="lang lang-pt">Perfil PUCRS</span>
             </a>
             <a class="btn btn-lattes"
                href="https://lattes.cnpq.br/7949995756060059"
                target="_blank" rel="noopener">
-              📄 Lattes CV
+              📄 <span class="lang lang-en">Lattes CV</span><span class="lang lang-pt">Currículo Lattes</span>
             </a>
             <a class="btn btn-email"
                href="mailto:lucas.kupssinsku@pucrs.br">
-              ✉️ Email
+              ✉️ <span class="lang lang-en">Email</span><span class="lang lang-pt">E-mail</span>
             </a>
           </div>
         </div>
@@ -85,14 +103,47 @@
   <!-- ── Research Interests ── -->
   <section id="research">
     <div class="container">
-      <h2 class="section-title">Research Interests</h2>
+      <h2 class="section-title">
+        <span class="lang lang-en">Research Interests</span>
+        <span class="lang lang-pt">Interesses de Pesquisa</span>
+      </h2>
       <div class="tags">
-        <span class="tag">Machine Learning</span>
-        <span class="tag">Deep Learning</span>
-        <span class="tag">Computer Vision</span>
-        <span class="tag">Natural Language Processing</span>
-        <span class="tag">Unlearning</span>
-        <span class="tag">Long Context LLMs</span>
+        <span class="tag"><span class="lang lang-en">Machine Learning</span><span class="lang lang-pt">Aprendizado de Máquina</span></span>
+        <span class="tag"><span class="lang lang-en">Deep Learning</span><span class="lang lang-pt">Aprendizado Profundo</span></span>
+        <span class="tag"><span class="lang lang-en">Computer Vision</span><span class="lang lang-pt">Visão Computacional</span></span>
+        <span class="tag"><span class="lang lang-en">Natural Language Processing</span><span class="lang lang-pt">Processamento de Linguagem Natural</span></span>
+        <span class="tag"><span class="lang lang-en">Unlearning</span><span class="lang lang-pt">Desaprendizado de Máquina</span></span>
+        <span class="tag"><span class="lang lang-en">Long Context LLMs</span><span class="lang lang-pt">LLMs de Contexto Longo</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Projects</span>
+        <span class="lang lang-pt">Projetos</span>
+      </h2>
+
+      <div class="project-list">
+
+        <div class="project-card">
+          <h3>Low Resource ML</h3>
+          <p class="project-funder">
+            <span class="lang lang-en">Funded by Kunumi · PUCRS</span>
+            <span class="lang lang-pt">Financiado pela Kunumi · PUCRS</span>
+          </p>
+          <p class="project-blurb">
+            <span class="lang lang-en">Low computational cost machine learning techniques for Large Language Models: inference-time model editing, machine unlearning, and context window extrapolation.</span>
+            <span class="lang lang-pt">Técnicas de aprendizado de máquina de baixo custo computacional para Modelos de Linguagem de Grande Escala: edição de modelos em tempo de inferência, desaprendizado de máquina e extrapolação de janelas de contexto.</span>
+          </p>
+          <a class="project-link" href="projects/low-resource-ml.html">
+            <span class="lang lang-en">View details →</span>
+            <span class="lang lang-pt">Ver detalhes →</span>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -100,10 +151,15 @@
   <!-- ── Selected Publications ── -->
   <section id="publications">
     <div class="container">
-      <h2 class="section-title">Selected Publications</h2>
+      <h2 class="section-title">
+        <span class="lang lang-en">Selected Publications</span>
+        <span class="lang lang-pt">Publicações Selecionadas</span>
+      </h2>
       <p style="color:var(--comment); font-size:.85rem; margin-bottom:1.4rem;">
-        Full list on
-        <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+        <span class="lang lang-en">Full list on
+          <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</span>
+        <span class="lang lang-pt">Lista completa no
+          <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</span>
       </p>
 
       <div id="publications-container"></div>
@@ -113,7 +169,10 @@
   <!-- ── Current Advisees ── -->
   <section id="advisees">
     <div class="container">
-      <h2 class="section-title">Current Advisees</h2>
+      <h2 class="section-title">
+        <span class="lang lang-en">Current Advisees</span>
+        <span class="lang lang-pt">Orientandos Atuais</span>
+      </h2>
       <div id="advisees-container"></div>
     </div>
   </section>
@@ -121,7 +180,10 @@
   <!-- ── Alumni ── -->
   <section id="alumni">
     <div class="container">
-      <h2 class="section-title">Alumni</h2>
+      <h2 class="section-title">
+        <span class="lang lang-en">Alumni</span>
+        <span class="lang lang-pt">Egressos</span>
+      </h2>
       <div id="alumni-container"></div>
     </div>
   </section>
@@ -129,49 +191,52 @@
   <!-- ── Lectures ── -->
   <section id="lectures">
     <div class="container">
-      <h2 class="section-title">Lectures &amp; Courses</h2>
+      <h2 class="section-title">
+        <span class="lang lang-en">Lectures &amp; Courses</span>
+        <span class="lang lang-pt">Disciplinas e Cursos</span>
+      </h2>
       <div class="lecture-list">
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name">Deep Neural Networks</p>
+            <p class="lecture-name"><span class="lang lang-en">Deep Neural Networks</span><span class="lang lang-pt">Redes Neurais Profundas</span></p>
           </div>
-          <span class="lecture-level level-grad">Graduate</span>
+          <span class="lecture-level level-grad"><span class="lang lang-en">Graduate</span><span class="lang lang-pt">Pós-graduação</span></span>
         </div>
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name">Deep Learning I</p>
+            <p class="lecture-name"><span class="lang lang-en">Deep Learning I</span><span class="lang lang-pt">Aprendizado Profundo I</span></p>
           </div>
-          <span class="lecture-level level-under">Undergraduate</span>
+          <span class="lecture-level level-under"><span class="lang lang-en">Undergraduate</span><span class="lang lang-pt">Graduação</span></span>
         </div>
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name">Deep Learning II</p>
+            <p class="lecture-name"><span class="lang lang-en">Deep Learning II</span><span class="lang lang-pt">Aprendizado Profundo II</span></p>
           </div>
-          <span class="lecture-level level-under">Undergraduate</span>
+          <span class="lecture-level level-under"><span class="lang lang-en">Undergraduate</span><span class="lang lang-pt">Graduação</span></span>
         </div>
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name">Machine Learning</p>
+            <p class="lecture-name"><span class="lang lang-en">Machine Learning</span><span class="lang lang-pt">Aprendizado de Máquina</span></p>
           </div>
-          <span class="lecture-level level-under">Undergraduate</span>
+          <span class="lecture-level level-under"><span class="lang lang-en">Undergraduate</span><span class="lang lang-pt">Graduação</span></span>
         </div>
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name">Theory of Computing</p>
+            <p class="lecture-name"><span class="lang lang-en">Theory of Computing</span><span class="lang lang-pt">Teoria da Computação</span></p>
           </div>
-          <span class="lecture-level level-grad">Graduate</span>
+          <span class="lecture-level level-grad"><span class="lang lang-en">Graduate</span><span class="lang lang-pt">Pós-graduação</span></span>
         </div>
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name">Scientific Methodology and Artificial Intelligence Lab</p>
+            <p class="lecture-name"><span class="lang lang-en">Scientific Methodology and Artificial Intelligence Lab</span><span class="lang lang-pt">Metodologia Científica e Laboratório de Inteligência Artificial</span></p>
           </div>
-          <span class="lecture-level level-grad">Graduate</span>
+          <span class="lecture-level level-grad"><span class="lang lang-en">Graduate</span><span class="lang lang-pt">Pós-graduação</span></span>
         </div>
 
       </div>
@@ -180,25 +245,37 @@
 
   <!-- ── Footer ── -->
   <footer>
-    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, Brazil</p>
+    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, <span class="lang lang-en">Brazil</span><span class="lang lang-pt">Brasil</span></p>
     <p style="margin-top:.4rem;">
       <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
-      <a href="https://www.pucrs.br/pesquisadores/lucas-silveira-kupssinsku/" target="_blank" rel="noopener">PUCRS Profile</a> ·
-      <a href="https://lattes.cnpq.br/7949995756060059" target="_blank" rel="noopener">Lattes CV</a>
+      <a href="https://www.pucrs.br/pesquisadores/lucas-silveira-kupssinsku/" target="_blank" rel="noopener"><span class="lang lang-en">PUCRS Profile</span><span class="lang lang-pt">Perfil PUCRS</span></a> ·
+      <a href="https://lattes.cnpq.br/7949995756060059" target="_blank" rel="noopener"><span class="lang lang-en">Lattes CV</span><span class="lang lang-pt">Currículo Lattes</span></a>
     </p>
   </footer>
 
+  <script src="js/toggles.js"></script>
   <script>
+    // Bilingual helper: emits both EN and PT variants; CSS shows the active one.
+    const bil = (en, pt) => `<span class="lang lang-en">${en}</span><span class="lang lang-pt">${pt}</span>`;
+
+    const coadviseeTag = bil(" · Co-advisee", " · Coorientação");
+
     const degreeLabel = {
-      "Ph.D.":        m => "Ph.D. Candidate" + (m.coadvisee ? " · Co-advisee" : ""),
-      "Master's":     m => "M.Sc. Student"   + (m.coadvisee ? " · Co-advisee" : ""),
-      "Undergraduate":m => "Undergraduate Researcher"
+      "Ph.D.":         m => bil("Ph.D. Candidate", "Doutorando(a)")           + (m.coadvisee ? coadviseeTag : ""),
+      "Master's":      m => bil("M.Sc. Student", "Mestrando(a)")              + (m.coadvisee ? coadviseeTag : ""),
+      "Undergraduate": m => bil("Undergraduate Researcher", "Pesquisador(a) de Graduação")
+    };
+
+    const levelLabel = {
+      "Ph.D.":         bil("Ph.D.", "Doutorado"),
+      "Master's":      bil("Master's", "Mestrado"),
+      "Undergraduate": bil("Undergraduate", "Graduação")
     };
 
     function personLinks(m) {
       const links = [];
       if (m.github)  links.push(`<a href="${m.github}"  target="_blank" rel="noopener">GitHub</a>`);
-      if (m.website) links.push(`<a href="${m.website}" target="_blank" rel="noopener">Profile</a>`);
+      if (m.website) links.push(`<a href="${m.website}" target="_blank" rel="noopener">${bil('Profile', 'Perfil')}</a>`);
       return links.length ? `<p class="person-links">${links.join(' · ')}</p>` : '';
     }
 
@@ -209,22 +286,34 @@
         <p class="person-degree">${degreeLabel[level](m)}</p>
         ${topic}
         ${personLinks(m)}
-        <p class="person-year">Since ${m.start}</p>
+        <p class="person-year">${bil('Since', 'Desde')} ${m.start}</p>
       </div>`;
     }
 
     function alumniCard(m) {
-      const coLabel = m.coadvisee ? ' · Co-advisee' : '';
+      const coLabel = m.coadvisee ? coadviseeTag : '';
       return `<div class="person-card">
         <p class="person-name">${m.name}</p>
-        <p class="person-degree">${m.level} — Completed${coLabel}</p>
+        <p class="person-degree">${levelLabel[m.level] || m.level} — ${bil('Completed', 'Concluído')}${coLabel}</p>
         <p class="person-topic">${m.topic}</p>
         ${personLinks(m)}
         <p class="person-year">${m.start} – ${m.finish}</p>
       </div>`;
     }
 
-    const badgeLabel = { journal: "Journal", conference: "Conference", workshop: "Workshop", preprint: "Preprint" };
+    const badgeLabel = {
+      journal:    bil("Journal", "Periódico"),
+      conference: bil("Conference", "Conferência"),
+      workshop:   bil("Workshop", "Workshop"),
+      preprint:   bil("Preprint", "Preprint")
+    };
+
+    const pubTabLabel = {
+      journal:    bil("Journal", "Periódicos"),
+      conference: bil("Conference", "Conferências"),
+      workshop:   bil("Workshop", "Workshops"),
+      preprint:   bil("Preprint", "Preprints")
+    };
 
     function pubCard(p) {
       const authors = p.authors
@@ -236,7 +325,7 @@
         <div class="pub-meta">
           <span class="pub-venue">${p.venue}</span>
           <span class="pub-year">${p.year}</span>
-          <span class="badge badge-${p.type}">${badgeLabel[p.type]}</span>
+          <span class="badge badge-${p.type}">${badgeLabel[p.type] || p.type}</span>
         </div>
       </div>`;
     }
@@ -247,9 +336,9 @@
         const featured = data.filter(p => p.featured === true);
         const types = [...new Set(featured.map(p => p.type))];
         const tabDefs = [
-          { label: 'All', html: featured.map(pubCard).join('') },
+          { label: bil('All', 'Todas'), html: featured.map(pubCard).join('') },
           ...types.map(t => ({
-            label: t.charAt(0).toUpperCase() + t.slice(1),
+            label: pubTabLabel[t] || (t.charAt(0).toUpperCase() + t.slice(1)),
             html: featured.filter(p => p.type === t).map(pubCard).join('')
           }))
         ];
@@ -257,7 +346,7 @@
       })
       .catch(() => {
         document.getElementById('publications-container').innerHTML =
-          '<p style="color:var(--comment)">Could not load publications.</p>';
+          '<p style="color:var(--comment)">' + bil('Could not load publications.', 'Não foi possível carregar as publicações.') + '</p>';
       });
 
     function buildTabs(container, tabs, innerClass = 'people-grid') {
@@ -268,7 +357,7 @@
       tabs.forEach(({ label, html }, i) => {
         const btn = document.createElement('button');
         btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
-        btn.textContent = label;
+        btn.innerHTML = label;
 
         const panel = document.createElement('div');
         panel.className = 'tab-panel' + (i === 0 ? ' active' : '');
@@ -291,48 +380,6 @@
 
     document.getElementById('copy-year').textContent = new Date().getFullYear();
 
-    (function () {
-      const root = document.documentElement;
-      const btn  = document.getElementById('theme-toggle');
-      const icon = btn.querySelector('.theme-icon');
-      const stored = localStorage.getItem('theme');
-      const initial = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-
-      function apply(theme) {
-        root.setAttribute('data-theme', theme);
-        icon.textContent = theme === 'light' ? '☀️' : '🌙';
-        btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
-      }
-
-      apply(initial);
-
-      btn.addEventListener('click', () => {
-        const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-        apply(next);
-        localStorage.setItem('theme', next);
-      });
-    })();
-
-    (function () {
-      const toggle = document.getElementById('nav-toggle');
-      const links  = document.getElementById('nav-links');
-      if (!toggle || !links) return;
-
-      function setOpen(open) {
-        links.classList.toggle('open', open);
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      }
-
-      toggle.addEventListener('click', () => {
-        setOpen(!links.classList.contains('open'));
-      });
-
-      links.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') setOpen(false);
-      });
-    })();
-
     fetch('data/advisees.json')
       .then(r => r.json())
       .then(data => {
@@ -340,7 +387,7 @@
         buildTabs(
           document.getElementById('advisees-container'),
           data.current.map(group => ({
-            label: group.level,
+            label: levelLabel[group.level] || group.level,
             html:  group.members.map(m => personCard(m, group.level)).join('')
           }))
         );
@@ -350,7 +397,7 @@
         buildTabs(
           document.getElementById('alumni-container'),
           levels.map(lvl => ({
-            label: lvl,
+            label: levelLabel[lvl] || lvl,
             html:  data.alumni.filter(m => m.level === lvl).map(alumniCard).join('')
           }))
         );
@@ -358,7 +405,7 @@
       .catch(() => {
         ['advisees-container', 'alumni-container'].forEach(id => {
           document.getElementById(id).innerHTML =
-            '<p style="color:var(--comment)">Could not load data.</p>';
+            '<p style="color:var(--comment)">' + bil('Could not load data.', 'Não foi possível carregar os dados.') + '</p>';
         });
       });
   </script>
