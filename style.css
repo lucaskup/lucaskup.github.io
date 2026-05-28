@@ -274,6 +274,7 @@ section + section { border-top: 1px solid var(--line); }
 .btn-pucrs    { border-color: var(--green);  color: var(--green); }
 .btn-lattes   { border-color: var(--yellow); color: var(--yellow); }
 .btn-email    { border-color: var(--orange); color: var(--orange); }
+.btn-orcid    { border-color: var(--purple); color: var(--purple); }
 
 .btn:hover {
   background: var(--line);
