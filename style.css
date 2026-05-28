@@ -598,6 +598,18 @@ html:not([data-lang]) .lang-pt { display: none; }
   display: block;
 }
 
+/* Multi-logo plate: align several funder logos in a row at a uniform height */
+.funder-logo--row {
+  gap: 1.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.funder-logo--row img {
+  max-height: 60px;
+  width: auto;
+}
+
 /* Research axes */
 .axes-grid {
   display: grid;

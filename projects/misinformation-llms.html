@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Misinformation Identification with LLMs — automatic detection of health misinformation in Portuguese using LLMs and Retrieval-Augmented Generation (RAG), funded by FAPERGS at PUCRS." />
+  <title>Misinformation Identification with LLMs · Lucas Silveira Kupssinskü</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <a class="nav-brand" href="../index.html">Lucas Kupssinskü</a>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="../index.html">
+        <span class="lang lang-en">Home</span>
+        <span class="lang lang-pt">Início</span>
+      </a></li>
+      <li><a href="../index.html#research">
+        <span class="lang lang-en">Research</span>
+        <span class="lang lang-pt">Pesquisa</span>
+      </a></li>
+      <li><a href="../index.html#projects">
+        <span class="lang lang-en">Projects</span>
+        <span class="lang lang-pt">Projetos</span>
+      </a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Mudar para português" title="Mudar para português">
+        <span class="lang-label">PT</span>
+      </button>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light mode" title="Toggle light mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Hero + Description ── -->
+  <section id="overview">
+    <div class="container">
+      <div class="project-hero">
+        <h1>Misinformation Identification with LLMs</h1>
+        <p class="project-subtitle">
+          <span class="lang lang-en">Funded by FAPERGS · CNPq · PUCRS</span>
+          <span class="lang lang-pt">Financiado pela FAPERGS · CNPq · PUCRS</span>
+        </p>
+      </div>
+
+      <!-- Funder logo (light plate keeps the dark logo visible in both themes) -->
+      <div class="funder">
+        <p class="funder-label">
+          <span class="lang lang-en">Funded by</span>
+          <span class="lang lang-pt">Financiamento</span>
+        </p>
+        <div class="funder-logo funder-logo--row">
+          <img src="../img/fapergs.png" alt="FAPERGS" onerror="this.remove()" />
+          <img src="../img/cnpq.jpg" alt="CNPq" />
+        </div>
+      </div>
+
+      <div class="project-body">
+        <div class="lang lang-en">
+          <p>
+            This project proposes a method for the automatic identification of misinformation,
+            built on a Large Language Model (LLM) fine-tuned for the health domain in the
+            Portuguese language. Misinformation is especially harmful in public health, where it
+            undermines vaccination campaigns, spreads ineffective treatments, and erodes trust in
+            institutions such as Brazil's Unified Health System (SUS). The guiding research
+            question is how to integrate LLMs with Retrieval-Augmented Generation (RAG) to detect
+            and counter scientific misinformation in health.
+          </p>
+          <p>
+            To accomplish this, we develop a new module for sentence-embedding generation combined
+            with the RAG technique. This integration lets the model not only generate responses but
+            also draw on external, trusted sources, reducing the occurrence of hallucinations. By
+            grounding generation in reliable and up-to-date data, the system can flag potentially
+            false or misleading assertions and suggest references that support or refute a claim.
+            The system will be made available through an API for the analysis of external
+            information.
+          </p>
+          <p>
+            Expected outcomes include a new fine-tuning module for sentence embeddings that adapts
+            embedding models by modifying roughly 1% of the model's parameters, an LLM adapted to
+            the health domain in Portuguese released openly on Hugging Face, and a functional RAG
+            system for misinformation reduction, alongside scientific publications and technical
+            reports.
+          </p>
+        </div>
+        <div class="lang lang-pt">
+          <p>
+            Este projeto propõe um método para a identificação automática de desinformação, baseado
+            em um LLM ajustado para o domínio da saúde no idioma português. A desinformação é
+            especialmente danosa na saúde pública, onde compromete campanhas de vacinação, dissemina
+            tratamentos ineficazes e enfraquece a confiança em instituições como o Sistema Único de
+            Saúde (SUS). A pergunta de pesquisa que orienta o projeto é como integrar LLMs a sistemas
+            de Recuperação e Geração de Informações (RAG) para detectar e combater a desinformação
+            científica em saúde.
+          </p>
+          <p>
+            Para isso, desenvolvemos um novo módulo para geração de embeddings de sentença combinado
+            com a técnica de RAG. Essa integração permite que o modelo, além de gerar respostas,
+            utilize fontes externas consideradas confiáveis, reduzindo a ocorrência de alucinações.
+            Ao ancorar a geração em dados confiáveis e atualizados, o sistema consegue sinalizar
+            asserções potencialmente falsas ou enganosas e sugerir referências que corroborem ou
+            refutem uma afirmação. O sistema será disponibilizado por meio de uma API, permitindo a
+            análise de informações externas.
+          </p>
+          <p>
+            Os resultados esperados incluem um novo módulo para fine-tuning de embeddings de sentença
+            que adapta modelos modificando cerca de 1% dos parâmetros, um LLM adaptado ao domínio da
+            saúde em português disponibilizado abertamente na Hugging Face e um sistema de RAG
+            funcional para redução de desinformação, além de publicações científicas e relatórios
+            técnicos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Research Axes ── -->
+  <section id="axes">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Research Axes</span>
+        <span class="lang lang-pt">Eixos de Pesquisa</span>
+      </h2>
+      <div class="axes-grid">
+
+        <div class="axis-card">
+          <p class="axis-name">
+            <span class="lang lang-en">Efficient Sentence-Embedding Fine-tuning</span>
+            <span class="lang lang-pt">Fine-tuning Eficiente de Embeddings de Sentença</span>
+          </p>
+          <p class="axis-desc">
+            <span class="lang lang-en">An attention-based neural module that fine-tunes sentence-embedding models by adjusting only about 1% of trainable parameters, a smaller fraction than LoRA, making large embedding models viable under limited compute.</span>
+            <span class="lang lang-pt">Um módulo neural baseado em atenção que faz fine-tuning de modelos de embeddings de sentença ajustando apenas cerca de 1% dos parâmetros treináveis, fração menor que o LoRA, viabilizando modelos grandes sob recursos computacionais limitados.</span>
+          </p>
+        </div>
+
+        <div class="axis-card">
+          <p class="axis-name">
+            <span class="lang lang-en">Health-Domain LLM in Portuguese</span>
+            <span class="lang lang-pt">LLM de Saúde em Português</span>
+          </p>
+          <p class="axis-desc">
+            <span class="lang lang-en">Fine-tuning and instruction-tuning of an open LLM for health content in Portuguese, so it can interpret medical terminology and evaluate news and social-media posts for fact-dependent assertions.</span>
+            <span class="lang lang-pt">Fine-tuning e instruction-tuning de um LLM aberto para conteúdo de saúde em português, capaz de interpretar terminologia médica e avaliar notícias e postagens em redes sociais quanto a asserções que dependem de fatos.</span>
+          </p>
+        </div>
+
+        <div class="axis-card">
+          <p class="axis-name">
+            <span class="lang lang-en">RAG for Misinformation Detection</span>
+            <span class="lang lang-pt">RAG para Detecção de Desinformação</span>
+          </p>
+          <p class="axis-desc">
+            <span class="lang lang-en">A RAG system, fed by trusted scientific and governmental sources, that analyzes a message, text, or news item, identifies potentially false content, and suggests references to corroborate or refute the claim.</span>
+            <span class="lang lang-pt">Um sistema de RAG, alimentado por fontes científicas e governamentais confiáveis, que analisa uma mensagem, texto ou notícia, identifica conteúdo potencialmente falso e sugere referências para corroborar ou refutar a asserção.</span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Project details ── -->
+  <section id="details">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Project Details</span>
+        <span class="lang lang-pt">Detalhes do Projeto</span>
+      </h2>
+      <div class="project-meta">
+        <div class="meta-item">
+          <p class="meta-key">
+            <span class="lang lang-en">Funder</span>
+            <span class="lang lang-pt">Financiador</span>
+          </p>
+          <p class="meta-val">FAPERGS · CNPq</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-key">
+            <span class="lang lang-en">FAPERGS call</span>
+            <span class="lang lang-pt">Edital FAPERGS</span>
+          </p>
+          <p class="meta-val">
+            <span class="lang lang-en">FAPERGS 10/2024 · ARD/ARC</span>
+            <span class="lang lang-pt">FAPERGS 10/2024 · ARD/ARC</span>
+          </p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-key">
+            <span class="lang lang-en">CNPq call</span>
+            <span class="lang lang-pt">Chamada CNPq</span>
+          </p>
+          <p class="meta-val">
+            <span class="lang lang-en">CNPq/Decit/SECTICS/MS Nº 30/2024</span>
+            <span class="lang lang-pt">CNPq/Decit/SECTICS/MS Nº 30/2024</span>
+          </p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-key">
+            <span class="lang lang-en">Institution</span>
+            <span class="lang lang-pt">Instituição</span>
+          </p>
+          <p class="meta-val">PUCRS</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-key">
+            <span class="lang lang-en">Timeline</span>
+            <span class="lang lang-pt">Período</span>
+          </p>
+          <p class="meta-val">2025 – 2027</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-key">
+            <span class="lang lang-en">Public record</span>
+            <span class="lang lang-pt">Registro público</span>
+          </p>
+          <p class="meta-val">
+            <a href="https://pesquisasaude.saude.gov.br/pesquisaView.xhtml?id=20051" target="_blank" rel="noopener">Pesquisa Saúde · MS</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Team ── -->
+  <section id="team">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Team</span>
+        <span class="lang lang-pt">Equipe</span>
+      </h2>
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Coordinator</span>
+          <span class="lang lang-pt">Coordenador</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Lucas S. Kupssinskü</div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Professor / Researcher</span>
+          <span class="lang lang-pt">Professor / Pesquisador</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Rodrigo C. Barros</div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Postdoctoral Researcher</span>
+          <span class="lang lang-pt">Pós-Doutorado</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Christian Mattjie</div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Ph.D. Students</span>
+          <span class="lang lang-pt">Doutorado</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Marcelo M. Delucis</div>
+          <div class="member-card">Otávio Parraga</div>
+          <div class="member-card">Rafaela Ravazio</div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Master's Students</span>
+          <span class="lang lang-pt">Mestrado</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Jerusa Dalbosco Finatto</div>
+          <div class="member-card">Joana M. Pasquali</div>
+          <div class="member-card">Lucas M. Fraga</div>
+          <div class="member-card">Pedro P. Wagner</div>
+        </div>
+      </div>
+
+      <div class="team-group">
+        <h3 class="team-level">
+          <span class="lang lang-en">Undergraduate Researchers</span>
+          <span class="lang lang-pt">Iniciação Científica</span>
+        </h3>
+        <div class="member-grid">
+          <div class="member-card">Arthur Domingues Fachel Nunes</div>
+          <div class="member-card">Pedro T. Barcelos</div>
+          <div class="member-card">Yasmin C. Aguirre</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Related Publications ── -->
+  <section id="related-publications">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Related Publications</span>
+        <span class="lang lang-pt">Publicações Relacionadas</span>
+      </h2>
+      <div id="related-pubs"></div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, Brazil</p>
+  </footer>
+
+  <script src="../js/toggles.js"></script>
+  <script>
+    document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+    // Related publications: pulled from the shared publications data, filtered by project tag.
+    (function () {
+      const container = document.getElementById('related-pubs');
+      if (!container) return;
+
+      const badgeLabel = { journal: "Journal", conference: "Conference", workshop: "Workshop", preprint: "Preprint" };
+      const typeOrder  = { conference: 0, journal: 1, workshop: 2, preprint: 3 };
+
+      function pubCard(p) {
+        const authors = p.authors
+          .map(a => a.startsWith('*') ? `<strong>${a.slice(1)}</strong>` : a)
+          .join(', ');
+        return `<div class="pub-card">
+          <p class="pub-title"><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></p>
+          <p class="pub-authors">${authors}</p>
+          <div class="pub-meta">
+            <span class="pub-venue">${p.venue}</span>
+            <span class="pub-year">${p.year}</span>
+            <span class="badge badge-${p.type}">${badgeLabel[p.type] || p.type}</span>
+          </div>
+        </div>`;
+      }
+
+      fetch('../data/publications.json')
+        .then(r => r.json())
+        .then(data => {
+          const pubs = data
+            .filter(p => p.project === 'misinformation-llms')
+            .sort((a, b) => (typeOrder[a.type] ?? 9) - (typeOrder[b.type] ?? 9) || b.year - a.year);
+
+          if (!pubs.length) {
+            container.innerHTML =
+              '<p class="placeholder-note">' +
+              '<span class="lang lang-en">Related publications to be added.</span>' +
+              '<span class="lang lang-pt">Publicações relacionadas em breve.</span></p>';
+            return;
+          }
+          container.innerHTML = `<div class="pub-list">${pubs.map(pubCard).join('')}</div>`;
+        })
+        .catch(() => {
+          container.innerHTML =
+            '<p class="placeholder-note">' +
+            '<span class="lang lang-en">Could not load related publications.</span>' +
+            '<span class="lang lang-pt">Não foi possível carregar as publicações relacionadas.</span></p>';
+        });
+    })();
+  </script>
+</body>
+</html>

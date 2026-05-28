@@ -1,5 +1,22 @@
 [
   {
+    "title": "Automated Fact-Checking in Brazilian Portuguese: Resources and Baselines",
+    "url": "https://sol.sbc.org.br/index.php/stil/article/view/37820",
+    "authors": [
+      "Marcelo M. Delucis",
+      "Lucas Fraga",
+      "Otávio Parraga",
+      "Christian Mattjie",
+      "Rafaela Ravazio",
+      "Rodrigo C. Barros",
+      "*Lucas S. Kupssinskü"
+    ],
+    "venue": "Simpósio Brasileiro de Tecnologia da Informação e da Linguagem Humana (STIL), SBC, pp. 137–148",
+    "year": 2025,
+    "type": "conference",
+    "project": "misinformation-llms"
+  },
+  {
     "title": "Inference-Time Machine Unlearning via Gated Activation Redirection",
     "url": "https://arxiv.org/abs/2605.12765",
     "authors": ["Vinícius Conte Turani", "Otávio Parraga", "João Vitor Boer Abitante", "Kristen K. Arguello", "Joana Pasquali", "Ramiro N. Barros", "Flavio du Pin Calmon", "Christian Mattjie", "Rodrigo C. Barros", "*Lucas S. Kupssinskü"],
