@@ -4,9 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Lucas Silveira Kupssinskü — Associate Professor at PUCRS, researcher in Machine Learning, Deep Learning, Fairness, and LLMs." />
+  <link rel="canonical" href="https://lucaskup.github.io/" />
   <meta property="og:title" content="Lucas Silveira Kupssinskü" />
   <meta property="og:description" content="Associate Professor at PUCRS. Research in ML, Deep Learning, Fairness, and LLMs." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lucaskup.github.io/" />
+  <meta property="og:image" content="https://lucaskup.github.io/img/perfilpucrs.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Lucas Silveira Kupssinskü" />
+  <meta name="twitter:description" content="Associate Professor at PUCRS. Research in ML, Deep Learning, Fairness, and LLMs." />
+  <meta name="twitter:image" content="https://lucaskup.github.io/img/perfilpucrs.jpg" />
   <title>Lucas Silveira Kupssinskü</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -131,41 +138,7 @@
         <span class="lang lang-pt">Projetos</span>
       </h2>
 
-      <div class="project-list">
-
-        <div class="project-card">
-          <h3>Low Resource ML</h3>
-          <p class="project-funder">
-            <span class="lang lang-en">Funded by Kunumi · PUCRS</span>
-            <span class="lang lang-pt">Financiado pela Kunumi · PUCRS</span>
-          </p>
-          <p class="project-blurb">
-            <span class="lang lang-en">Low computational cost machine learning techniques for Large Language Models: inference-time model editing, machine unlearning, and context window extrapolation.</span>
-            <span class="lang lang-pt">Técnicas de aprendizado de máquina de baixo custo computacional para Modelos de Linguagem de Grande Escala: edição de modelos em tempo de inferência, desaprendizado de máquina e extrapolação de janelas de contexto.</span>
-          </p>
-          <a class="project-link" href="projects/low-resource-ml.html">
-            <span class="lang lang-en">View details →</span>
-            <span class="lang lang-pt">Ver detalhes →</span>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <h3>Misinformation Identification with LLMs</h3>
-          <p class="project-funder">
-            <span class="lang lang-en">Funded by FAPERGS · CNPq · PUCRS</span>
-            <span class="lang lang-pt">Financiado pela FAPERGS · CNPq · PUCRS</span>
-          </p>
-          <p class="project-blurb">
-            <span class="lang lang-en">Automatic identification of health misinformation in Portuguese, combining an LLM fine-tuned for the health domain with Retrieval-Augmented Generation (RAG) over trusted sources to reduce hallucinations.</span>
-            <span class="lang lang-pt">Identificação automática de desinformação em saúde no idioma português, combinando um LLM ajustado para o domínio da saúde com Retrieval-Augmented Generation (RAG) sobre fontes confiáveis para reduzir alucinações.</span>
-          </p>
-          <a class="project-link" href="projects/misinformation-llms.html">
-            <span class="lang lang-en">View details →</span>
-            <span class="lang lang-pt">Ver detalhes →</span>
-          </a>
-        </div>
-
-      </div>
+      <div id="project-list" class="project-list"></div>
     </div>
   </section>
 
@@ -275,7 +248,7 @@
     </p>
   </footer>
 
-  <script src="js/toggles.js"></script>
+  <script src="js/toggles.js?v=2"></script>
   <script>
     // Bilingual helper: emits both EN and PT variants; CSS shows the active one.
     const bil = (en, pt) => `<span class="lang lang-en">${en}</span><span class="lang lang-pt">${pt}</span>`;
@@ -401,6 +374,39 @@
     }
 
     document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+    // Projects — rendered from data/projects.json (cards mirror the publications pattern).
+    (function () {
+      const container = document.getElementById('project-list');
+      if (!container) return;
+
+      const statusLabel = { active: bil('Active', 'Em andamento') };
+
+      function projectCard(p) {
+        const tags = (p.tags || [])
+          .map(t => `<span class="project-tag">${t}</span>`).join('');
+        const meta = [];
+        if (p.status)   meta.push(`<span class="project-status project-status--${p.status}">${statusLabel[p.status] || p.status}</span>`);
+        if (p.timeline) meta.push(`<span class="project-timeline">${p.timeline}</span>`);
+        return `<div class="project-card">
+          ${meta.length ? `<div class="project-card-meta">${meta.join('')}</div>` : ''}
+          <h3>${p.title}</h3>
+          <p class="project-funder">${bil(p.funder_en, p.funder_pt)}</p>
+          <p class="project-blurb">${bil(p.blurb_en, p.blurb_pt)}</p>
+          ${tags ? `<div class="project-tags">${tags}</div>` : ''}
+          <a class="project-link" href="${p.page}">${bil('View details →', 'Ver detalhes →')}</a>
+        </div>`;
+      }
+
+      fetch('data/projects.json')
+        .then(r => r.json())
+        .then(data => { container.innerHTML = data.map(projectCard).join(''); })
+        .catch(() => {
+          container.innerHTML =
+            '<p style="color:var(--comment)">' +
+            bil('Could not load projects.', 'Não foi possível carregar os projetos.') + '</p>';
+        });
+    })();
 
     fetch('data/advisees.json')
       .then(r => r.json())

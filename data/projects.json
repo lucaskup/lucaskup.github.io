@@ -1,0 +1,26 @@
+[
+  {
+    "id": "low-resource-ml",
+    "title": "Low Resource ML",
+    "funder_en": "Funded by Kunumi · PUCRS",
+    "funder_pt": "Financiado pela Kunumi · PUCRS",
+    "blurb_en": "Low computational cost machine learning techniques for Large Language Models: inference-time model editing, machine unlearning, and context window extrapolation.",
+    "blurb_pt": "Técnicas de aprendizado de máquina de baixo custo computacional para Modelos de Linguagem de Grande Escala: edição de modelos em tempo de inferência, desaprendizado de máquina e extrapolação de janelas de contexto.",
+    "status": "active",
+    "timeline": "2026 – 2028",
+    "tags": ["LLMs", "Model Editing", "Machine Unlearning", "Long Context"],
+    "page": "projects/low-resource-ml.html"
+  },
+  {
+    "id": "misinformation-llms",
+    "title": "Misinformation Identification with LLMs",
+    "funder_en": "Funded by FAPERGS · CNPq · PUCRS",
+    "funder_pt": "Financiado pela FAPERGS · CNPq · PUCRS",
+    "blurb_en": "Automatic identification of health misinformation in Portuguese, combining an LLM fine-tuned for the health domain with Retrieval-Augmented Generation (RAG) over trusted sources to reduce hallucinations.",
+    "blurb_pt": "Identificação automática de desinformação em saúde no idioma português, combinando um LLM ajustado para o domínio da saúde com Retrieval-Augmented Generation (RAG) sobre fontes confiáveis para reduzir alucinações.",
+    "status": "active",
+    "timeline": "2025 – 2027",
+    "tags": ["LLMs", "RAG", "Health", "Misinformation", "Portuguese"],
+    "page": "projects/misinformation-llms.html"
+  }
+]

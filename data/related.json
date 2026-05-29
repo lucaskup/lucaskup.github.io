@@ -1,0 +1,18 @@
+[
+  {
+    "project": "low-resource-ml",
+    "type": "poster",
+    "lang": "en",
+    "title": "Bayesian Attention Mechanism: A Probabilistic Framework for Positional Encoding and Context Length Extrapolation",
+    "source": "ICLR 2026",
+    "url": "https://iclr.cc/virtual/2026/poster/10008400"
+  },
+  {
+    "project": "low-resource-ml",
+    "type": "article",
+    "lang": "pt",
+    "title": "Atenção como aposta: e se cada cabeça do Transformer fosse uma crença sobre o mundo?",
+    "source": "Kunumi",
+    "url": "https://www.kunuminst.org/article/atencao-como-aposta-cabeca-tranasformer-crenca-mundo"
+  }
+]

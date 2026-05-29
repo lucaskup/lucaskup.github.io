@@ -4,7 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Low Resource ML — low computational cost machine learning for LLMs, funded by Kunumi in partnership with PUCRS." />
+  <link rel="canonical" href="https://lucaskup.github.io/projects/low-resource-ml.html" />
+  <meta property="og:title" content="Low Resource ML · Lucas Silveira Kupssinskü" />
+  <meta property="og:description" content="Low computational cost machine learning for LLMs: inference-time model editing, machine unlearning, and context window extrapolation. Funded by Kunumi · PUCRS." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://lucaskup.github.io/projects/low-resource-ml.html" />
+  <meta property="og:image" content="https://lucaskup.github.io/img/projects/low-resource-ml/iclr2026/01.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Low Resource ML · Lucas Silveira Kupssinskü" />
+  <meta name="twitter:description" content="Low computational cost machine learning for LLMs: model editing, machine unlearning, and context window extrapolation. Funded by Kunumi · PUCRS." />
+  <meta name="twitter:image" content="https://lucaskup.github.io/img/projects/low-resource-ml/iclr2026/01.jpg" />
   <title>Low Resource ML · Lucas Silveira Kupssinskü</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    "name": "Low Resource ML",
+    "description": "Low computational cost machine learning techniques for Large Language Models: inference-time model editing, machine unlearning, and context window extrapolation.",
+    "url": "https://lucaskup.github.io/projects/low-resource-ml.html",
+    "startDate": "2026",
+    "endDate": "2028",
+    "funder": [
+      { "@type": "Organization", "name": "Kunumi" },
+      { "@type": "Organization", "name": "PUCRS" }
+    ],
+    "member": { "@type": "Person", "name": "Lucas Silveira Kupssinskü" }
+  }
+  </script>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
@@ -44,6 +70,10 @@
   <!-- ── Hero + Description ── -->
   <section id="overview">
     <div class="container">
+      <a class="back-link" href="../index.html#projects">
+        <span class="lang lang-en">← Back to projects</span>
+        <span class="lang lang-pt">← Voltar aos projetos</span>
+      </a>
       <div class="project-hero">
         <h1>Low Resource ML</h1>
         <p class="project-subtitle">
@@ -59,7 +89,7 @@
           <span class="lang lang-pt">Financiamento</span>
         </p>
         <div class="funder-logo">
-          <img src="../img/kunuminst.png" alt="Kunumi Institute (kunuminst) and PUCRS" />
+          <img src="../img/kunuminst.png" alt="Kunumi Institute (kunuminst) and PUCRS" width="6331" height="667" loading="lazy" decoding="async" />
         </div>
       </div>
 
@@ -115,6 +145,32 @@
           </p>
         </div>
       </div>
+
+      <figure class="project-figure">
+        <div class="carousel" data-carousel>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <img src="../img/projects/low-resource-ml/iclr2026/01.jpg"
+                     width="2048" height="1536" loading="lazy" decoding="async"
+                     alt="Project members presenting at ICLR 2026" />
+              </div>
+              <div class="carousel-slide">
+                <img src="../img/projects/low-resource-ml/iclr2026/02.jpg"
+                     width="1200" height="1600" loading="lazy" decoding="async"
+                     alt="Project members at the ICLR 2026 venue" />
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-prev" type="button" aria-label="Previous image">‹</button>
+          <button class="carousel-btn carousel-next" type="button" aria-label="Next image">›</button>
+          <div class="carousel-dots"></div>
+        </div>
+        <figcaption>
+          <span class="lang lang-en">Project members at ICLR 2026.</span>
+          <span class="lang lang-pt">Integrantes do projeto na ICLR 2026.</span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -185,6 +241,23 @@
             <span class="lang lang-pt">Instituição</span>
           </p>
           <p class="meta-val">PUCRS</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-key">
+            <span class="lang lang-en">Timeline</span>
+            <span class="lang lang-pt">Período</span>
+          </p>
+          <p class="meta-val">2026 – 2028</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-key">
+            <span class="lang lang-en">Status</span>
+            <span class="lang lang-pt">Situação</span>
+          </p>
+          <p class="meta-val">
+            <span class="lang lang-en">Active</span>
+            <span class="lang lang-pt">Em andamento</span>
+          </p>
         </div>
       </div>
     </div>
@@ -289,12 +362,23 @@
     </div>
   </section>
 
+  <!-- ── Related Content ── -->
+  <section id="related-content">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Related Content</span>
+        <span class="lang lang-pt">Conteúdo Relacionado</span>
+      </h2>
+      <div id="related-links"></div>
+    </div>
+  </section>
+
   <!-- ── Footer ── -->
   <footer>
     <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, Brazil</p>
   </footer>
 
-  <script src="../js/toggles.js"></script>
+  <script src="../js/toggles.js?v=2"></script>
   <script>
     document.getElementById('copy-year').textContent = new Date().getFullYear();
 
@@ -342,6 +426,59 @@
             '<p class="placeholder-note">' +
             '<span class="lang lang-en">Could not load related publications.</span>' +
             '<span class="lang lang-pt">Não foi possível carregar as publicações relacionadas.</span></p>';
+        });
+    })();
+
+    // Related content: external coverage (posters, articles, talks, …) from data/related.json.
+    (function () {
+      const container = document.getElementById('related-links');
+      if (!container) return;
+
+      const bil = (en, pt) => `<span class="lang lang-en">${en}</span><span class="lang lang-pt">${pt}</span>`;
+      const typeLabel = {
+        poster:   bil('Poster', 'Pôster'),
+        article:  bil('Article', 'Artigo'),
+        talk:     bil('Talk', 'Palestra'),
+        video:    bil('Video', 'Vídeo'),
+        news:     bil('News', 'Notícia'),
+        blog:     bil('Blog', 'Blog'),
+        code:     bil('Code', 'Código')
+      };
+
+      function host(url) {
+        try { return new URL(url).hostname.replace(/^www\./, ''); }
+        catch (e) { return url; }
+      }
+
+      function relCard(r) {
+        const meta = [`<span class="related-type related-type--${r.type}">${typeLabel[r.type] || r.type}</span>`];
+        if (r.source) meta.push(`<span class="related-source">${r.source}</span>`);
+        if (r.lang)   meta.push(`<span class="related-lang">${r.lang.toUpperCase()}</span>`);
+        return `<a class="related-card" href="${r.url}" target="_blank" rel="noopener">
+          <div class="related-meta">${meta.join('')}</div>
+          <p class="related-title">${r.title}</p>
+          <span class="related-host">${host(r.url)} ↗</span>
+        </a>`;
+      }
+
+      fetch('../data/related.json')
+        .then(r => r.json())
+        .then(data => {
+          const items = data.filter(r => r.project === 'low-resource-ml');
+          if (!items.length) {
+            container.innerHTML =
+              '<p class="placeholder-note">' +
+              '<span class="lang lang-en">Related content to be added.</span>' +
+              '<span class="lang lang-pt">Conteúdo relacionado em breve.</span></p>';
+            return;
+          }
+          container.innerHTML = `<div class="related-list">${items.map(relCard).join('')}</div>`;
+        })
+        .catch(() => {
+          container.innerHTML =
+            '<p class="placeholder-note">' +
+            '<span class="lang lang-en">Could not load related content.</span>' +
+            '<span class="lang lang-pt">Não foi possível carregar o conteúdo relacionado.</span></p>';
         });
     })();
   </script>
