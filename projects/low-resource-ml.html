@@ -31,6 +31,19 @@
     "member": { "@type": "Person", "name": "Lucas Silveira Kupssinskü" }
   }
   </script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <script>
+    // Apply stored theme/language before first paint to avoid a flash.
+    (function () {
+      try {
+        var d = document.documentElement;
+        d.setAttribute('data-theme', localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+        var l = localStorage.getItem('lang');
+        if (l) d.setAttribute('data-lang', l);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
@@ -50,6 +63,10 @@
       <li><a href="../index.html#projects">
         <span class="lang lang-en">Projects</span>
         <span class="lang lang-pt">Projetos</span>
+      </a></li>
+      <li><a href="../prospective-students.html">
+        <span class="lang lang-en">Join Us</span>
+        <span class="lang lang-pt">Ingressar</span>
       </a></li>
     </ul>
     <div class="nav-actions">
@@ -394,8 +411,9 @@
         const authors = p.authors
           .map(a => a.startsWith('*') ? `<strong>${a.slice(1)}</strong>` : a)
           .join(', ');
+        const title = p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : p.title;
         return `<div class="pub-card">
-          <p class="pub-title"><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></p>
+          <p class="pub-title">${title}</p>
           <p class="pub-authors">${authors}</p>
           <div class="pub-meta">
             <span class="pub-venue">${p.venue}</span>

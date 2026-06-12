@@ -1,0 +1,65 @@
+[
+  {
+    "date": "2026-06-10",
+    "en": "Six papers from our research group accepted at BRACIS 2026. See you in Cuiabá!",
+    "pt": "Seis artigos do nosso grupo de pesquisa aceitos na BRACIS 2026. Nos vemos em Cuiabá!"
+  },
+  {
+    "date": "2026-05-20",
+    "en": "Two new preprints on arXiv from the Low Resource ML project: inference-time machine unlearning via gated activation redirection, and low-rank adapter initialization via gradient surgery.",
+    "pt": "Dois novos preprints no arXiv do projeto Low Resource ML: desaprendizado de máquina em tempo de inferência via gated activation redirection e inicialização de adaptadores de baixo posto via gradient surgery.",
+    "url": "projects/low-resource-ml.html"
+  },
+  {
+    "date": "2026-04-25",
+    "en": "Arthur Bianchessi presented the Bayesian Attention Mechanism paper at ICLR 2026.",
+    "pt": "Arthur Bianchessi apresentou o artigo Bayesian Attention Mechanism na ICLR 2026.",
+    "url": "https://iclr.cc/virtual/2026/poster/10008400"
+  },
+  {
+    "date": "2026-03-15",
+    "en": "Marco Bochernitsan, Jerusa Finatto, and Vitor Hugo Garcez defended their M.Sc. theses. Vitor stays in the group as a Ph.D. student.",
+    "pt": "Marco Bochernitsan, Jerusa Finatto e Vitor Hugo Garcez defenderam suas dissertações de mestrado. Vitor continua no grupo como doutorando."
+  },
+  {
+    "date": "2026-02-20",
+    "en": "New preprint on arXiv: Quantization-Robust LLM Unlearning via Low-Rank Adaptation.",
+    "pt": "Novo preprint no arXiv: Quantization-Robust LLM Unlearning via Low-Rank Adaptation.",
+    "url": "https://arxiv.org/abs/2602.13151"
+  },
+  {
+    "date": "2026-01-22",
+    "en": "Paper accepted at ICLR 2026: Bayesian Attention Mechanism, a probabilistic framework for positional encoding and context length extrapolation.",
+    "pt": "Artigo aceito na ICLR 2026: Bayesian Attention Mechanism, um framework probabilístico para codificação posicional e extrapolação de janela de contexto.",
+    "url": "https://openreview.net/forum?id=dXJB9O8fLd"
+  },
+  {
+    "date": "2026-01-05",
+    "en": "The Low Resource ML project, funded by Kunumi, kicks off. Three research axes: model editing, machine unlearning, and context window extrapolation (2026 to 2028).",
+    "pt": "Início do projeto Low Resource ML, financiado pela Kunumi. Três eixos de pesquisa: edição de modelos, desaprendizado de máquina e extrapolação de janelas de contexto (2026 a 2028).",
+    "url": "projects/low-resource-ml.html"
+  },
+  {
+    "date": "2025-10-02",
+    "en": "Two papers at BRACIS 2025: Evaluating Odor Selectivity in α-Synucleinopathy and Inference Time Debiasing Concepts in Diffusion Models.",
+    "pt": "Dois artigos na BRACIS 2025: Evaluating Odor Selectivity in α-Synucleinopathy e Inference Time Debiasing Concepts in Diffusion Models."
+  },
+  {
+    "date": "2025-10-01",
+    "en": "Automated Fact-Checking in Brazilian Portuguese presented at STIL 2025, introducing resources and baselines for the misinformation project.",
+    "pt": "Automated Fact-Checking in Brazilian Portuguese apresentado no STIL 2025, com recursos e baselines do projeto de desinformação.",
+    "url": "https://doi.org/10.5753/stil.2025.37820"
+  },
+  {
+    "date": "2025-03-10",
+    "en": "The Misinformation Identification with LLMs project is awarded FAPERGS and CNPq funding (2025 to 2027).",
+    "pt": "O projeto de Identificação de Desinformação com LLMs recebe financiamento da FAPERGS e do CNPq (2025 a 2027).",
+    "url": "projects/misinformation-llms.html"
+  },
+  {
+    "date": "2025-02-10",
+    "en": "Fairness in Deep Learning: A Survey on Vision and Language Research published in ACM Computing Surveys.",
+    "pt": "Fairness in Deep Learning: A Survey on Vision and Language Research publicado na ACM Computing Surveys.",
+    "url": "https://doi.org/10.1145/3637549"
+  }
+]

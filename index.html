@@ -15,6 +15,19 @@
   <meta name="twitter:description" content="Associate Professor at PUCRS. Research in ML, Deep Learning, Fairness, and LLMs." />
   <meta name="twitter:image" content="https://lucaskup.github.io/img/perfilpucrs.jpg" />
   <title>Lucas Silveira Kupssinskü</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script>
+    // Apply stored theme/language before first paint to avoid a flash.
+    (function () {
+      try {
+        var d = document.documentElement;
+        d.setAttribute('data-theme', localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+        var l = localStorage.getItem('lang');
+        if (l) d.setAttribute('data-lang', l);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -24,12 +37,14 @@
     <span class="nav-brand">Lucas Kupssinskü</span>
     <ul id="nav-links" class="nav-links">
       <li><a href="#about"><span class="lang lang-en">About</span><span class="lang lang-pt">Sobre</span></a></li>
+      <li><a href="#news"><span class="lang lang-en">News</span><span class="lang lang-pt">Notícias</span></a></li>
       <li><a href="#research"><span class="lang lang-en">Research</span><span class="lang lang-pt">Pesquisa</span></a></li>
       <li><a href="#projects"><span class="lang lang-en">Projects</span><span class="lang lang-pt">Projetos</span></a></li>
       <li><a href="#publications"><span class="lang lang-en">Publications</span><span class="lang lang-pt">Publicações</span></a></li>
       <li><a href="#advisees"><span class="lang lang-en">Advisees</span><span class="lang lang-pt">Orientandos</span></a></li>
       <li><a href="#alumni"><span class="lang lang-en">Alumni</span><span class="lang lang-pt">Egressos</span></a></li>
       <li><a href="#lectures"><span class="lang lang-en">Lectures</span><span class="lang lang-pt">Disciplinas</span></a></li>
+      <li><a href="prospective-students.html"><span class="lang lang-en">Join Us</span><span class="lang lang-pt">Ingressar</span></a></li>
     </ul>
     <div class="nav-actions">
       <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Mudar para português" title="Mudar para português">
@@ -81,6 +96,22 @@
               Michael J. Fox Foundation e Kunumi.
             </span>
           </p>
+          <p class="hero-bio">
+            <span class="lang lang-en">
+              Before academia, I spent ten years in industry as a developer and systems
+              analyst, and I have taught at every level, from teenagers in a technical
+              course to digital inclusion programs for elderly people. I moved to research
+              and teaching full-time because it is where I believe I can create the most
+              positive impact on society.
+            </span>
+            <span class="lang lang-pt">
+              Antes da academia, passei dez anos na indústria como desenvolvedor e analista
+              de sistemas, e já ensinei em todos os níveis, de adolescentes em um curso
+              técnico a programas de inclusão digital para idosos. Migrei para a pesquisa e
+              o ensino em dedicação integral porque é onde acredito poder gerar o maior
+              impacto positivo na sociedade.
+            </span>
+          </p>
           <div class="profile-links">
             <a class="btn btn-scholar"
                href="https://scholar.google.com/citations?user=Uona1HYAAAAJ"
@@ -109,6 +140,17 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ── News ── -->
+  <section id="news">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">News</span>
+        <span class="lang lang-pt">Notícias</span>
+      </h2>
+      <div id="news-container"></div>
     </div>
   </section>
 
@@ -146,13 +188,13 @@
   <section id="publications">
     <div class="container">
       <h2 class="section-title">
-        <span class="lang lang-en">Selected Publications</span>
-        <span class="lang lang-pt">Publicações Selecionadas</span>
+        <span class="lang lang-en">Publications</span>
+        <span class="lang lang-pt">Publicações</span>
       </h2>
       <p style="color:var(--comment); font-size:.85rem; margin-bottom:1.4rem;">
-        <span class="lang lang-en">Full list on
+        <span class="lang lang-en">Also available on
           <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</span>
-        <span class="lang lang-pt">Lista completa no
+        <span class="lang lang-pt">Também disponível no
           <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</span>
       </p>
 
@@ -168,6 +210,17 @@
         <span class="lang lang-pt">Orientandos Atuais</span>
       </h2>
       <div id="advisees-container"></div>
+
+      <div class="callout">
+        <p>
+          <span class="lang lang-en"><strong>Want to join the group?</strong> I take full-time students at all levels: undergraduate, M.Sc., and Ph.D.</span>
+          <span class="lang lang-pt"><strong>Quer entrar no grupo?</strong> Oriento estudantes em dedicação integral em todos os níveis: graduação, mestrado e doutorado.</span>
+        </p>
+        <a class="project-link" href="prospective-students.html">
+          <span class="lang lang-en">Read this first →</span>
+          <span class="lang lang-pt">Leia isto primeiro →</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -314,8 +367,9 @@
       const authors = p.authors
         .map(a => a.startsWith('*') ? `<strong>${a.slice(1)}</strong>` : a)
         .join(', ');
+      const title = p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : p.title;
       return `<div class="pub-card">
-        <p class="pub-title"><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></p>
+        <p class="pub-title">${title}</p>
         <p class="pub-authors">${authors}</p>
         <div class="pub-meta">
           <span class="pub-venue">${p.venue}</span>
@@ -328,13 +382,19 @@
     fetch('data/publications.json')
       .then(r => r.json())
       .then(data => {
-        const featured = data.filter(p => p.featured === true);
-        const types = [...new Set(featured.map(p => p.type))];
+        // Theses and technical reports stay in the data but are not displayed.
+        const shown = ['journal', 'conference', 'workshop', 'preprint'];
+        const all = data
+          .filter(p => shown.includes(p.type))
+          .sort((a, b) => (b.year || 0) - (a.year || 0));
+        const featured = all.filter(p => p.featured === true);
+        const types = shown.filter(t => all.some(p => p.type === t));
         const tabDefs = [
-          { label: bil('All', 'Todas'), html: featured.map(pubCard).join('') },
+          { label: bil('Selected', 'Selecionadas'), html: featured.map(pubCard).join('') },
+          { label: bil('All', 'Todas'), html: all.map(pubCard).join('') },
           ...types.map(t => ({
             label: pubTabLabel[t] || (t.charAt(0).toUpperCase() + t.slice(1)),
-            html: featured.filter(p => p.type === t).map(pubCard).join('')
+            html: all.filter(p => p.type === t).map(pubCard).join('')
           }))
         ];
         buildTabs(document.getElementById('publications-container'), tabDefs, 'pub-list');
@@ -374,6 +434,56 @@
     }
 
     document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+    // News — dated one-liners from data/news.json; the 5 most recent show by default.
+    (function () {
+      const container = document.getElementById('news-container');
+      if (!container) return;
+      const VISIBLE = 5;
+
+      function dateLabel(iso) {
+        const d = new Date(iso + 'T00:00:00');
+        return bil(
+          d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
+          d.toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' })
+        );
+      }
+
+      function newsItem(n, i) {
+        const text = bil(n.en, n.pt);
+        const external = n.url && /^https?:/.test(n.url);
+        const body = n.url
+          ? `<a href="${n.url}"${external ? ' target="_blank" rel="noopener"' : ''}>${text}</a>`
+          : text;
+        return `<div class="news-item${i >= VISIBLE ? ' news-extra' : ''}">
+          <span class="news-date">${dateLabel(n.date)}</span>
+          <p class="news-text">${body}</p>
+        </div>`;
+      }
+
+      fetch('data/news.json')
+        .then(r => r.json())
+        .then(data => {
+          const items = [...data].sort((a, b) => b.date.localeCompare(a.date));
+          container.innerHTML = `<div class="news-list">${items.map(newsItem).join('')}</div>`;
+          if (items.length > VISIBLE) {
+            const showAll = bil(`Show all (${items.length})`, `Ver todas (${items.length})`);
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'news-toggle';
+            btn.innerHTML = showAll;
+            btn.addEventListener('click', () => {
+              const open = container.classList.toggle('news-open');
+              btn.innerHTML = open ? bil('Show fewer', 'Ver menos') : showAll;
+            });
+            container.appendChild(btn);
+          }
+        })
+        .catch(() => {
+          container.innerHTML =
+            '<p style="color:var(--comment)">' + bil('Could not load news.', 'Não foi possível carregar as notícias.') + '</p>';
+        });
+    })();
 
     // Projects — rendered from data/projects.json (cards mirror the publications pattern).
     (function () {

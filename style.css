@@ -248,8 +248,10 @@ section + section { border-top: 1px solid var(--line); }
   color: var(--fg);
   font-size: .95rem;
   max-width: 680px;
-  margin-bottom: 1.4rem;
+  margin-bottom: .9rem;
 }
+
+.hero-bio:last-of-type { margin-bottom: 1.4rem; }
 
 /* Profile Links */
 .profile-links {
@@ -548,6 +550,43 @@ html:not([data-lang]) .lang-pt { display: none; }
 }
 
 .project-link:hover { color: var(--purple); }
+
+/* ── News ────────────────────────────────────────────────── */
+.news-list { display: flex; flex-direction: column; gap: .6rem; }
+.news-item { display: flex; gap: 1rem; align-items: baseline; }
+.news-item.news-extra { display: none; }
+.news-open .news-item.news-extra { display: flex; }
+.news-date { color: var(--comment); font-size: .8rem; min-width: 5.2rem; white-space: nowrap; }
+.news-text { font-size: .92rem; margin: 0; }
+
+.news-toggle {
+  margin-top: 1.2rem;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--comment);
+  font-size: .8rem;
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+}
+.news-toggle:hover { color: var(--cyan); border-color: var(--cyan); }
+
+/* ── Prospective-students callout (Advisees section) ─────── */
+.callout {
+  margin-top: 1.8rem;
+  padding: 1.1rem 1.3rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--purple);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+}
+.callout p { margin: 0; }
 
 /* Card meta row: status badge + timeline */
 .project-card-meta {

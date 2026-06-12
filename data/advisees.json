@@ -36,40 +36,40 @@
         {
           "name": "Arthur Sperhacke Bianchessi",
           "coadvisee": false,
-          "topic": "A definir",
+          "topic": "Long Context",
           "start": 2025,
           "github": "https://github.com/ArthurSBianchessi"
         },
         {
           "name": "Lucas Monteiro Fraga",
           "coadvisee": false,
-          "topic": "A definir",
+          "topic": "Misinformation Detection",
           "start": 2025,
           "github": "https://github.com/lucasfrag"
         },
         {
           "name": "Pedro Wagner",
           "coadvisee": false,
-          "topic": "A definir",
+          "topic": "Sentence Embeddings",
           "start": 2024
         },
         {
           "name": "Wolfgang Ricardo Rowell Junior",
           "coadvisee": false,
-          "topic": "A definir",
+          "topic": "Machine Learning for Weather Forecasting",
           "start": 2024
         },
         {
           "name": "Vinícius Turani",
           "coadvisee": false,
-          "topic": "A definir",
+          "topic": "Activation Engineering",
           "start": 2026,
           "github": "https://github.com/ViniTurani"
         },
         {
           "name": "João Vitor Boer Abitante",
           "coadvisee": false,
-          "topic": "A definir",
+          "topic": "Machine Unlearning",
           "start": 2025,
           "github": "https://github.com/JoaoVitorBoer"
         }
