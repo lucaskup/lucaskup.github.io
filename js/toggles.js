@@ -79,6 +79,9 @@
     const prev   = root.querySelector('.carousel-prev');
     const next   = root.querySelector('.carousel-next');
     const dotsEl = root.querySelector('.carousel-dots');
+    const figure = root.closest('figure');
+    const capEn  = figure && figure.querySelector('figcaption .lang-en');
+    const capPt  = figure && figure.querySelector('figcaption .lang-pt');
     if (!track || slides.length === 0) return;
 
     // A single image needs no navigation chrome.
@@ -100,6 +103,11 @@
       index = (i + slides.length) % slides.length; // wrap around
       track.style.transform = `translateX(-${index * 100}%)`;
       dots.forEach((d, j) => d.classList.toggle('active', j === index));
+
+      // Sync the shared caption to the active slide, when per-slide captions exist.
+      const slide = slides[index];
+      if (capEn && slide.dataset.captionEn) capEn.textContent = slide.dataset.captionEn;
+      if (capPt && slide.dataset.captionPt) capPt.textContent = slide.dataset.captionPt;
     }
 
     prev && prev.addEventListener('click', () => go(index - 1));
