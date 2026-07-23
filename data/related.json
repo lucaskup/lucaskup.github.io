@@ -1,6 +1,14 @@
 [
   {
     "project": "low-resource-ml",
+    "type": "news",
+    "lang": "pt",
+    "title": "Encontro Kunumi COLABS no Sul: primeiros resultados do Colab de Low Resource ML",
+    "source": "Kunumi COLABS",
+    "url": "https://lucaskup.github.io/news/kunumi-colabs-rs.html"
+  },
+  {
+    "project": "low-resource-ml",
     "type": "poster",
     "lang": "en",
     "title": "Bayesian Attention Mechanism: A Probabilistic Framework for Positional Encoding and Context Length Extrapolation",
