@@ -406,110 +406,11 @@
     <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, Brazil</p>
   </footer>
 
-  <script src="../js/toggles.js?v=3"></script>
+  <script src="../js/toggles.js?v=4"></script>
   <script>
+    // Related publications and related content are prerendered into this page
+    // by build.js from data/publications.json and data/related.json.
     document.getElementById('copy-year').textContent = new Date().getFullYear();
-
-    // Related publications: pulled from the shared publications data, filtered by project tag.
-    (function () {
-      const container = document.getElementById('related-pubs');
-      if (!container) return;
-
-      const badgeLabel = { journal: "Journal", conference: "Conference", workshop: "Workshop", preprint: "Preprint" };
-      const typeOrder  = { conference: 0, journal: 1, workshop: 2, preprint: 3 };
-
-      function pubCard(p) {
-        const authors = p.authors
-          .map(a => a.startsWith('*') ? `<strong>${a.slice(1)}</strong>` : a)
-          .join(', ');
-        const title = p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : p.title;
-        return `<div class="pub-card">
-          <p class="pub-title">${title}</p>
-          <p class="pub-authors">${authors}</p>
-          <div class="pub-meta">
-            <span class="pub-venue">${p.venue}</span>
-            <span class="pub-year">${p.year}</span>
-            <span class="badge badge-${p.type}">${badgeLabel[p.type] || p.type}</span>
-          </div>
-        </div>`;
-      }
-
-      fetch('../data/publications.json')
-        .then(r => r.json())
-        .then(data => {
-          const pubs = data
-            .filter(p => p.project === 'low-resource-ml')
-            .sort((a, b) => (typeOrder[a.type] ?? 9) - (typeOrder[b.type] ?? 9) || b.year - a.year);
-
-          if (!pubs.length) {
-            container.innerHTML =
-              '<p class="placeholder-note">' +
-              '<span class="lang lang-en">Related publications to be added.</span>' +
-              '<span class="lang lang-pt">Publicações relacionadas em breve.</span></p>';
-            return;
-          }
-          container.innerHTML = `<div class="pub-list">${pubs.map(pubCard).join('')}</div>`;
-        })
-        .catch(() => {
-          container.innerHTML =
-            '<p class="placeholder-note">' +
-            '<span class="lang lang-en">Could not load related publications.</span>' +
-            '<span class="lang lang-pt">Não foi possível carregar as publicações relacionadas.</span></p>';
-        });
-    })();
-
-    // Related content: external coverage (posters, articles, talks, …) from data/related.json.
-    (function () {
-      const container = document.getElementById('related-links');
-      if (!container) return;
-
-      const bil = (en, pt) => `<span class="lang lang-en">${en}</span><span class="lang lang-pt">${pt}</span>`;
-      const typeLabel = {
-        poster:   bil('Poster', 'Pôster'),
-        article:  bil('Article', 'Artigo'),
-        talk:     bil('Talk', 'Palestra'),
-        video:    bil('Video', 'Vídeo'),
-        news:     bil('News', 'Notícia'),
-        blog:     bil('Blog', 'Blog'),
-        code:     bil('Code', 'Código')
-      };
-
-      function host(url) {
-        try { return new URL(url).hostname.replace(/^www\./, ''); }
-        catch (e) { return url; }
-      }
-
-      function relCard(r) {
-        const meta = [`<span class="related-type related-type--${r.type}">${typeLabel[r.type] || r.type}</span>`];
-        if (r.source) meta.push(`<span class="related-source">${r.source}</span>`);
-        if (r.lang)   meta.push(`<span class="related-lang">${r.lang.toUpperCase()}</span>`);
-        return `<a class="related-card" href="${r.url}" target="_blank" rel="noopener">
-          <div class="related-meta">${meta.join('')}</div>
-          <p class="related-title">${r.title}</p>
-          <span class="related-host">${host(r.url)} ↗</span>
-        </a>`;
-      }
-
-      fetch('../data/related.json')
-        .then(r => r.json())
-        .then(data => {
-          const items = data.filter(r => r.project === 'low-resource-ml');
-          if (!items.length) {
-            container.innerHTML =
-              '<p class="placeholder-note">' +
-              '<span class="lang lang-en">Related content to be added.</span>' +
-              '<span class="lang lang-pt">Conteúdo relacionado em breve.</span></p>';
-            return;
-          }
-          container.innerHTML = `<div class="related-list">${items.map(relCard).join('')}</div>`;
-        })
-        .catch(() => {
-          container.innerHTML =
-            '<p class="placeholder-note">' +
-            '<span class="lang lang-en">Could not load related content.</span>' +
-            '<span class="lang lang-pt">Não foi possível carregar o conteúdo relacionado.</span></p>';
-        });
-    })();
   </script>
 </body>
 </html>

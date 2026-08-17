@@ -572,6 +572,11 @@ html:not([data-lang]) .lang-pt { display: none; }
 }
 .news-toggle:hover { color: var(--cyan); border-color: var(--cyan); }
 
+/* Both button labels are prerendered; the container's news-open class picks one. */
+.news-toggle .news-label-less { display: none; }
+.news-open .news-toggle .news-label-more { display: none; }
+.news-open .news-toggle .news-label-less { display: inline; }
+
 /* ── Prospective-students callout (Advisees section) ─────── */
 .callout {
   margin-top: 1.8rem;

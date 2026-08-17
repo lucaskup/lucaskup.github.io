@@ -69,6 +69,37 @@
   });
 })();
 
+(function initTabs() {
+  // Tab groups are prerendered by build.js as a .tabs button row followed by
+  // sibling .tab-panel divs; this only wires up the switching.
+  document.querySelectorAll('.tabs').forEach((row) => {
+    const btns = Array.from(row.querySelectorAll('.tab-btn'));
+    const panels = [];
+    let el = row.nextElementSibling;
+    while (el) {
+      if (el.classList.contains('tab-panel')) panels.push(el);
+      el = el.nextElementSibling;
+    }
+    btns.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        if (panels[i]) panels[i].classList.add('active');
+      });
+    });
+  });
+})();
+
+(function initNewsToggle() {
+  // The button's show/hide labels are both in the markup; CSS picks one
+  // based on the container's news-open class.
+  const container = document.getElementById('news-container');
+  const btn = container && container.querySelector('.news-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', () => container.classList.toggle('news-open'));
+})();
+
 (function initCarousels() {
   const carousels = document.querySelectorAll('[data-carousel]');
   if (!carousels.length) return;

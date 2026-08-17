@@ -40,6 +40,7 @@
       <li><a href="#news"><span class="lang lang-en">News</span><span class="lang lang-pt">Notícias</span></a></li>
       <li><a href="#research"><span class="lang lang-en">Research</span><span class="lang lang-pt">Pesquisa</span></a></li>
       <li><a href="#projects"><span class="lang lang-en">Projects</span><span class="lang lang-pt">Projetos</span></a></li>
+      <li><a href="#partnerships"><span class="lang lang-en">Partnerships</span><span class="lang lang-pt">Parcerias</span></a></li>
       <li><a href="#publications"><span class="lang lang-en">Publications</span><span class="lang lang-pt">Publicações</span></a></li>
       <li><a href="#advisees"><span class="lang lang-en">Advisees</span><span class="lang lang-pt">Orientandos</span></a></li>
       <li><a href="#alumni"><span class="lang lang-en">Alumni</span><span class="lang lang-pt">Egressos</span></a></li>
@@ -184,6 +185,44 @@
     </div>
   </section>
 
+  <!-- ── Partnerships ── -->
+  <section id="partnerships">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="lang lang-en">Partnerships</span>
+        <span class="lang lang-pt">Parcerias</span>
+      </h2>
+      <p>
+        <span class="lang lang-en">
+          I work with companies, foundations, and funding agencies on both
+          applied and pure machine learning research. A partnership can take the form of a contracted
+          R&amp;D project, a jointly supervised research line, consulting, or training
+          for industry teams. Recent and current collaborations include Petrobras, Motorola, the
+          Michael J. Fox Foundation, Kunumi, FAPERGS, and CNPq, on topics ranging from
+          geoscience and health to efficient LLMs.
+        </span>
+        <span class="lang lang-pt">
+          Trabalho com empresas, fundações e agências de fomento em pesquisa
+          de aprendizado de máquina, tanto aplicada quanto pura. Uma parceria pode tomar a forma de um
+          projeto de P&amp;D contratado, uma linha de pesquisa orientada em conjunto,
+          consultorias ou treinamentos para equipes da indústria. Colaborações recentes e atuais incluem
+          Petrobras, Motorola, Michael J. Fox Foundation, Kunumi, FAPERGS e CNPq, em
+          temas que vão de geociências e saúde a LLMs eficientes.
+        </span>
+      </p>
+      <div class="callout">
+        <p>
+          <span class="lang lang-en"><strong>Interested in a collaboration?</strong> Write a short note about your problem and we will get back to you.</span>
+          <span class="lang lang-pt"><strong>Interessado em uma colaboração?</strong> Escreva uma breve mensagem sobre o seu problema e retornaremos o contato.</span>
+        </p>
+        <a class="project-link" href="mailto:lucas.kupssinsku@pucrs.br">
+          <span class="lang lang-en">Get in touch →</span>
+          <span class="lang lang-pt">Entre em contato →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Selected Publications ── -->
   <section id="publications">
     <div class="container">
@@ -301,251 +340,12 @@
     </p>
   </footer>
 
-  <script src="js/toggles.js?v=3"></script>
+  <script src="js/toggles.js?v=4"></script>
   <script>
-    // Bilingual helper: emits both EN and PT variants; CSS shows the active one.
-    const bil = (en, pt) => `<span class="lang lang-en">${en}</span><span class="lang lang-pt">${pt}</span>`;
-
-    const coadviseeTag = bil(" · Co-advisee", " · Coorientação");
-
-    const degreeLabel = {
-      "Ph.D.":         m => bil("Ph.D. Candidate", "Doutorando(a)")           + (m.coadvisee ? coadviseeTag : ""),
-      "Master's":      m => bil("M.Sc. Student", "Mestrando(a)")              + (m.coadvisee ? coadviseeTag : ""),
-      "Undergraduate": m => bil("Undergraduate Researcher", "Pesquisador(a) de Graduação")
-    };
-
-    const levelLabel = {
-      "Ph.D.":         bil("Ph.D.", "Doutorado"),
-      "Master's":      bil("Master's", "Mestrado"),
-      "Undergraduate": bil("Undergraduate", "Graduação")
-    };
-
-    function personLinks(m) {
-      const links = [];
-      if (m.github)  links.push(`<a href="${m.github}"  target="_blank" rel="noopener">GitHub</a>`);
-      if (m.website) links.push(`<a href="${m.website}" target="_blank" rel="noopener">${bil('Profile', 'Perfil')}</a>`);
-      return links.length ? `<p class="person-links">${links.join(' · ')}</p>` : '';
-    }
-
-    function personCard(m, level) {
-      const topic = m.topic && m.topic !== 'A definir' ? `<p class="person-topic">${m.topic}</p>` : '';
-      return `<div class="person-card">
-        <p class="person-name">${m.name}</p>
-        <p class="person-degree">${degreeLabel[level](m)}</p>
-        ${topic}
-        ${personLinks(m)}
-        <p class="person-year">${bil('Since', 'Desde')} ${m.start}</p>
-      </div>`;
-    }
-
-    function alumniCard(m) {
-      const coLabel = m.coadvisee ? coadviseeTag : '';
-      return `<div class="person-card">
-        <p class="person-name">${m.name}</p>
-        <p class="person-degree">${levelLabel[m.level] || m.level} — ${bil('Completed', 'Concluído')}${coLabel}</p>
-        <p class="person-topic">${m.topic}</p>
-        ${personLinks(m)}
-        <p class="person-year">${m.start} – ${m.finish}</p>
-      </div>`;
-    }
-
-    const badgeLabel = {
-      journal:    bil("Journal", "Periódico"),
-      conference: bil("Conference", "Conferência"),
-      workshop:   bil("Workshop", "Workshop"),
-      preprint:   bil("Preprint", "Preprint")
-    };
-
-    const pubTabLabel = {
-      journal:    bil("Journal", "Periódicos"),
-      conference: bil("Conference", "Conferências"),
-      workshop:   bil("Workshop", "Workshops"),
-      preprint:   bil("Preprint", "Preprints")
-    };
-
-    function pubCard(p) {
-      const authors = p.authors
-        .map(a => a.startsWith('*') ? `<strong>${a.slice(1)}</strong>` : a)
-        .join(', ');
-      const title = p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : p.title;
-      return `<div class="pub-card">
-        <p class="pub-title">${title}</p>
-        <p class="pub-authors">${authors}</p>
-        <div class="pub-meta">
-          <span class="pub-venue">${p.venue}</span>
-          <span class="pub-year">${p.year}</span>
-          <span class="badge badge-${p.type}">${badgeLabel[p.type] || p.type}</span>
-        </div>
-      </div>`;
-    }
-
-    fetch('data/publications.json')
-      .then(r => r.json())
-      .then(data => {
-        // Theses and technical reports stay in the data but are not displayed.
-        const shown = ['journal', 'conference', 'workshop', 'preprint'];
-        const all = data
-          .filter(p => shown.includes(p.type))
-          .sort((a, b) => (b.year || 0) - (a.year || 0));
-        const featured = all.filter(p => p.featured === true);
-        const types = shown.filter(t => all.some(p => p.type === t));
-        const tabDefs = [
-          { label: bil('Selected', 'Selecionadas'), html: featured.map(pubCard).join('') },
-          { label: bil('All', 'Todas'), html: all.map(pubCard).join('') },
-          ...types.map(t => ({
-            label: pubTabLabel[t] || (t.charAt(0).toUpperCase() + t.slice(1)),
-            html: all.filter(p => p.type === t).map(pubCard).join('')
-          }))
-        ];
-        buildTabs(document.getElementById('publications-container'), tabDefs, 'pub-list');
-      })
-      .catch(() => {
-        document.getElementById('publications-container').innerHTML =
-          '<p style="color:var(--comment)">' + bil('Could not load publications.', 'Não foi possível carregar as publicações.') + '</p>';
-      });
-
-    function buildTabs(container, tabs, innerClass = 'people-grid') {
-      const btnRow = document.createElement('div');
-      btnRow.className = 'tabs';
-      const panels = [];
-
-      tabs.forEach(({ label, html }, i) => {
-        const btn = document.createElement('button');
-        btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
-        btn.innerHTML = label;
-
-        const panel = document.createElement('div');
-        panel.className = 'tab-panel' + (i === 0 ? ' active' : '');
-        panel.innerHTML = `<div class="${innerClass}">${html}</div>`;
-
-        btn.addEventListener('click', () => {
-          btnRow.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-          panels.forEach(p => p.classList.remove('active'));
-          btn.classList.add('active');
-          panel.classList.add('active');
-        });
-
-        btnRow.appendChild(btn);
-        panels.push(panel);
-      });
-
-      container.appendChild(btnRow);
-      panels.forEach(p => container.appendChild(p));
-    }
-
+    // News, projects, publications, advisees, and alumni are prerendered into
+    // this page by build.js (run in CI); toggles.js wires up their tabs and
+    // the news show-all button.
     document.getElementById('copy-year').textContent = new Date().getFullYear();
-
-    // News — dated one-liners from data/news.json; the 5 most recent show by default.
-    (function () {
-      const container = document.getElementById('news-container');
-      if (!container) return;
-      const VISIBLE = 5;
-
-      function dateLabel(iso) {
-        const d = new Date(iso + 'T00:00:00');
-        return bil(
-          d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
-          d.toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' })
-        );
-      }
-
-      function newsItem(n, i) {
-        const text = bil(n.en, n.pt);
-        const external = n.url && /^https?:/.test(n.url);
-        const body = n.url
-          ? `<a href="${n.url}"${external ? ' target="_blank" rel="noopener"' : ''}>${text}</a>`
-          : text;
-        return `<div class="news-item${i >= VISIBLE ? ' news-extra' : ''}">
-          <span class="news-date">${dateLabel(n.date)}</span>
-          <p class="news-text">${body}</p>
-        </div>`;
-      }
-
-      fetch('data/news.json')
-        .then(r => r.json())
-        .then(data => {
-          const items = [...data].sort((a, b) => b.date.localeCompare(a.date));
-          container.innerHTML = `<div class="news-list">${items.map(newsItem).join('')}</div>`;
-          if (items.length > VISIBLE) {
-            const showAll = bil(`Show all (${items.length})`, `Ver todas (${items.length})`);
-            const btn = document.createElement('button');
-            btn.type = 'button';
-            btn.className = 'news-toggle';
-            btn.innerHTML = showAll;
-            btn.addEventListener('click', () => {
-              const open = container.classList.toggle('news-open');
-              btn.innerHTML = open ? bil('Show fewer', 'Ver menos') : showAll;
-            });
-            container.appendChild(btn);
-          }
-        })
-        .catch(() => {
-          container.innerHTML =
-            '<p style="color:var(--comment)">' + bil('Could not load news.', 'Não foi possível carregar as notícias.') + '</p>';
-        });
-    })();
-
-    // Projects — rendered from data/projects.json (cards mirror the publications pattern).
-    (function () {
-      const container = document.getElementById('project-list');
-      if (!container) return;
-
-      const statusLabel = { active: bil('Active', 'Em andamento') };
-
-      function projectCard(p) {
-        const tags = (p.tags || [])
-          .map(t => `<span class="project-tag">${t}</span>`).join('');
-        const meta = [];
-        if (p.status)   meta.push(`<span class="project-status project-status--${p.status}">${statusLabel[p.status] || p.status}</span>`);
-        if (p.timeline) meta.push(`<span class="project-timeline">${p.timeline}</span>`);
-        return `<div class="project-card">
-          ${meta.length ? `<div class="project-card-meta">${meta.join('')}</div>` : ''}
-          <h3>${p.title}</h3>
-          <p class="project-funder">${bil(p.funder_en, p.funder_pt)}</p>
-          <p class="project-blurb">${bil(p.blurb_en, p.blurb_pt)}</p>
-          ${tags ? `<div class="project-tags">${tags}</div>` : ''}
-          <a class="project-link" href="${p.page}">${bil('View details →', 'Ver detalhes →')}</a>
-        </div>`;
-      }
-
-      fetch('data/projects.json')
-        .then(r => r.json())
-        .then(data => { container.innerHTML = data.map(projectCard).join(''); })
-        .catch(() => {
-          container.innerHTML =
-            '<p style="color:var(--comment)">' +
-            bil('Could not load projects.', 'Não foi possível carregar os projetos.') + '</p>';
-        });
-    })();
-
-    fetch('data/advisees.json')
-      .then(r => r.json())
-      .then(data => {
-        // Current advisees — one tab per degree level
-        buildTabs(
-          document.getElementById('advisees-container'),
-          data.current.map(group => ({
-            label: levelLabel[group.level] || group.level,
-            html:  group.members.map(m => personCard(m, group.level)).join('')
-          }))
-        );
-
-        // Alumni — one tab per degree level
-        const levels = [...new Set(data.alumni.map(m => m.level))];
-        buildTabs(
-          document.getElementById('alumni-container'),
-          levels.map(lvl => ({
-            label: levelLabel[lvl] || lvl,
-            html:  data.alumni.filter(m => m.level === lvl).map(alumniCard).join('')
-          }))
-        );
-      })
-      .catch(() => {
-        ['advisees-container', 'alumni-container'].forEach(id => {
-          document.getElementById(id).innerHTML =
-            '<p style="color:var(--comment)">' + bil('Could not load data.', 'Não foi possível carregar os dados.') + '</p>';
-        });
-      });
   </script>
 </body>
 </html>
