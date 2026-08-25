@@ -54,12 +54,6 @@
           "start": 2024
         },
         {
-          "name": "Wolfgang Ricardo Rowell Junior",
-          "coadvisee": false,
-          "topic": "Machine Learning for Weather Forecasting",
-          "start": 2024
-        },
-        {
           "name": "Vinícius Turani",
           "coadvisee": false,
           "topic": "Activation Engineering",
@@ -103,6 +97,14 @@
     }
   ],
   "alumni": [
+    {
+      "name": "Wolfgang Ricardo Rowell Junior",
+      "coadvisee": false,
+      "level": "Master's",
+      "topic": "Evaluation and Regional Adaptation of GraphCast Operational for Brazil: A Statistical Benchmark and LoRA Fine-Tuning Study",
+      "start": 2024,
+      "finish": 2026
+    },
     {
       "name": "Vitor Hugo Garcez Barcellos Dos Santos",
       "coadvisee": false,
