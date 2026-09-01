@@ -40,7 +40,7 @@
         d.setAttribute('data-theme', localStorage.getItem('theme') ||
           (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
         var l = localStorage.getItem('lang');
-        if (l) d.setAttribute('data-lang', l);
+        if (l) { d.setAttribute('data-lang', l); if (l === 'pt') d.lang = 'pt-BR'; }
       } catch (e) {}
     })();
   </script>
@@ -48,25 +48,27 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main"><span class="lang lang-en">Skip to content</span><span class="lang lang-pt" lang="pt-BR">Pular para o conteúdo</span></a>
+
   <!-- ── Navigation ── -->
   <nav>
     <a class="nav-brand" href="../index.html">Lucas Kupssinskü</a>
     <ul id="nav-links" class="nav-links">
       <li><a href="../index.html">
         <span class="lang lang-en">Home</span>
-        <span class="lang lang-pt">Início</span>
+        <span class="lang lang-pt" lang="pt-BR">Início</span>
       </a></li>
       <li><a href="../index.html#research">
         <span class="lang lang-en">Research</span>
-        <span class="lang lang-pt">Pesquisa</span>
+        <span class="lang lang-pt" lang="pt-BR">Pesquisa</span>
       </a></li>
       <li><a href="../index.html#projects">
         <span class="lang lang-en">Projects</span>
-        <span class="lang lang-pt">Projetos</span>
+        <span class="lang lang-pt" lang="pt-BR">Projetos</span>
       </a></li>
       <li><a href="../prospective-students.html">
         <span class="lang lang-en">Join Us</span>
-        <span class="lang lang-pt">Ingressar</span>
+        <span class="lang lang-pt" lang="pt-BR">Ingressar</span>
       </a></li>
     </ul>
     <div class="nav-actions">
@@ -84,18 +86,20 @@
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- ── Hero + Description ── -->
   <section id="overview">
     <div class="container">
       <a class="back-link" href="../index.html#projects">
         <span class="lang lang-en">← Back to projects</span>
-        <span class="lang lang-pt">← Voltar aos projetos</span>
+        <span class="lang lang-pt" lang="pt-BR">← Voltar aos projetos</span>
       </a>
       <div class="project-hero">
         <h1>Low Resource ML</h1>
         <p class="project-subtitle">
           <span class="lang lang-en">Funded by Kunumi · PUCRS</span>
-          <span class="lang lang-pt">Financiado pela Kunumi · PUCRS</span>
+          <span class="lang lang-pt" lang="pt-BR">Financiado pela Kunumi · PUCRS</span>
         </p>
       </div>
 
@@ -103,7 +107,7 @@
       <div class="funder">
         <p class="funder-label">
           <span class="lang lang-en">Funded by</span>
-          <span class="lang lang-pt">Financiamento</span>
+          <span class="lang lang-pt" lang="pt-BR">Financiamento</span>
         </p>
         <div class="funder-logo">
           <img src="../img/kunuminst.png" alt="Kunumi Institute (kunuminst) and PUCRS" width="6331" height="667" loading="lazy" decoding="async" />
@@ -135,7 +139,7 @@
             learning under resource constraints.
           </p>
         </div>
-        <div class="lang lang-pt">
+        <div class="lang lang-pt" lang="pt-BR">
           <p>
             O projeto tem como objetivo investigar e desenvolver novas técnicas de aprendizado de
             máquina de baixo custo computacional aplicadas a Modelos de Linguagem de Grande Escala
@@ -171,21 +175,21 @@
                    data-caption-en="Project Team"
                    data-caption-pt="Equipe do Projeto">
                 <img src="../img/projects/low-resource-ml/iclr2026/03.jpg"
-                     width="2048" height="1536" loading="lazy" decoding="async"
+                     width="1400" height="1050" loading="lazy" decoding="async"
                      alt="Project team" />
               </div>
               <div class="carousel-slide"
                    data-caption-en="Project members at ICLR 2026."
                    data-caption-pt="Integrantes do projeto na ICLR 2026.">
                 <img src="../img/projects/low-resource-ml/iclr2026/01.jpg"
-                     width="2048" height="1536" loading="lazy" decoding="async"
+                     width="1400" height="1050" loading="lazy" decoding="async"
                      alt="Project members presenting at ICLR 2026" />
               </div>
               <div class="carousel-slide"
                    data-caption-en="Project members at ICLR 2026."
                    data-caption-pt="Integrantes do projeto na ICLR 2026.">
                 <img src="../img/projects/low-resource-ml/iclr2026/02.jpg"
-                     width="1200" height="1600" loading="lazy" decoding="async"
+                     width="1050" height="1400" loading="lazy" decoding="async"
                      alt="Project members at the ICLR 2026 venue" />
               </div>
             </div>
@@ -196,7 +200,7 @@
         </div>
         <figcaption>
           <span class="lang lang-en">Project Team</span>
-          <span class="lang lang-pt">Equipe do Projeto</span>
+          <span class="lang lang-pt" lang="pt-BR">Equipe do Projeto</span>
         </figcaption>
       </figure>
     </div>
@@ -207,40 +211,40 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Research Axes</span>
-        <span class="lang lang-pt">Eixos de Pesquisa</span>
+        <span class="lang lang-pt" lang="pt-BR">Eixos de Pesquisa</span>
       </h2>
       <div class="axes-grid">
 
         <div class="axis-card">
           <p class="axis-name">
             <span class="lang lang-en">Inference-time Model Editing</span>
-            <span class="lang lang-pt">Edição de Modelos em Tempo de Inferência</span>
+            <span class="lang lang-pt" lang="pt-BR">Edição de Modelos em Tempo de Inferência</span>
           </p>
           <p class="axis-desc">
             <span class="lang lang-en">Model editing/steering: correcting information and incorporating new knowledge in trained LLMs without expensive retraining.</span>
-            <span class="lang lang-pt">Model editing/steering: corrigir informações e incorporar novos conhecimentos em LLMs já treinados sem retreinamentos caros.</span>
+            <span class="lang lang-pt" lang="pt-BR">Model editing/steering: corrigir informações e incorporar novos conhecimentos em LLMs já treinados sem retreinamentos caros.</span>
           </p>
         </div>
 
         <div class="axis-card">
           <p class="axis-name">
             <span class="lang lang-en">Machine Unlearning</span>
-            <span class="lang lang-pt">Desaprendizado de Máquina</span>
+            <span class="lang lang-pt" lang="pt-BR">Desaprendizado de Máquina</span>
           </p>
           <p class="axis-desc">
             <span class="lang lang-en">Selective, controlled, and traceable removal of unwanted data, supporting privacy, security, and model governance.</span>
-            <span class="lang lang-pt">Remoção seletiva, controlada e rastreável de dados indesejados, apoiando privacidade, segurança e governança de modelos.</span>
+            <span class="lang lang-pt" lang="pt-BR">Remoção seletiva, controlada e rastreável de dados indesejados, apoiando privacidade, segurança e governança de modelos.</span>
           </p>
         </div>
 
         <div class="axis-card">
           <p class="axis-name">
             <span class="lang lang-en">Context Window Extrapolation</span>
-            <span class="lang lang-pt">Extrapolação de Janelas de Contexto</span>
+            <span class="lang lang-pt" lang="pt-BR">Extrapolação de Janelas de Contexto</span>
           </p>
           <p class="axis-desc">
             <span class="lang lang-en">Letting LLMs trained on short contexts operate effectively over much longer ones, without proportionally raising training cost.</span>
-            <span class="lang lang-pt">Permitir que LLMs treinados com contextos curtos operem de forma eficaz em contextos muito mais extensos, sem aumentar proporcionalmente o custo de treinamento.</span>
+            <span class="lang lang-pt" lang="pt-BR">Permitir que LLMs treinados com contextos curtos operem de forma eficaz em contextos muito mais extensos, sem aumentar proporcionalmente o custo de treinamento.</span>
           </p>
         </div>
 
@@ -253,38 +257,38 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Project Details</span>
-        <span class="lang lang-pt">Detalhes do Projeto</span>
+        <span class="lang lang-pt" lang="pt-BR">Detalhes do Projeto</span>
       </h2>
       <div class="project-meta">
         <div class="meta-item">
           <p class="meta-key">
             <span class="lang lang-en">Funder</span>
-            <span class="lang lang-pt">Financiador</span>
+            <span class="lang lang-pt" lang="pt-BR">Financiador</span>
           </p>
           <p class="meta-val">Kunumi</p>
         </div>
         <div class="meta-item">
           <p class="meta-key">
             <span class="lang lang-en">Institution</span>
-            <span class="lang lang-pt">Instituição</span>
+            <span class="lang lang-pt" lang="pt-BR">Instituição</span>
           </p>
           <p class="meta-val">PUCRS</p>
         </div>
         <div class="meta-item">
           <p class="meta-key">
             <span class="lang lang-en">Timeline</span>
-            <span class="lang lang-pt">Período</span>
+            <span class="lang lang-pt" lang="pt-BR">Período</span>
           </p>
           <p class="meta-val">2026 – 2028</p>
         </div>
         <div class="meta-item">
           <p class="meta-key">
             <span class="lang lang-en">Status</span>
-            <span class="lang lang-pt">Situação</span>
+            <span class="lang lang-pt" lang="pt-BR">Situação</span>
           </p>
           <p class="meta-val">
             <span class="lang lang-en">Active</span>
-            <span class="lang lang-pt">Em andamento</span>
+            <span class="lang lang-pt" lang="pt-BR">Em andamento</span>
           </p>
         </div>
       </div>
@@ -296,12 +300,12 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Team</span>
-        <span class="lang lang-pt">Equipe</span>
+        <span class="lang lang-pt" lang="pt-BR">Equipe</span>
       </h2>
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Coordinator</span>
-          <span class="lang lang-pt">Coordenador</span>
+          <span class="lang lang-pt" lang="pt-BR">Coordenador</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Lucas S. Kupssinskü</div>
@@ -311,7 +315,7 @@
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Professor / Researcher</span>
-          <span class="lang lang-pt">Professor / Pesquisador</span>
+          <span class="lang lang-pt" lang="pt-BR">Professor / Pesquisador</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Rodrigo C. Barros</div>
@@ -321,7 +325,7 @@
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Postdoctoral Researcher</span>
-          <span class="lang lang-pt">Pós-Doutorado</span>
+          <span class="lang lang-pt" lang="pt-BR">Pós-Doutorado</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Christian Mattjie</div>
@@ -331,7 +335,7 @@
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Ph.D. Students</span>
-          <span class="lang lang-pt">Doutorado</span>
+          <span class="lang lang-pt" lang="pt-BR">Doutorado</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Joana Meneguzzo Pasquali</div>
@@ -344,7 +348,7 @@
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Master's Students</span>
-          <span class="lang lang-pt">Mestrado</span>
+          <span class="lang lang-pt" lang="pt-BR">Mestrado</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Arthur Merode Germano</div>
@@ -366,7 +370,7 @@
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Undergraduate Researchers</span>
-          <span class="lang lang-pt">Graduação</span>
+          <span class="lang lang-pt" lang="pt-BR">Graduação</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Augusto Ochoa Ughini</div>
@@ -384,7 +388,7 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Related Publications</span>
-        <span class="lang lang-pt">Publicações Relacionadas</span>
+        <span class="lang lang-pt" lang="pt-BR">Publicações Relacionadas</span>
       </h2>
       <div id="related-pubs"></div>
     </div>
@@ -395,18 +399,20 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Related Content</span>
-        <span class="lang lang-pt">Conteúdo Relacionado</span>
+        <span class="lang lang-pt" lang="pt-BR">Conteúdo Relacionado</span>
       </h2>
       <div id="related-links"></div>
     </div>
   </section>
+
+  </main>
 
   <!-- ── Footer ── -->
   <footer>
     <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, Brazil</p>
   </footer>
 
-  <script src="../js/toggles.js?v=4"></script>
+  <script src="../js/toggles.js?v=5"></script>
   <script>
     // Related publications and related content are prerendered into this page
     // by build.js from data/publications.json and data/related.json.

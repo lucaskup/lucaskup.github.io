@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Page not found · Lucas Silveira Kupssinskü</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script>
+    // Apply stored theme/language before first paint to avoid a flash.
+    (function () {
+      try {
+        var d = document.documentElement;
+        d.setAttribute('data-theme', localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+        var l = localStorage.getItem('lang');
+        if (l) { d.setAttribute('data-lang', l); if (l === 'pt') d.lang = 'pt-BR'; }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <a class="nav-brand" href="/">Lucas Kupssinskü</a>
+    <div class="nav-actions">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Mudar para português" title="Mudar para português">
+        <span class="lang-label">PT</span>
+      </button>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light mode" title="Toggle light mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main">
+  <section id="not-found">
+    <div class="container">
+      <div class="project-hero">
+        <h1>404</h1>
+        <p class="project-subtitle">
+          <span class="lang lang-en">Page not found</span>
+          <span class="lang lang-pt" lang="pt-BR">Página não encontrada</span>
+        </p>
+      </div>
+      <div class="project-body">
+        <p>
+          <span class="lang lang-en">The page you are looking for does not exist or has moved.</span>
+          <span class="lang lang-pt" lang="pt-BR">A página que você procura não existe ou foi movida.</span>
+        </p>
+        <p>
+          <a class="project-link" href="/">
+            <span class="lang lang-en">← Back to home</span>
+            <span class="lang lang-pt" lang="pt-BR">← Voltar ao início</span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, <span class="lang lang-en">Brazil</span><span class="lang lang-pt" lang="pt-BR">Brasil</span></p>
+  </footer>
+
+  <script src="/js/toggles.js?v=5"></script>
+  <script>
+    document.getElementById('copy-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -41,7 +41,7 @@
         d.setAttribute('data-theme', localStorage.getItem('theme') ||
           (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
         var l = localStorage.getItem('lang');
-        if (l) d.setAttribute('data-lang', l);
+        if (l) { d.setAttribute('data-lang', l); if (l === 'pt') d.lang = 'pt-BR'; }
       } catch (e) {}
     })();
   </script>
@@ -49,25 +49,27 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main"><span class="lang lang-en">Skip to content</span><span class="lang lang-pt" lang="pt-BR">Pular para o conteúdo</span></a>
+
   <!-- ── Navigation ── -->
   <nav>
     <a class="nav-brand" href="../index.html">Lucas Kupssinskü</a>
     <ul id="nav-links" class="nav-links">
       <li><a href="../index.html">
         <span class="lang lang-en">Home</span>
-        <span class="lang lang-pt">Início</span>
+        <span class="lang lang-pt" lang="pt-BR">Início</span>
       </a></li>
       <li><a href="../index.html#research">
         <span class="lang lang-en">Research</span>
-        <span class="lang lang-pt">Pesquisa</span>
+        <span class="lang lang-pt" lang="pt-BR">Pesquisa</span>
       </a></li>
       <li><a href="../index.html#projects">
         <span class="lang lang-en">Projects</span>
-        <span class="lang lang-pt">Projetos</span>
+        <span class="lang lang-pt" lang="pt-BR">Projetos</span>
       </a></li>
       <li><a href="../prospective-students.html">
         <span class="lang lang-en">Join Us</span>
-        <span class="lang lang-pt">Ingressar</span>
+        <span class="lang lang-pt" lang="pt-BR">Ingressar</span>
       </a></li>
     </ul>
     <div class="nav-actions">
@@ -85,18 +87,20 @@
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- ── Hero + Description ── -->
   <section id="overview">
     <div class="container">
       <a class="back-link" href="../index.html#projects">
         <span class="lang lang-en">← Back to projects</span>
-        <span class="lang lang-pt">← Voltar aos projetos</span>
+        <span class="lang lang-pt" lang="pt-BR">← Voltar aos projetos</span>
       </a>
       <div class="project-hero">
         <h1>Misinformation Identification with LLMs</h1>
         <p class="project-subtitle">
           <span class="lang lang-en">Funded by FAPERGS · CNPq · PUCRS</span>
-          <span class="lang lang-pt">Financiado pela FAPERGS · CNPq · PUCRS</span>
+          <span class="lang lang-pt" lang="pt-BR">Financiado pela FAPERGS · CNPq · PUCRS</span>
         </p>
       </div>
 
@@ -104,7 +108,7 @@
       <div class="funder">
         <p class="funder-label">
           <span class="lang lang-en">Funded by</span>
-          <span class="lang lang-pt">Financiamento</span>
+          <span class="lang lang-pt" lang="pt-BR">Financiamento</span>
         </p>
         <div class="funder-logo funder-logo--row">
           <img src="../img/fapergs.png" alt="FAPERGS" width="527" height="82" loading="lazy" decoding="async" />
@@ -140,7 +144,7 @@
             reports.
           </p>
         </div>
-        <div class="lang lang-pt">
+        <div class="lang lang-pt" lang="pt-BR">
           <p>
             Este projeto propõe um método para a identificação automática de desinformação, baseado
             em um LLM ajustado para o domínio da saúde no idioma português. A desinformação é
@@ -176,40 +180,40 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Research Axes</span>
-        <span class="lang lang-pt">Eixos de Pesquisa</span>
+        <span class="lang lang-pt" lang="pt-BR">Eixos de Pesquisa</span>
       </h2>
       <div class="axes-grid">
 
         <div class="axis-card">
           <p class="axis-name">
             <span class="lang lang-en">Efficient Sentence-Embedding Fine-tuning</span>
-            <span class="lang lang-pt">Fine-tuning Eficiente de Embeddings de Sentença</span>
+            <span class="lang lang-pt" lang="pt-BR">Fine-tuning Eficiente de Embeddings de Sentença</span>
           </p>
           <p class="axis-desc">
             <span class="lang lang-en">An attention-based neural module that fine-tunes sentence-embedding models by adjusting only about 1% of trainable parameters, a smaller fraction than LoRA, making large embedding models viable under limited compute.</span>
-            <span class="lang lang-pt">Um módulo neural baseado em atenção que faz fine-tuning de modelos de embeddings de sentença ajustando apenas cerca de 1% dos parâmetros treináveis, fração menor que o LoRA, viabilizando modelos grandes sob recursos computacionais limitados.</span>
+            <span class="lang lang-pt" lang="pt-BR">Um módulo neural baseado em atenção que faz fine-tuning de modelos de embeddings de sentença ajustando apenas cerca de 1% dos parâmetros treináveis, fração menor que o LoRA, viabilizando modelos grandes sob recursos computacionais limitados.</span>
           </p>
         </div>
 
         <div class="axis-card">
           <p class="axis-name">
             <span class="lang lang-en">Health-Domain LLM in Portuguese</span>
-            <span class="lang lang-pt">LLM de Saúde em Português</span>
+            <span class="lang lang-pt" lang="pt-BR">LLM de Saúde em Português</span>
           </p>
           <p class="axis-desc">
             <span class="lang lang-en">Fine-tuning and instruction-tuning of an open LLM for health content in Portuguese, so it can interpret medical terminology and evaluate news and social-media posts for fact-dependent assertions.</span>
-            <span class="lang lang-pt">Fine-tuning e instruction-tuning de um LLM aberto para conteúdo de saúde em português, capaz de interpretar terminologia médica e avaliar notícias e postagens em redes sociais quanto a asserções que dependem de fatos.</span>
+            <span class="lang lang-pt" lang="pt-BR">Fine-tuning e instruction-tuning de um LLM aberto para conteúdo de saúde em português, capaz de interpretar terminologia médica e avaliar notícias e postagens em redes sociais quanto a asserções que dependem de fatos.</span>
           </p>
         </div>
 
         <div class="axis-card">
           <p class="axis-name">
             <span class="lang lang-en">RAG for Misinformation Detection</span>
-            <span class="lang lang-pt">RAG para Detecção de Desinformação</span>
+            <span class="lang lang-pt" lang="pt-BR">RAG para Detecção de Desinformação</span>
           </p>
           <p class="axis-desc">
             <span class="lang lang-en">A RAG system, fed by trusted scientific and governmental sources, that analyzes a message, text, or news item, identifies potentially false content, and suggests references to corroborate or refute the claim.</span>
-            <span class="lang lang-pt">Um sistema de RAG, alimentado por fontes científicas e governamentais confiáveis, que analisa uma mensagem, texto ou notícia, identifica conteúdo potencialmente falso e sugere referências para corroborar ou refutar a asserção.</span>
+            <span class="lang lang-pt" lang="pt-BR">Um sistema de RAG, alimentado por fontes científicas e governamentais confiáveis, que analisa uma mensagem, texto ou notícia, identifica conteúdo potencialmente falso e sugere referências para corroborar ou refutar a asserção.</span>
           </p>
         </div>
 
@@ -222,54 +226,54 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Project Details</span>
-        <span class="lang lang-pt">Detalhes do Projeto</span>
+        <span class="lang lang-pt" lang="pt-BR">Detalhes do Projeto</span>
       </h2>
       <div class="project-meta">
         <div class="meta-item">
           <p class="meta-key">
             <span class="lang lang-en">Funder</span>
-            <span class="lang lang-pt">Financiador</span>
+            <span class="lang lang-pt" lang="pt-BR">Financiador</span>
           </p>
           <p class="meta-val">FAPERGS · CNPq</p>
         </div>
         <div class="meta-item">
           <p class="meta-key">
             <span class="lang lang-en">FAPERGS call</span>
-            <span class="lang lang-pt">Edital FAPERGS</span>
+            <span class="lang lang-pt" lang="pt-BR">Edital FAPERGS</span>
           </p>
           <p class="meta-val">
             <span class="lang lang-en">FAPERGS 10/2024 · ARD/ARC</span>
-            <span class="lang lang-pt">FAPERGS 10/2024 · ARD/ARC</span>
+            <span class="lang lang-pt" lang="pt-BR">FAPERGS 10/2024 · ARD/ARC</span>
           </p>
         </div>
         <div class="meta-item">
           <p class="meta-key">
             <span class="lang lang-en">CNPq call</span>
-            <span class="lang lang-pt">Chamada CNPq</span>
+            <span class="lang lang-pt" lang="pt-BR">Chamada CNPq</span>
           </p>
           <p class="meta-val">
             <span class="lang lang-en">CNPq/Decit/SECTICS/MS Nº 30/2024</span>
-            <span class="lang lang-pt">CNPq/Decit/SECTICS/MS Nº 30/2024</span>
+            <span class="lang lang-pt" lang="pt-BR">CNPq/Decit/SECTICS/MS Nº 30/2024</span>
           </p>
         </div>
         <div class="meta-item">
           <p class="meta-key">
             <span class="lang lang-en">Institution</span>
-            <span class="lang lang-pt">Instituição</span>
+            <span class="lang lang-pt" lang="pt-BR">Instituição</span>
           </p>
           <p class="meta-val">PUCRS</p>
         </div>
         <div class="meta-item">
           <p class="meta-key">
             <span class="lang lang-en">Timeline</span>
-            <span class="lang lang-pt">Período</span>
+            <span class="lang lang-pt" lang="pt-BR">Período</span>
           </p>
           <p class="meta-val">2025 – 2027</p>
         </div>
         <div class="meta-item">
           <p class="meta-key">
             <span class="lang lang-en">Public record</span>
-            <span class="lang lang-pt">Registro público</span>
+            <span class="lang lang-pt" lang="pt-BR">Registro público</span>
           </p>
           <p class="meta-val">
             <a href="https://pesquisasaude.saude.gov.br/pesquisaView.xhtml?id=20051" target="_blank" rel="noopener">Pesquisa Saúde · MS</a>
@@ -284,12 +288,12 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Team</span>
-        <span class="lang lang-pt">Equipe</span>
+        <span class="lang lang-pt" lang="pt-BR">Equipe</span>
       </h2>
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Coordinator</span>
-          <span class="lang lang-pt">Coordenador</span>
+          <span class="lang lang-pt" lang="pt-BR">Coordenador</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Lucas S. Kupssinskü</div>
@@ -299,7 +303,7 @@
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Professor / Researcher</span>
-          <span class="lang lang-pt">Professor / Pesquisador</span>
+          <span class="lang lang-pt" lang="pt-BR">Professor / Pesquisador</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Rodrigo C. Barros</div>
@@ -309,7 +313,7 @@
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Postdoctoral Researcher</span>
-          <span class="lang lang-pt">Pós-Doutorado</span>
+          <span class="lang lang-pt" lang="pt-BR">Pós-Doutorado</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Christian Mattjie</div>
@@ -319,7 +323,7 @@
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Ph.D. Students</span>
-          <span class="lang lang-pt">Doutorado</span>
+          <span class="lang lang-pt" lang="pt-BR">Doutorado</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Marcelo M. Delucis</div>
@@ -331,7 +335,7 @@
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Master's Students</span>
-          <span class="lang lang-pt">Mestrado</span>
+          <span class="lang lang-pt" lang="pt-BR">Mestrado</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Jerusa Dalbosco Finatto</div>
@@ -344,7 +348,7 @@
       <div class="team-group">
         <h3 class="team-level">
           <span class="lang lang-en">Undergraduate Researchers</span>
-          <span class="lang lang-pt">Iniciação Científica</span>
+          <span class="lang lang-pt" lang="pt-BR">Iniciação Científica</span>
         </h3>
         <div class="member-grid">
           <div class="member-card">Arthur Domingues Fachel Nunes</div>
@@ -360,18 +364,20 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Related Publications</span>
-        <span class="lang lang-pt">Publicações Relacionadas</span>
+        <span class="lang lang-pt" lang="pt-BR">Publicações Relacionadas</span>
       </h2>
       <div id="related-pubs"></div>
     </div>
   </section>
+
+  </main>
 
   <!-- ── Footer ── -->
   <footer>
     <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, Brazil</p>
   </footer>
 
-  <script src="../js/toggles.js?v=4"></script>
+  <script src="../js/toggles.js?v=5"></script>
   <script>
     // Related publications and related content are prerendered into this page
     // by build.js from data/publications.json and data/related.json.

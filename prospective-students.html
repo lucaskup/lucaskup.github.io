@@ -23,7 +23,7 @@
         d.setAttribute('data-theme', localStorage.getItem('theme') ||
           (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
         var l = localStorage.getItem('lang');
-        if (l) d.setAttribute('data-lang', l);
+        if (l) { d.setAttribute('data-lang', l); if (l === 'pt') d.lang = 'pt-BR'; }
       } catch (e) {}
     })();
   </script>
@@ -31,25 +31,27 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main"><span class="lang lang-en">Skip to content</span><span class="lang lang-pt" lang="pt-BR">Pular para o conteúdo</span></a>
+
   <!-- ── Navigation ── -->
   <nav>
     <a class="nav-brand" href="index.html">Lucas Kupssinskü</a>
     <ul id="nav-links" class="nav-links">
       <li><a href="index.html">
         <span class="lang lang-en">Home</span>
-        <span class="lang lang-pt">Início</span>
+        <span class="lang lang-pt" lang="pt-BR">Início</span>
       </a></li>
       <li><a href="index.html#research">
         <span class="lang lang-en">Research</span>
-        <span class="lang lang-pt">Pesquisa</span>
+        <span class="lang lang-pt" lang="pt-BR">Pesquisa</span>
       </a></li>
       <li><a href="index.html#projects">
         <span class="lang lang-en">Projects</span>
-        <span class="lang lang-pt">Projetos</span>
+        <span class="lang lang-pt" lang="pt-BR">Projetos</span>
       </a></li>
       <li><a href="index.html#publications">
         <span class="lang lang-en">Publications</span>
-        <span class="lang lang-pt">Publicações</span>
+        <span class="lang lang-pt" lang="pt-BR">Publicações</span>
       </a></li>
     </ul>
     <div class="nav-actions">
@@ -67,21 +69,23 @@
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- ── Hero ── -->
   <section id="overview">
     <div class="container">
       <a class="back-link" href="index.html">
         <span class="lang lang-en">← Back to home</span>
-        <span class="lang lang-pt">← Voltar ao início</span>
+        <span class="lang lang-pt" lang="pt-BR">← Voltar ao início</span>
       </a>
       <div class="project-hero">
         <h1>
           <span class="lang lang-en">Prospective Students</span>
-          <span class="lang lang-pt">Futuros Orientandos</span>
+          <span class="lang lang-pt" lang="pt-BR">Futuros Orientandos</span>
         </h1>
         <p class="project-subtitle">
           <span class="lang lang-en">How to join my research group at PUCRS</span>
-          <span class="lang lang-pt">Como ingressar no meu grupo de pesquisa na PUCRS</span>
+          <span class="lang lang-pt" lang="pt-BR">Como ingressar no meu grupo de pesquisa na PUCRS</span>
         </p>
       </div>
 
@@ -105,7 +109,7 @@
             overlap.
           </p>
         </div>
-        <div class="lang lang-pt">
+        <div class="lang lang-pt" lang="pt-BR">
           <p>
             Fico sempre feliz em conversar com estudantes motivados de todos os níveis:
             graduação, mestrado e doutorado. Um aviso importante antes de tudo:
@@ -135,21 +139,21 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Ways to Work With Me</span>
-        <span class="lang lang-pt">Formas de Trabalhar Comigo</span>
+        <span class="lang lang-pt" lang="pt-BR">Formas de Trabalhar Comigo</span>
       </h2>
       <div class="axes-grid">
 
         <div class="axis-card">
           <p class="axis-name">
             <span class="lang lang-en">Undergraduate Research (IC)</span>
-            <span class="lang lang-pt">Iniciação Científica (IC)</span>
+            <span class="lang lang-pt" lang="pt-BR">Iniciação Científica (IC)</span>
           </p>
           <p class="axis-desc">
             <span class="lang lang-en">If you are a PUCRS undergrad interested in scientific
               initiation, email me or talk to me after class. No prior research experience is
               required. Curiosity and consistency matter more. Scholarships (PIBIC/BPA) are
               available through periodic university calls.</span>
-            <span class="lang lang-pt">Se você é estudante de graduação da PUCRS com interesse
+            <span class="lang lang-pt" lang="pt-BR">Se você é estudante de graduação da PUCRS com interesse
               em iniciação científica, me mande um e-mail ou fale comigo depois da aula. Não é
               preciso ter experiência prévia em pesquisa. Curiosidade e consistência importam
               mais. Bolsas (PIBIC/BPA) são oferecidas em editais periódicos da universidade.</span>
@@ -159,7 +163,7 @@
         <div class="axis-card">
           <p class="axis-name">
             <span class="lang lang-en">M.Sc. and Ph.D.</span>
-            <span class="lang lang-pt">Mestrado e Doutorado</span>
+            <span class="lang lang-pt" lang="pt-BR">Mestrado e Doutorado</span>
           </p>
           <p class="axis-desc">
             <span class="lang lang-en">Admission is through the
@@ -167,7 +171,7 @@
               Graduate Program in Computer Science (PPGCC)</a> at PUCRS, which runs regular
               selection calls. CAPES/CNPq scholarships are available for full-time students.
               Reach out before applying so we can discuss fit and potential topics.</span>
-            <span class="lang lang-pt">O ingresso ocorre pelo
+            <span class="lang lang-pt" lang="pt-BR">O ingresso ocorre pelo
               <a href="https://portal.pucrs.br/escola-politecnica/ppgcc/" target="_blank" rel="noopener">
               Programa de Pós-Graduação em Ciência da Computação (PPGCC)</a> da PUCRS, que
               abre processos seletivos regulares. Há bolsas CAPES/CNPq para estudantes em
@@ -179,13 +183,13 @@
         <div class="axis-card">
           <p class="axis-name">
             <span class="lang lang-en">Co-advising &amp; Collaboration</span>
-            <span class="lang lang-pt">Coorientação e Colaboração</span>
+            <span class="lang lang-pt" lang="pt-BR">Coorientação e Colaboração</span>
           </p>
           <p class="axis-desc">
             <span class="lang lang-en">I co-advise students from other programs and
               institutions when there is a strong overlap with my research lines, and I am
               open to collaborations with industry and other research groups.</span>
-            <span class="lang lang-pt">Cooriento estudantes de outros programas e
+            <span class="lang lang-pt" lang="pt-BR">Cooriento estudantes de outros programas e
               instituições quando há forte sobreposição com minhas linhas de pesquisa, e
               estou aberto a colaborações com a indústria e outros grupos de pesquisa.</span>
           </p>
@@ -200,7 +204,7 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">What to Expect</span>
-        <span class="lang lang-pt">O Que Esperar</span>
+        <span class="lang lang-pt" lang="pt-BR">O Que Esperar</span>
       </h2>
       <div class="project-body">
         <div class="lang lang-en">
@@ -217,7 +221,7 @@
             published at venues such as ICLR, AAAI, and IEEE conferences during their degrees.
           </p>
         </div>
-        <div class="lang lang-pt">
+        <div class="lang lang-pt" lang="pt-BR">
           <p>
             De você, espero dedicação integral, honestidade intelectual e progresso constante
             e incremental. Pesquisa é uma maratona de pequenos passos, não um sprint de noites
@@ -240,7 +244,7 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Get in Touch</span>
-        <span class="lang lang-pt">Entre em Contato</span>
+        <span class="lang lang-pt" lang="pt-BR">Entre em Contato</span>
       </h2>
       <div class="project-body">
         <div class="lang lang-en">
@@ -253,7 +257,7 @@
             messages that show you have looked at what the group actually does.
           </p>
         </div>
-        <div class="lang lang-pt">
+        <div class="lang lang-pt" lang="pt-BR">
           <p>
             É só me mandar um e-mail em
             <a href="mailto:lucas.kupssinsku@pucrs.br">lucas.kupssinsku@pucrs.br</a>, sem
@@ -267,12 +271,14 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ── Footer ── -->
   <footer>
-    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, <span class="lang lang-en">Brazil</span><span class="lang lang-pt">Brasil</span></p>
+    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, <span class="lang lang-en">Brazil</span><span class="lang lang-pt" lang="pt-BR">Brasil</span></p>
   </footer>
 
-  <script src="js/toggles.js?v=4"></script>
+  <script src="js/toggles.js?v=5"></script>
   <script>
     document.getElementById('copy-year').textContent = new Date().getFullYear();
   </script>

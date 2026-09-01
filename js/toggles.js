@@ -34,6 +34,8 @@
 
   function apply(lang) {
     root.setAttribute('data-lang', lang);
+    // Keep the document language in sync so screen readers switch voice.
+    root.lang = lang === 'pt' ? 'pt-BR' : 'en';
     // Button shows the language you can switch TO.
     if (label) label.textContent = lang === 'en' ? 'PT' : 'EN';
     btn.setAttribute('aria-label', lang === 'en' ? 'Mudar para português' : 'Switch to English');
@@ -71,7 +73,9 @@
 
 (function initTabs() {
   // Tab groups are prerendered by build.js as a .tabs button row followed by
-  // sibling .tab-panel divs; this only wires up the switching.
+  // sibling .tab-panel divs; this wires up the switching, keeps the ARIA
+  // state (aria-selected, roving tabindex) in sync, and adds the arrow-key
+  // navigation expected of a tablist.
   document.querySelectorAll('.tabs').forEach((row) => {
     const btns = Array.from(row.querySelectorAll('.tab-btn'));
     const panels = [];
@@ -80,12 +84,81 @@
       if (el.classList.contains('tab-panel')) panels.push(el);
       el = el.nextElementSibling;
     }
+
+    function select(i, focus) {
+      btns.forEach((b, j) => {
+        const active = j === i;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-selected', active ? 'true' : 'false');
+        if (active) b.removeAttribute('tabindex');
+        else b.setAttribute('tabindex', '-1');
+      });
+      panels.forEach((p, j) => p.classList.toggle('active', j === i));
+      if (focus) btns[i].focus();
+    }
+
     btns.forEach((btn, i) => {
-      btn.addEventListener('click', () => {
-        btns.forEach(b => b.classList.remove('active'));
-        panels.forEach(p => p.classList.remove('active'));
-        btn.classList.add('active');
-        if (panels[i]) panels[i].classList.add('active');
+      btn.addEventListener('click', () => select(i, false));
+      btn.addEventListener('keydown', (e) => {
+        let to = null;
+        if (e.key === 'ArrowRight') to = (i + 1) % btns.length;
+        else if (e.key === 'ArrowLeft') to = (i - 1 + btns.length) % btns.length;
+        else if (e.key === 'Home') to = 0;
+        else if (e.key === 'End') to = btns.length - 1;
+        if (to !== null) { e.preventDefault(); select(to, true); }
+      });
+    });
+  });
+})();
+
+(function initBibtex() {
+  // Each .bibtex-btn carries its citation in data-bibtex (prerendered by
+  // build.js); clicking copies it and flashes a confirmation on the button.
+  const btns = document.querySelectorAll('.bibtex-btn');
+  if (!btns.length) return;
+
+  // Legacy path for non-secure contexts (e.g. served over plain http on a
+  // LAN address) or when the async Clipboard API rejects.
+  function legacyCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function copy(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text)
+        .catch(() => (legacyCopy(text) ? Promise.resolve() : Promise.reject()));
+    }
+    return legacyCopy(text) ? Promise.resolve() : Promise.reject();
+  }
+
+  function flash(btn, cls, label) {
+    btn.classList.add(cls);
+    btn.textContent = label;
+    setTimeout(() => {
+      btn.classList.remove(cls);
+      btn.textContent = 'BibTeX';
+    }, 1500);
+  }
+
+  btns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const text = btn.dataset.bibtex || '';
+      copy(text).then(() => {
+        flash(btn, 'copied', '✓ BibTeX');
+      }).catch(() => {
+        // Clipboard unavailable: signal the failure and hand the text over
+        // in a prompt so it can still be copied manually.
+        flash(btn, 'copy-failed', '✕ BibTeX');
+        window.prompt('Copy the BibTeX entry below:', text);
       });
     });
   });

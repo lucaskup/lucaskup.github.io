@@ -37,7 +37,7 @@
         d.setAttribute('data-theme', localStorage.getItem('theme') ||
           (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
         var l = localStorage.getItem('lang');
-        if (l) d.setAttribute('data-lang', l);
+        if (l) { d.setAttribute('data-lang', l); if (l === 'pt') d.lang = 'pt-BR'; }
       } catch (e) {}
     })();
   </script>
@@ -45,25 +45,27 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main"><span class="lang lang-en">Skip to content</span><span class="lang lang-pt" lang="pt-BR">Pular para o conteúdo</span></a>
+
   <!-- ── Navigation ── -->
   <nav>
     <a class="nav-brand" href="../index.html">Lucas Kupssinskü</a>
     <ul id="nav-links" class="nav-links">
       <li><a href="../index.html">
         <span class="lang lang-en">Home</span>
-        <span class="lang lang-pt">Início</span>
+        <span class="lang lang-pt" lang="pt-BR">Início</span>
       </a></li>
       <li><a href="../index.html#news">
         <span class="lang lang-en">News</span>
-        <span class="lang lang-pt">Notícias</span>
+        <span class="lang lang-pt" lang="pt-BR">Notícias</span>
       </a></li>
       <li><a href="../index.html#projects">
         <span class="lang lang-en">Projects</span>
-        <span class="lang lang-pt">Projetos</span>
+        <span class="lang lang-pt" lang="pt-BR">Projetos</span>
       </a></li>
       <li><a href="../prospective-students.html">
         <span class="lang lang-en">Join Us</span>
-        <span class="lang lang-pt">Ingressar</span>
+        <span class="lang lang-pt" lang="pt-BR">Ingressar</span>
       </a></li>
     </ul>
     <div class="nav-actions">
@@ -81,25 +83,27 @@
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- ── Post ── -->
   <section id="overview">
     <div class="container">
       <a class="back-link" href="../index.html#news">
         <span class="lang lang-en">← Back to news</span>
-        <span class="lang lang-pt">← Voltar às notícias</span>
+        <span class="lang lang-pt" lang="pt-BR">← Voltar às notícias</span>
       </a>
       <div class="project-hero">
         <p class="news-date">
           <span class="lang lang-en">Jul 2026</span>
-          <span class="lang lang-pt">Jul 2026</span>
+          <span class="lang lang-pt" lang="pt-BR">Jul 2026</span>
         </p>
         <h1>
           <span class="lang lang-en">Kunumi COLABS in the South</span>
-          <span class="lang lang-pt">Encontro Kunumi COLABS no Sul</span>
+          <span class="lang lang-pt" lang="pt-BR">Encontro Kunumi COLABS no Sul</span>
         </h1>
         <p class="project-subtitle">
           <span class="lang lang-en">First results of the Low Resource ML Colab · Kunumi · PUCRS</span>
-          <span class="lang lang-pt">Primeiros resultados do Colab de Low Resource ML · Kunumi · PUCRS</span>
+          <span class="lang lang-pt" lang="pt-BR">Primeiros resultados do Colab de Low Resource ML · Kunumi · PUCRS</span>
         </p>
       </div>
 
@@ -111,42 +115,42 @@
                    data-caption-en="Kunumi COLABS meeting in the South of Brazil."
                    data-caption-pt="Encontro do Kunumi COLABS na região Sul.">
                 <img src="../img/news/kunumi-colabs-rs/01.jpg"
-                     width="2048" height="1365" loading="eager" decoding="async"
+                     width="1400" height="933" loading="eager" decoding="async"
                      alt="Kunumi COLABS meeting in the South of Brazil" />
               </div>
               <div class="carousel-slide"
                    data-caption-en="Presenting the first results of the Low Resource ML Colab."
                    data-caption-pt="Apresentando os primeiros resultados do Colab de Low Resource ML.">
                 <img src="../img/news/kunumi-colabs-rs/02.jpg"
-                     width="2048" height="1365" loading="lazy" decoding="async"
+                     width="1400" height="933" loading="lazy" decoding="async"
                      alt="Presenting the first results of the Low Resource ML Colab" />
               </div>
               <div class="carousel-slide"
                    data-caption-en="Researchers gathered at the Kunumi COLABS meeting."
                    data-caption-pt="Pesquisadores reunidos no encontro do Kunumi COLABS.">
                 <img src="../img/news/kunumi-colabs-rs/03.jpg"
-                     width="2048" height="1365" loading="lazy" decoding="async"
+                     width="1400" height="933" loading="lazy" decoding="async"
                      alt="Researchers gathered at the Kunumi COLABS meeting" />
               </div>
               <div class="carousel-slide"
                    data-caption-en="Sessions at the Kunumi COLABS meeting."
                    data-caption-pt="Sessões durante o encontro do Kunumi COLABS.">
                 <img src="../img/news/kunumi-colabs-rs/04.jpg"
-                     width="2048" height="1365" loading="lazy" decoding="async"
+                     width="1400" height="933" loading="lazy" decoding="async"
                      alt="Sessions at the Kunumi COLABS meeting" />
               </div>
               <div class="carousel-slide"
                    data-caption-en="Colabs from across the network sharing early results."
                    data-caption-pt="Colabs de toda a rede compartilhando resultados iniciais.">
                 <img src="../img/news/kunumi-colabs-rs/05.jpg"
-                     width="2048" height="1365" loading="lazy" decoding="async"
+                     width="1400" height="933" loading="lazy" decoding="async"
                      alt="Colabs from across the network sharing early results" />
               </div>
               <div class="carousel-slide"
                    data-caption-en="Kunumi COLABS network in the South of Brazil."
                    data-caption-pt="Rede Kunumi COLABS na região Sul.">
                 <img src="../img/news/kunumi-colabs-rs/06.jpg"
-                     width="2048" height="1365" loading="lazy" decoding="async"
+                     width="1400" height="933" loading="lazy" decoding="async"
                      alt="Kunumi COLABS network in the South of Brazil" />
               </div>
             </div>
@@ -157,7 +161,7 @@
         </div>
         <figcaption>
           <span class="lang lang-en">Kunumi COLABS meeting · Photos by Carlos Macedo</span>
-          <span class="lang lang-pt">Encontro Kunumi COLABS · Fotos de Carlos Macedo</span>
+          <span class="lang lang-pt" lang="pt-BR">Encontro Kunumi COLABS · Fotos de Carlos Macedo</span>
         </figcaption>
       </figure>
 
@@ -187,7 +191,7 @@
             and researchers in our group, who make this research happen every day.
           </p>
         </div>
-        <div class="lang lang-pt">
+        <div class="lang lang-pt" lang="pt-BR">
           <p>
             O que acontece quando a maior rede de pesquisadores de Inteligência Artificial do Brasil
             recebe financiamento e liberdade para pesquisar? A resposta está começando a aparecer.
@@ -217,18 +221,20 @@
       <p class="back-link" style="margin-top: 2rem;">
         <a href="../projects/low-resource-ml.html">
           <span class="lang lang-en">Read more about the Low Resource ML project →</span>
-          <span class="lang lang-pt">Saiba mais sobre o projeto Low Resource ML →</span>
+          <span class="lang lang-pt" lang="pt-BR">Saiba mais sobre o projeto Low Resource ML →</span>
         </a>
       </p>
     </div>
   </section>
+
+  </main>
 
   <!-- ── Footer ── -->
   <footer>
     <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, Brazil</p>
   </footer>
 
-  <script src="../js/toggles.js?v=4"></script>
+  <script src="../js/toggles.js?v=5"></script>
   <script>
     document.getElementById('copy-year').textContent = new Date().getFullYear();
   </script>

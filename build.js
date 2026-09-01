@@ -6,6 +6,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const ROOT = __dirname;
 const OUT = path.join(ROOT, '_site');
@@ -19,7 +20,7 @@ const advisees = read('advisees.json');
 const related = read('related.json');
 
 // ── Shared templates (mirrors of the former client-side renderers) ──
-const bil = (en, pt) => `<span class="lang lang-en">${en}</span><span class="lang lang-pt">${pt}</span>`;
+const bil = (en, pt) => `<span class="lang lang-en">${en}</span><span class="lang lang-pt" lang="pt-BR">${pt}</span>`;
 
 const coadviseeTag = bil(' · Co-advisee', ' · Coorientação');
 
@@ -78,6 +79,39 @@ const pubTabLabel = {
   preprint:   bil('Preprint', 'Preprints')
 };
 
+// BibTeX entry for a publication, used by the copy button on each card.
+const escAttr = s => String(s)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;').replace(/\n/g, '&#10;');
+
+function bibtexFor(p) {
+  const ascii = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^A-Za-z]/g, '');
+  const firstAuthor = p.authors[0].replace(/^\*/, '').trim();
+  const lastName = firstAuthor.split(/\s+/).pop();
+  const titleWord = (p.title.match(/[A-Za-zÀ-ÿ]{4,}/) || ['pub'])[0];
+  const key = (ascii(lastName) + p.year + ascii(titleWord)).toLowerCase();
+
+  const fields = [
+    ['title',  `{${p.title}}`],
+    ['author', p.authors.map(a => a.replace(/^\*/, '')).join(' and ')]
+  ];
+  let entry = 'misc';
+  if (p.type === 'journal') {
+    entry = 'article';
+    fields.push(['journal', p.venue]);
+  } else if (p.type === 'conference' || p.type === 'workshop') {
+    entry = 'inproceedings';
+    fields.push(['booktitle', p.venue]);
+  } else {
+    fields.push(['howpublished', p.venue]);
+  }
+  fields.push(['year', String(p.year)]);
+  if (p.url) fields.push(['url', p.url]);
+
+  const body = fields.map(([k, v]) => `  ${k} = {${v}}`).join(',\n');
+  return `@${entry}{${key},\n${body}\n}`;
+}
+
 function pubCard(p) {
   const authors = p.authors
     .map(a => a.startsWith('*') ? `<strong>${a.slice(1)}</strong>` : a)
@@ -90,17 +124,25 @@ function pubCard(p) {
       <span class="pub-venue">${p.venue}</span>
       <span class="pub-year">${p.year}</span>
       <span class="badge badge-${p.type}">${badgeLabel[p.type] || p.type}</span>
+      <button type="button" class="bibtex-btn" data-bibtex="${escAttr(bibtexFor(p))}" aria-label="Copy BibTeX citation to clipboard" title="Copy BibTeX citation to clipboard">BibTeX</button>
     </div>
   </div>`;
 }
 
 // Same DOM shape buildTabs() used to create; js/toggles.js hydrates it.
+// Emitted with tablist/tab/tabpanel ARIA wiring; toggles.js keeps the
+// aria-selected and tabindex state in sync and adds arrow-key navigation.
+let tabsSeq = 0;
 function tabsHtml(tabs, innerClass = 'people-grid') {
+  const group = `tabs-${++tabsSeq}`;
   const btns = tabs.map(({ label }, i) =>
-    `<button type="button" class="tab-btn${i === 0 ? ' active' : ''}">${label}</button>`).join('');
+    `<button type="button" class="tab-btn${i === 0 ? ' active' : ''}" role="tab"
+      id="${group}-tab-${i}" aria-controls="${group}-panel-${i}"
+      aria-selected="${i === 0 ? 'true' : 'false'}"${i === 0 ? '' : ' tabindex="-1"'}>${label}</button>`).join('');
   const panels = tabs.map(({ html }, i) =>
-    `<div class="tab-panel${i === 0 ? ' active' : ''}"><div class="${innerClass}">${html}</div></div>`).join('\n');
-  return `<div class="tabs">${btns}</div>\n${panels}`;
+    `<div class="tab-panel${i === 0 ? ' active' : ''}" role="tabpanel"
+      id="${group}-panel-${i}" aria-labelledby="${group}-tab-${i}" tabindex="0"><div class="${innerClass}">${html}</div></div>`).join('\n');
+  return `<div class="tabs" role="tablist">${btns}</div>\n${panels}`;
 }
 
 // ── Section renderers ──
@@ -317,5 +359,40 @@ transform('projects/misinformation-llms.html', (html, file) => {
   html = fillContainer(html, 'related-pubs', '', renderRelatedPubs('misinformation-llms'), file);
   return html;
 });
+
+// ── Sitemap: generated at build time so lastmod never goes stale ──
+// Each page's lastmod is the date of the last commit touching any of its
+// source inputs (requires full git history; deploy.yml checks out with
+// fetch-depth: 0). Falls back to today when git is unavailable.
+function renderSitemap() {
+  const site = 'https://lucaskup.github.io/';
+  const pages = [
+    { loc: '',                                  src: ['index.html', 'style.css', 'data/news.json', 'data/projects.json', 'data/publications.json', 'data/advisees.json'] },
+    { loc: 'prospective-students.html',         src: ['prospective-students.html'] },
+    { loc: 'news/kunumi-colabs-rs.html',        src: ['news/kunumi-colabs-rs.html'] },
+    { loc: 'projects/low-resource-ml.html',     src: ['projects/low-resource-ml.html', 'data/publications.json', 'data/related.json'] },
+    { loc: 'projects/misinformation-llms.html', src: ['projects/misinformation-llms.html', 'data/publications.json'] }
+  ];
+  const today = new Date().toISOString().slice(0, 10);
+  const lastmod = files => {
+    try {
+      const out = execSync(`git log -1 --format=%cs -- ${files.join(' ')}`, { cwd: ROOT }).toString().trim();
+      return /^\d{4}-\d{2}-\d{2}$/.test(out) ? out : today;
+    } catch (e) {
+      return today;
+    }
+  };
+  const urls = pages.map(p => `  <url>
+    <loc>${site}${p.loc}</loc>
+    <lastmod>${lastmod(p.src)}</lastmod>
+  </url>`).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>\n`;
+}
+
+fs.writeFileSync(path.join(OUT, 'sitemap.xml'), renderSitemap());
+console.log('generated sitemap.xml');
 
 console.log('build complete → _site/');

@@ -24,7 +24,7 @@
         d.setAttribute('data-theme', localStorage.getItem('theme') ||
           (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
         var l = localStorage.getItem('lang');
-        if (l) d.setAttribute('data-lang', l);
+        if (l) { d.setAttribute('data-lang', l); if (l === 'pt') d.lang = 'pt-BR'; }
       } catch (e) {}
     })();
   </script>
@@ -32,20 +32,22 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main"><span class="lang lang-en">Skip to content</span><span class="lang lang-pt" lang="pt-BR">Pular para o conteúdo</span></a>
+
   <!-- ── Navigation ── -->
   <nav>
     <span class="nav-brand">Lucas Kupssinskü</span>
     <ul id="nav-links" class="nav-links">
-      <li><a href="#about"><span class="lang lang-en">About</span><span class="lang lang-pt">Sobre</span></a></li>
-      <li><a href="#news"><span class="lang lang-en">News</span><span class="lang lang-pt">Notícias</span></a></li>
-      <li><a href="#research"><span class="lang lang-en">Research</span><span class="lang lang-pt">Pesquisa</span></a></li>
-      <li><a href="#projects"><span class="lang lang-en">Projects</span><span class="lang lang-pt">Projetos</span></a></li>
-      <li><a href="#partnerships"><span class="lang lang-en">Partnerships</span><span class="lang lang-pt">Parcerias</span></a></li>
-      <li><a href="#publications"><span class="lang lang-en">Publications</span><span class="lang lang-pt">Publicações</span></a></li>
-      <li><a href="#advisees"><span class="lang lang-en">Advisees</span><span class="lang lang-pt">Orientandos</span></a></li>
-      <li><a href="#alumni"><span class="lang lang-en">Alumni</span><span class="lang lang-pt">Egressos</span></a></li>
-      <li><a href="#lectures"><span class="lang lang-en">Lectures</span><span class="lang lang-pt">Disciplinas</span></a></li>
-      <li><a href="prospective-students.html"><span class="lang lang-en">Join Us</span><span class="lang lang-pt">Ingressar</span></a></li>
+      <li><a href="#about"><span class="lang lang-en">About</span><span class="lang lang-pt" lang="pt-BR">Sobre</span></a></li>
+      <li><a href="#news"><span class="lang lang-en">News</span><span class="lang lang-pt" lang="pt-BR">Notícias</span></a></li>
+      <li><a href="#research"><span class="lang lang-en">Research</span><span class="lang lang-pt" lang="pt-BR">Pesquisa</span></a></li>
+      <li><a href="#projects"><span class="lang lang-en">Projects</span><span class="lang lang-pt" lang="pt-BR">Projetos</span></a></li>
+      <li><a href="#partnerships"><span class="lang lang-en">Partnerships</span><span class="lang lang-pt" lang="pt-BR">Parcerias</span></a></li>
+      <li><a href="#publications"><span class="lang lang-en">Publications</span><span class="lang lang-pt" lang="pt-BR">Publicações</span></a></li>
+      <li><a href="#advisees"><span class="lang lang-en">Advisees</span><span class="lang lang-pt" lang="pt-BR">Orientandos</span></a></li>
+      <li><a href="#alumni"><span class="lang lang-en">Alumni</span><span class="lang lang-pt" lang="pt-BR">Egressos</span></a></li>
+      <li><a href="#lectures"><span class="lang lang-en">Lectures</span><span class="lang lang-pt" lang="pt-BR">Disciplinas</span></a></li>
+      <li><a href="prospective-students.html"><span class="lang lang-en">Join Us</span><span class="lang lang-pt" lang="pt-BR">Ingressar</span></a></li>
     </ul>
     <div class="nav-actions">
       <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Mudar para português" title="Mudar para português">
@@ -62,22 +64,24 @@
     </div>
   </nav>
 
+  <main id="main">
+
   <!-- ── About ── -->
   <section id="about">
     <div class="container">
       <div class="hero">
 
-        <div class="avatar"><img src="img/perfilpucrs.jpg" alt="Lucas Silveira Kupssinskü, Associate Professor at PUCRS" /></div>
+        <div class="avatar"><img src="img/perfilpucrs.jpg" alt="Lucas Silveira Kupssinskü, Associate Professor at PUCRS" width="648" height="648" /></div>
 
         <div class="hero-info">
           <h1>Lucas Silveira <span>Kupssinskü</span></h1>
           <p class="hero-role">
             <span class="lang lang-en">Associate Professor · Deep Learning Researcher</span>
-            <span class="lang lang-pt">Professor Adjunto · Pesquisador em Aprendizado Profundo</span>
+            <span class="lang lang-pt" lang="pt-BR">Professor Adjunto · Pesquisador em Aprendizado Profundo</span>
           </p>
           <p class="hero-institution">
             <span class="lang lang-en">School of Technology · Pontifical Catholic University of Rio Grande do Sul (PUCRS) · Porto Alegre, Brazil</span>
-            <span class="lang lang-pt">Escola Politécnica · Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS) · Porto Alegre, Brasil</span>
+            <span class="lang lang-pt" lang="pt-BR">Escola Politécnica · Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS) · Porto Alegre, Brasil</span>
           </p>
           <p class="hero-bio">
             <span class="lang lang-en">
@@ -88,7 +92,7 @@
               and Machine Unlearning, supported by institutions such as Petrobras, Motorola,
               Michael J. Fox Foundation, and Kunumi.
             </span>
-            <span class="lang lang-pt">
+            <span class="lang lang-pt" lang="pt-BR">
               Sou Professor Adjunto e pesquisador no Programa de Pós-Graduação em Ciência da Computação da PUCRS,
               onde coordeno, em conjunto, o Grupo de Pesquisa em Teoria e Aplicações de Aprendizado de Máquina (MALTA).
               Tenho doutorado em Computação Aplicada pela Unisinos. Minha pesquisa concentra-se em aprendizado de máquina
@@ -105,7 +109,7 @@
               and teaching full-time because it is where I believe I can create the most
               positive impact on society.
             </span>
-            <span class="lang lang-pt">
+            <span class="lang lang-pt" lang="pt-BR">
               Antes da academia, passei dez anos na indústria como desenvolvedor e analista
               de sistemas, e já ensinei em todos os níveis, de adolescentes em um curso
               técnico a programas de inclusão digital para idosos. Migrei para a pesquisa e
@@ -122,12 +126,12 @@
             <a class="btn btn-pucrs"
                href="https://www.pucrs.br/pesquisadores/lucas-silveira-kupssinsku/"
                target="_blank" rel="noopener">
-              🎓 <span class="lang lang-en">PUCRS Profile</span><span class="lang lang-pt">Perfil PUCRS</span>
+              🎓 <span class="lang lang-en">PUCRS Profile</span><span class="lang lang-pt" lang="pt-BR">Perfil PUCRS</span>
             </a>
             <a class="btn btn-lattes"
                href="https://lattes.cnpq.br/7949995756060059"
                target="_blank" rel="noopener">
-              📄 <span class="lang lang-en">Lattes CV</span><span class="lang lang-pt">Currículo Lattes</span>
+              📄 <span class="lang lang-en">Lattes CV</span><span class="lang lang-pt" lang="pt-BR">Currículo Lattes</span>
             </a>
             <a class="btn btn-orcid"
                href="https://orcid.org/0000-0003-2580-3996"
@@ -136,7 +140,7 @@
             </a>
             <a class="btn btn-email"
                href="mailto:lucas.kupssinsku@pucrs.br">
-              ✉️ <span class="lang lang-en">Email</span><span class="lang lang-pt">E-mail</span>
+              ✉️ <span class="lang lang-en">Email</span><span class="lang lang-pt" lang="pt-BR">E-mail</span>
             </a>
           </div>
         </div>
@@ -149,7 +153,7 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">News</span>
-        <span class="lang lang-pt">Notícias</span>
+        <span class="lang lang-pt" lang="pt-BR">Notícias</span>
       </h2>
       <div id="news-container"></div>
     </div>
@@ -160,15 +164,15 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Research Interests</span>
-        <span class="lang lang-pt">Interesses de Pesquisa</span>
+        <span class="lang lang-pt" lang="pt-BR">Interesses de Pesquisa</span>
       </h2>
       <div class="tags">
-        <span class="tag"><span class="lang lang-en">Machine Learning</span><span class="lang lang-pt">Aprendizado de Máquina</span></span>
-        <span class="tag"><span class="lang lang-en">Deep Learning</span><span class="lang lang-pt">Aprendizado Profundo</span></span>
-        <span class="tag"><span class="lang lang-en">Computer Vision</span><span class="lang lang-pt">Visão Computacional</span></span>
-        <span class="tag"><span class="lang lang-en">Natural Language Processing</span><span class="lang lang-pt">Processamento de Linguagem Natural</span></span>
-        <span class="tag"><span class="lang lang-en">Unlearning</span><span class="lang lang-pt">Desaprendizado de Máquina</span></span>
-        <span class="tag"><span class="lang lang-en">Long Context LLMs</span><span class="lang lang-pt">LLMs de Contexto Longo</span></span>
+        <span class="tag"><span class="lang lang-en">Machine Learning</span><span class="lang lang-pt" lang="pt-BR">Aprendizado de Máquina</span></span>
+        <span class="tag"><span class="lang lang-en">Deep Learning</span><span class="lang lang-pt" lang="pt-BR">Aprendizado Profundo</span></span>
+        <span class="tag"><span class="lang lang-en">Computer Vision</span><span class="lang lang-pt" lang="pt-BR">Visão Computacional</span></span>
+        <span class="tag"><span class="lang lang-en">Natural Language Processing</span><span class="lang lang-pt" lang="pt-BR">Processamento de Linguagem Natural</span></span>
+        <span class="tag"><span class="lang lang-en">Unlearning</span><span class="lang lang-pt" lang="pt-BR">Desaprendizado de Máquina</span></span>
+        <span class="tag"><span class="lang lang-en">Long Context LLMs</span><span class="lang lang-pt" lang="pt-BR">LLMs de Contexto Longo</span></span>
       </div>
     </div>
   </section>
@@ -178,7 +182,7 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Projects</span>
-        <span class="lang lang-pt">Projetos</span>
+        <span class="lang lang-pt" lang="pt-BR">Projetos</span>
       </h2>
 
       <div id="project-list" class="project-list"></div>
@@ -190,7 +194,7 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Partnerships</span>
-        <span class="lang lang-pt">Parcerias</span>
+        <span class="lang lang-pt" lang="pt-BR">Parcerias</span>
       </h2>
       <p>
         <span class="lang lang-en">
@@ -201,7 +205,7 @@
           Michael J. Fox Foundation, Kunumi, FAPERGS, and CNPq, on topics ranging from
           geoscience and health to efficient LLMs.
         </span>
-        <span class="lang lang-pt">
+        <span class="lang lang-pt" lang="pt-BR">
           Trabalho com empresas, fundações e agências de fomento em pesquisa
           de aprendizado de máquina, tanto aplicada quanto pura. Uma parceria pode tomar a forma de um
           projeto de P&amp;D contratado, uma linha de pesquisa orientada em conjunto,
@@ -213,11 +217,11 @@
       <div class="callout">
         <p>
           <span class="lang lang-en"><strong>Interested in a collaboration?</strong> Write a short note about your problem and we will get back to you.</span>
-          <span class="lang lang-pt"><strong>Interessado em uma colaboração?</strong> Escreva uma breve mensagem sobre o seu problema e retornaremos o contato.</span>
+          <span class="lang lang-pt" lang="pt-BR"><strong>Interessado em uma colaboração?</strong> Escreva uma breve mensagem sobre o seu problema e retornaremos o contato.</span>
         </p>
         <a class="project-link" href="mailto:lucas.kupssinsku@pucrs.br">
           <span class="lang lang-en">Get in touch →</span>
-          <span class="lang lang-pt">Entre em contato →</span>
+          <span class="lang lang-pt" lang="pt-BR">Entre em contato →</span>
         </a>
       </div>
     </div>
@@ -228,12 +232,12 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Publications</span>
-        <span class="lang lang-pt">Publicações</span>
+        <span class="lang lang-pt" lang="pt-BR">Publicações</span>
       </h2>
       <p style="color:var(--comment); font-size:.85rem; margin-bottom:1.4rem;">
         <span class="lang lang-en">Also available on
           <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</span>
-        <span class="lang lang-pt">Também disponível no
+        <span class="lang lang-pt" lang="pt-BR">Também disponível no
           <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</span>
       </p>
 
@@ -246,18 +250,18 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Current Advisees</span>
-        <span class="lang lang-pt">Orientandos Atuais</span>
+        <span class="lang lang-pt" lang="pt-BR">Orientandos Atuais</span>
       </h2>
       <div id="advisees-container"></div>
 
       <div class="callout">
         <p>
           <span class="lang lang-en"><strong>Want to join the group?</strong> I take full-time students at all levels: undergraduate, M.Sc., and Ph.D.</span>
-          <span class="lang lang-pt"><strong>Quer entrar no grupo?</strong> Oriento estudantes em dedicação integral em todos os níveis: graduação, mestrado e doutorado.</span>
+          <span class="lang lang-pt" lang="pt-BR"><strong>Quer entrar no grupo?</strong> Oriento estudantes em dedicação integral em todos os níveis: graduação, mestrado e doutorado.</span>
         </p>
         <a class="project-link" href="prospective-students.html">
           <span class="lang lang-en">Read this first →</span>
-          <span class="lang lang-pt">Leia isto primeiro →</span>
+          <span class="lang lang-pt" lang="pt-BR">Leia isto primeiro →</span>
         </a>
       </div>
     </div>
@@ -268,7 +272,7 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Alumni</span>
-        <span class="lang lang-pt">Egressos</span>
+        <span class="lang lang-pt" lang="pt-BR">Egressos</span>
       </h2>
       <div id="alumni-container"></div>
     </div>
@@ -279,68 +283,73 @@
     <div class="container">
       <h2 class="section-title">
         <span class="lang lang-en">Lectures &amp; Courses</span>
-        <span class="lang lang-pt">Disciplinas e Cursos</span>
+        <span class="lang lang-pt" lang="pt-BR">Disciplinas e Cursos</span>
       </h2>
       <div class="lecture-list">
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name"><span class="lang lang-en">Deep Neural Networks</span><span class="lang lang-pt">Redes Neurais Profundas</span></p>
+            <p class="lecture-name"><span class="lang lang-en">Deep Neural Networks</span><span class="lang lang-pt" lang="pt-BR">Redes Neurais Profundas</span></p>
+            <a class="lecture-link" href="https://lucaskup.github.io/deep-learning-course/" target="_blank" rel="noopener"><span class="lang lang-en">Course materials →</span><span class="lang lang-pt" lang="pt-BR">Material da disciplina →</span></a>
           </div>
-          <span class="lecture-level level-grad"><span class="lang lang-en">Graduate</span><span class="lang lang-pt">Pós-graduação</span></span>
+          <span class="lecture-level level-grad"><span class="lang lang-en">Graduate</span><span class="lang lang-pt" lang="pt-BR">Pós-graduação</span></span>
         </div>
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name"><span class="lang lang-en">Deep Learning I</span><span class="lang lang-pt">Aprendizado Profundo I</span></p>
+            <p class="lecture-name"><span class="lang lang-en">Deep Learning I</span><span class="lang lang-pt" lang="pt-BR">Aprendizado Profundo I</span></p>
+            <a class="lecture-link" href="https://lucaskup.github.io/deep-learning-course/" target="_blank" rel="noopener"><span class="lang lang-en">Course materials →</span><span class="lang lang-pt" lang="pt-BR">Material da disciplina →</span></a>
           </div>
-          <span class="lecture-level level-under"><span class="lang lang-en">Undergraduate</span><span class="lang lang-pt">Graduação</span></span>
+          <span class="lecture-level level-under"><span class="lang lang-en">Undergraduate</span><span class="lang lang-pt" lang="pt-BR">Graduação</span></span>
         </div>
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name"><span class="lang lang-en">Deep Learning II</span><span class="lang lang-pt">Aprendizado Profundo II</span></p>
+            <p class="lecture-name"><span class="lang lang-en">Deep Learning II</span><span class="lang lang-pt" lang="pt-BR">Aprendizado Profundo II</span></p>
+            <a class="lecture-link" href="https://lucaskup.github.io/deep-learning-course/" target="_blank" rel="noopener"><span class="lang lang-en">Course materials →</span><span class="lang lang-pt" lang="pt-BR">Material da disciplina →</span></a>
           </div>
-          <span class="lecture-level level-under"><span class="lang lang-en">Undergraduate</span><span class="lang lang-pt">Graduação</span></span>
+          <span class="lecture-level level-under"><span class="lang lang-en">Undergraduate</span><span class="lang lang-pt" lang="pt-BR">Graduação</span></span>
         </div>
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name"><span class="lang lang-en">Machine Learning</span><span class="lang lang-pt">Aprendizado de Máquina</span></p>
+            <p class="lecture-name"><span class="lang lang-en">Machine Learning</span><span class="lang lang-pt" lang="pt-BR">Aprendizado de Máquina</span></p>
           </div>
-          <span class="lecture-level level-under"><span class="lang lang-en">Undergraduate</span><span class="lang lang-pt">Graduação</span></span>
+          <span class="lecture-level level-under"><span class="lang lang-en">Undergraduate</span><span class="lang lang-pt" lang="pt-BR">Graduação</span></span>
         </div>
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name"><span class="lang lang-en">Theory of Computing</span><span class="lang lang-pt">Teoria da Computação</span></p>
+            <p class="lecture-name"><span class="lang lang-en">Theory of Computing</span><span class="lang lang-pt" lang="pt-BR">Teoria da Computação</span></p>
           </div>
-          <span class="lecture-level level-grad"><span class="lang lang-en">Graduate</span><span class="lang lang-pt">Pós-graduação</span></span>
+          <span class="lecture-level level-grad"><span class="lang lang-en">Graduate</span><span class="lang lang-pt" lang="pt-BR">Pós-graduação</span></span>
         </div>
 
         <div class="lecture-card">
           <div>
-            <p class="lecture-name"><span class="lang lang-en">Scientific Methodology and Artificial Intelligence Lab</span><span class="lang lang-pt">Metodologia Científica e Laboratório de Inteligência Artificial</span></p>
+            <p class="lecture-name"><span class="lang lang-en">Scientific Methodology and Artificial Intelligence Lab</span><span class="lang lang-pt" lang="pt-BR">Metodologia Científica e Laboratório de Inteligência Artificial</span></p>
           </div>
-          <span class="lecture-level level-grad"><span class="lang lang-en">Graduate</span><span class="lang lang-pt">Pós-graduação</span></span>
+          <span class="lecture-level level-grad"><span class="lang lang-en">Graduate</span><span class="lang lang-pt" lang="pt-BR">Pós-graduação</span></span>
         </div>
 
       </div>
     </div>
   </section>
 
+  </main>
+
   <!-- ── Footer ── -->
   <footer>
-    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, <span class="lang lang-en">Brazil</span><span class="lang lang-pt">Brasil</span></p>
+    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, <span class="lang lang-en">Brazil</span><span class="lang lang-pt" lang="pt-BR">Brasil</span></p>
     <p style="margin-top:.4rem;">
       <a href="https://scholar.google.com/citations?user=Uona1HYAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
-      <a href="https://www.pucrs.br/pesquisadores/lucas-silveira-kupssinsku/" target="_blank" rel="noopener"><span class="lang lang-en">PUCRS Profile</span><span class="lang lang-pt">Perfil PUCRS</span></a> ·
-      <a href="https://lattes.cnpq.br/7949995756060059" target="_blank" rel="noopener"><span class="lang lang-en">Lattes CV</span><span class="lang lang-pt">Currículo Lattes</span></a> ·
+      <a href="https://www.pucrs.br/pesquisadores/lucas-silveira-kupssinsku/" target="_blank" rel="noopener"><span class="lang lang-en">PUCRS Profile</span><span class="lang lang-pt" lang="pt-BR">Perfil PUCRS</span></a> ·
+      <a href="https://lattes.cnpq.br/7949995756060059" target="_blank" rel="noopener"><span class="lang lang-en">Lattes CV</span><span class="lang lang-pt" lang="pt-BR">Currículo Lattes</span></a> ·
       <a href="https://orcid.org/0000-0003-2580-3996" target="_blank" rel="noopener">ORCID</a>
     </p>
   </footer>
 
-  <script src="js/toggles.js?v=4"></script>
+  <script src="js/toggles.js?v=5"></script>
   <script>
     // News, projects, publications, advisees, and alumni are prerendered into
     // this page by build.js (run in CI); toggles.js wires up their tabs and

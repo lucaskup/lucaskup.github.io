@@ -7,7 +7,8 @@ Personal academic site. Plain HTML/CSS/JS with the content data in `data/*.json`
 The dynamic sections (news, projects, publications, advisees, alumni, and the
 related content on project pages) are prerendered from the JSON files into
 static HTML so crawlers and no-JS visitors see full content. The build also
-injects JSON-LD structured data (Person and ScholarlyArticle) into the homepage.
+injects JSON-LD structured data (Person and ScholarlyArticle) into the homepage
+and generates `sitemap.xml` with lastmod dates taken from git history.
 
 - Edit content in `data/*.json` as before; the JSON files stay the source of truth.
 - On every push to `master`, the GitHub Action in `.github/workflows/deploy.yml`
