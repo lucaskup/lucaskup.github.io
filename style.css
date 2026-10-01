@@ -797,6 +797,93 @@ html:not([data-lang]) .lang-pt { display: none; }
 .carousel[data-single] .carousel-btn,
 .carousel[data-single] .carousel-dots { display: none; }
 
+/* Photos open full screen in the lightbox (js/toggles.js) */
+.project-figure img { cursor: zoom-in; }
+
+/* Lightbox: full-screen photo viewer. Always dark, like most photo
+   viewers, so the photo stands out in either theme. */
+html.lightbox-open { overflow: hidden; }
+
+.lightbox {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 3.5rem 1rem 1rem;
+  border: none;
+  background: #0a0a0e;
+  color: #f8f8f2;
+}
+
+.lightbox[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+}
+
+.lightbox::backdrop { background: #0a0a0e; }
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: calc(100% - 3rem);
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+  user-select: none;
+}
+
+.lightbox-caption {
+  font-size: .85rem;
+  font-style: italic;
+  text-align: center;
+  color: #c8cad6;
+  max-width: 760px;
+}
+
+.lightbox-btn,
+.lightbox-close {
+  position: absolute;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  background: rgba(40, 42, 54, .75);
+  color: #f8f8f2;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .2s, color .2s;
+}
+
+/* Hover only on real pointers, so the highlight does not stick after a tap */
+@media (hover: hover) {
+  .lightbox-btn:hover,
+  .lightbox-close:hover { border-color: #8be9fd; color: #8be9fd; }
+}
+
+.lightbox-btn  { top: 50%; transform: translateY(-50%); }
+.lightbox-prev { left: .8rem; }
+.lightbox-next { right: .8rem; }
+.lightbox-close { top: .8rem; right: .8rem; }
+
+.lightbox[data-single] .lightbox-btn { display: none; }
+
+/* On phones the arrows sit at the bottom so they never cover the photo;
+   swiping works too. */
+@media (max-width: 600px) {
+  .lightbox { padding-bottom: 4.5rem; }
+  .lightbox-btn { top: auto; bottom: 1rem; transform: none; }
+  .lightbox-prev { left: calc(50% - 3.4rem); }
+  .lightbox-next { right: calc(50% - 3.4rem); }
+}
+
 .project-figure figcaption {
   font-size: .8rem;
   color: var(--comment);

@@ -188,6 +188,9 @@
     const capPt  = figure && figure.querySelector('figcaption .lang-pt');
     if (!track || slides.length === 0) return;
 
+    // Focusable even with a single image, so Enter can open the lightbox.
+    root.tabIndex = 0;
+
     // A single image needs no navigation chrome.
     if (slides.length === 1) { root.setAttribute('data-single', ''); return; }
 
@@ -205,6 +208,7 @@
 
     function go(i) {
       index = (i + slides.length) % slides.length; // wrap around
+      root.dataset.index = index;
       track.style.transform = `translateX(-${index * 100}%)`;
       dots.forEach((d, j) => d.classList.toggle('active', j === index));
 
@@ -217,8 +221,10 @@
     prev && prev.addEventListener('click', () => go(index - 1));
     next && next.addEventListener('click', () => go(index + 1));
 
+    // The lightbox asks the carousel to follow the photo last viewed there.
+    root.addEventListener('carousel:go', (e) => go(e.detail));
+
     // Arrow-key navigation when the carousel has focus.
-    root.tabIndex = 0;
     root.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft')  { e.preventDefault(); go(index - 1); }
       if (e.key === 'ArrowRight') { e.preventDefault(); go(index + 1); }
@@ -226,4 +232,126 @@
 
     go(0);
   });
+})();
+
+(function initLightbox() {
+  // Clicking a photo inside a .project-figure opens it full screen. Photos in
+  // the same figure form one gallery: arrows, keys and swipes move through
+  // it, and the browser back button closes it (important on phones).
+  const figures = Array.from(document.querySelectorAll('.project-figure'))
+    .filter((f) => f.querySelector('img'));
+  if (!figures.length || typeof HTMLDialogElement !== 'function') return;
+
+  const root = document.documentElement;
+  const t = (en, pt) => (root.getAttribute('data-lang') === 'pt' ? pt : en);
+
+  const dlg = document.createElement('dialog');
+  dlg.className = 'lightbox';
+  // Close comes first so it receives the initial focus when the dialog opens.
+  dlg.innerHTML =
+    '<button class="lightbox-close" type="button">×</button>' +
+    '<img class="lightbox-img" alt="" />' +
+    '<p class="lightbox-caption"></p>' +
+    '<button class="lightbox-btn lightbox-prev" type="button">‹</button>' +
+    '<button class="lightbox-btn lightbox-next" type="button">›</button>';
+  document.body.appendChild(dlg);
+
+  const big     = dlg.querySelector('.lightbox-img');
+  const caption = dlg.querySelector('.lightbox-caption');
+  const prev    = dlg.querySelector('.lightbox-prev');
+  const next    = dlg.querySelector('.lightbox-next');
+  const close   = dlg.querySelector('.lightbox-close');
+
+  let gallery = [];
+  let index = 0;
+  let carousel = null;
+
+  function captionFor(img) {
+    const slide = img.closest('.carousel-slide');
+    const lang = root.getAttribute('data-lang') === 'pt' ? 'Pt' : 'En';
+    if (slide && slide.dataset['caption' + lang]) return slide.dataset['caption' + lang];
+    const cap = img.closest('figure').querySelector('figcaption .lang-' + lang.toLowerCase());
+    return cap ? cap.textContent.trim() : '';
+  }
+
+  function show(i) {
+    index = (i + gallery.length) % gallery.length;
+    const img = gallery[index];
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt;
+    const text = captionFor(img);
+    caption.textContent = gallery.length > 1
+      ? (text ? text + ' · ' : '') + (index + 1) + ' / ' + gallery.length
+      : text;
+  }
+
+  function open(figure, i) {
+    gallery = Array.from(figure.querySelectorAll('img'));
+    carousel = figure.querySelector('[data-carousel]');
+    dlg.toggleAttribute('data-single', gallery.length === 1);
+    dlg.setAttribute('aria-label', t('Image viewer', 'Visualizador de imagens'));
+    prev.setAttribute('aria-label', t('Previous image', 'Imagem anterior'));
+    next.setAttribute('aria-label', t('Next image', 'Próxima imagem'));
+    close.setAttribute('aria-label', t('Close', 'Fechar'));
+    show(i);
+    dlg.showModal();
+    root.classList.add('lightbox-open');
+    // A history entry lets the phone's back gesture close the viewer
+    // instead of leaving the page.
+    history.pushState({ lightbox: true }, '');
+  }
+
+  figures.forEach((figure) => {
+    figure.querySelectorAll('img').forEach((img, i) => {
+      img.addEventListener('click', () => open(figure, i));
+    });
+    const c = figure.querySelector('[data-carousel]');
+    if (c) {
+      c.addEventListener('keydown', (e) => {
+        if (e.target !== c || (e.key !== 'Enter' && e.key !== ' ')) return;
+        e.preventDefault();
+        open(figure, Number(c.dataset.index || 0));
+      });
+    }
+  });
+
+  dlg.addEventListener('close', () => {
+    root.classList.remove('lightbox-open');
+    if (carousel) carousel.dispatchEvent(new CustomEvent('carousel:go', { detail: index }));
+    if (history.state && history.state.lightbox) history.back();
+  });
+
+  window.addEventListener('popstate', () => { if (dlg.open) dlg.close(); });
+
+  prev.addEventListener('click', () => show(index - 1));
+  next.addEventListener('click', () => show(index + 1));
+  close.addEventListener('click', () => dlg.close());
+
+  // Tapping anywhere outside the photo and the buttons closes the viewer.
+  dlg.addEventListener('click', (e) => {
+    if (!e.target.closest('button, .lightbox-img')) dlg.close();
+  });
+
+  dlg.addEventListener('keydown', (e) => {
+    if (gallery.length < 2) return;
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); show(index - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); show(index + 1); }
+  });
+
+  // Horizontal swipe changes photo; ignored while pinch-zoomed so panning
+  // a zoomed photo does not skip to the next one.
+  let x0 = null, y0 = null;
+  dlg.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1) { x0 = null; return; }
+    x0 = e.touches[0].clientX;
+    y0 = e.touches[0].clientY;
+  }, { passive: true });
+  dlg.addEventListener('touchend', (e) => {
+    if (x0 === null || gallery.length < 2) return;
+    if (window.visualViewport && window.visualViewport.scale > 1.01) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    const dy = e.changedTouches[0].clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(index + (dx < 0 ? 1 : -1));
+  }, { passive: true });
 })();
