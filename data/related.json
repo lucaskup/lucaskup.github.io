@@ -9,6 +9,14 @@
   },
   {
     "project": "low-resource-ml",
+    "type": "news",
+    "lang": "pt",
+    "title": "Egresso da PUCRS apresenta pesquisa de IA no ICLR 2026",
+    "source": "PUCRS",
+    "url": "https://portal.pucrs.br/noticias/ensino/egresso-pucrs-pesquisa-inteligencia-artificial-iclr-2026/"
+  },
+  {
+    "project": "low-resource-ml",
     "type": "poster",
     "lang": "en",
     "title": "Bayesian Attention Mechanism: A Probabilistic Framework for Positional Encoding and Context Length Extrapolation",
