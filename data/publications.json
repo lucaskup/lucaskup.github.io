@@ -67,6 +67,36 @@
     "project": "misinformation-llms"
   },
   {
+    "title": "Less is More: Improved Fact-Checking on AVeriTeC with Iterative Question Generation",
+    "authors": [
+      "Lucas M. Fraga",
+      "Marcelo M. Delucis",
+      "Christian Mattjie",
+      "Pedro P. Wagner",
+      "Arthur S. Ibarra",
+      "Yasmin C. Aguirre",
+      "Rodrigo C. Barros",
+      "*Lucas S. Kupssinskü"
+    ],
+    "venue": "Encontro Nacional de Inteligência Artificial e Computacional (ENIAC)",
+    "year": 2026,
+    "type": "conference",
+    "project": "misinformation-llms"
+  },
+  {
+    "title": "Evaluation of Tabular Methods on Misinformation Detection",
+    "authors": [
+      "Pedro T. Barcelos",
+      "Otávio Parraga",
+      "*Lucas S. Kupssinskü",
+      "Rodrigo C. Barros"
+    ],
+    "venue": "Escola Regional de Aprendizado de Máquina e Inteligência Artificial da Região Sul (ERAMIA-RS)",
+    "year": 2026,
+    "type": "workshop",
+    "project": "misinformation-llms"
+  },
+  {
     "title": "Diffused Embeddings: Exploring Sentence Representations from DLMs",
     "authors": [
       "Ramiro N. Barros",
