@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Curriculum vitae of Lucas Silveira Kupssinskü, Associate Professor at PUCRS: education, positions, grants, publications, supervision, teaching, awards, and service." />
+  <link rel="canonical" href="https://lucaskup.github.io/cv.html" />
+  <meta property="og:title" content="Curriculum Vitae · Lucas Silveira Kupssinskü" />
+  <meta property="og:description" content="Education, positions, grants, publications, supervision, teaching, awards, and service." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://lucaskup.github.io/cv.html" />
+  <meta property="og:image" content="https://lucaskup.github.io/img/perfilpucrs.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Curriculum Vitae · Lucas Silveira Kupssinskü" />
+  <meta name="twitter:description" content="Education, positions, grants, publications, supervision, teaching, awards, and service." />
+  <title>Curriculum Vitae · Lucas Silveira Kupssinskü</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script>
+    // Apply stored theme/language before first paint to avoid a flash.
+    (function () {
+      try {
+        var d = document.documentElement;
+        d.setAttribute('data-theme', localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+        var l = localStorage.getItem('lang');
+        if (l) { d.setAttribute('data-lang', l); if (l === 'pt') d.lang = 'pt-BR'; }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cv-page">
+
+  <a class="skip-link" href="#main"><span class="lang lang-en">Skip to content</span><span class="lang lang-pt" lang="pt-BR">Pular para o conteúdo</span></a>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <a class="nav-brand" href="index.html">Lucas Kupssinskü</a>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="index.html">
+        <span class="lang lang-en">Home</span>
+        <span class="lang lang-pt" lang="pt-BR">Início</span>
+      </a></li>
+      <li><a href="index.html#research">
+        <span class="lang lang-en">Research</span>
+        <span class="lang lang-pt" lang="pt-BR">Pesquisa</span>
+      </a></li>
+      <li><a href="index.html#projects">
+        <span class="lang lang-en">Projects</span>
+        <span class="lang lang-pt" lang="pt-BR">Projetos</span>
+      </a></li>
+      <li><a href="index.html#publications">
+        <span class="lang lang-en">Publications</span>
+        <span class="lang lang-pt" lang="pt-BR">Publicações</span>
+      </a></li>
+      <li><a href="cv.html" aria-current="page">CV</a></li>
+      <li><a href="prospective-students.html">
+        <span class="lang lang-en">Join Us</span>
+        <span class="lang lang-pt" lang="pt-BR">Ingressar</span>
+      </a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Mudar para português" title="Mudar para português">
+        <span class="lang-label">PT</span>
+      </button>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light mode" title="Toggle light mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <section id="cv">
+    <div class="container cv-container">
+      <a class="back-link" href="index.html">
+        <span class="lang lang-en">← Back to home</span>
+        <span class="lang lang-pt" lang="pt-BR">← Voltar ao início</span>
+      </a>
+
+      <div class="cv-layout">
+        <!-- Section index; filled by build.js, sticky on wide screens -->
+        <aside class="cv-toc" aria-label="CV sections">
+          <p class="cv-toc-title">
+            <span class="lang lang-en">Contents</span>
+            <span class="lang lang-pt" lang="pt-BR">Conteúdo</span>
+          </p>
+          <div id="cv-toc"></div>
+        </aside>
+
+        <article class="cv-doc">
+          <!-- Header, summary, and every section are prerendered by build.js -->
+          <div id="cv-container"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, <span class="lang lang-en">Brazil</span><span class="lang lang-pt" lang="pt-BR">Brasil</span></p>
+  </footer>
+
+  <script src="js/toggles.js?v=7"></script>
+  <script>
+    document.getElementById('copy-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

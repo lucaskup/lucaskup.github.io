@@ -1,0 +1,390 @@
+{
+  "updated": "2026-10-05",
+  "profile": {
+    "name": "Lucas Silveira Kupssinskü",
+    "title_en": "Associate Professor · Deep Learning Researcher",
+    "title_pt": "Professor Adjunto · Pesquisador em Aprendizado Profundo",
+    "affiliation_en": "School of Technology and Graduate Program in Computer Science (PPGCC, CAPES 7), Pontifical Catholic University of Rio Grande do Sul (PUCRS)",
+    "affiliation_pt": "Escola Politécnica e Programa de Pós-Graduação em Ciência da Computação (PPGCC, CAPES 7), Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)",
+    "address_en": "Av. Ipiranga 6681, Partenon, 90619-900, Porto Alegre, RS, Brazil",
+    "address_pt": "Av. Ipiranga 6681, Partenon, 90619-900, Porto Alegre, RS, Brasil",
+    "email": "lucas.kupssinsku@pucrs.br",
+    "phone": "+55 51 3353-8641",
+    "links": {
+      "website": "https://lucaskup.github.io/",
+      "scholar": "https://scholar.google.com/citations?user=Uona1HYAAAAJ",
+      "orcid": "https://orcid.org/0000-0003-2580-3996",
+      "lattes": "https://lattes.cnpq.br/7949995756060059",
+      "pucrs": "https://www.pucrs.br/pesquisadores/lucas-silveira-kupssinsku/"
+    },
+    "citations": { "count": 545, "source": "Google Scholar", "date": "2026-01-12" },
+    "mission_en": "I develop methods to correct, adapt, and verify language models without retraining, and I train researchers who build those methods with rigor.",
+    "mission_pt": "Desenvolvo métodos para corrigir, adaptar e verificar modelos de linguagem sem retreinamento, e formo pesquisadores que constroem esses métodos com rigor.",
+    "summary_en": "Associate Professor at PUCRS and researcher at the Graduate Program in Computer Science (CAPES 7), where I co-lead the Machine Learning Theory and Applications Research Group (MALTA). Ph.D. in Applied Computing from Unisinos. I coordinate research projects in machine learning and deep learning focused on fairness, LLMs, machine unlearning, representation engineering, long-context models, and misinformation detection, with support from Petrobras, Motorola, the Michael J. Fox Foundation, Kunumi, FAPERGS, and CNPq. Before academia, I spent nine years in industry as a developer, systems analyst, and Scrum Master, and I have taught at every level, from technical courses to graduate programs.",
+    "summary_pt": "Professor Adjunto da PUCRS e pesquisador do Programa de Pós-Graduação em Ciência da Computação (CAPES 7), onde coordeno, em conjunto, o Grupo de Pesquisa em Teoria e Aplicações de Aprendizado de Máquina (MALTA). Doutor em Computação Aplicada pela Unisinos. Coordeno projetos de pesquisa em aprendizado de máquina e aprendizado profundo focados em fairness, LLMs, desaprendizado de máquina, representation engineering, modelos de contexto longo e detecção de desinformação, com apoio de Petrobras, Motorola, Michael J. Fox Foundation, Kunumi, FAPERGS e CNPq. Antes da academia, atuei nove anos na indústria como desenvolvedor, analista de sistemas e Scrum Master, e lecionei em todos os níveis, de cursos técnicos à pós-graduação.",
+    "interests_en": ["Machine Learning", "Deep Learning", "Large Language Models", "Machine Unlearning", "Fairness", "Long-Context Models", "Misinformation Detection", "Computer Vision", "Natural Language Processing"],
+    "interests_pt": ["Aprendizado de Máquina", "Aprendizado Profundo", "Modelos de Linguagem de Grande Escala", "Desaprendizado de Máquina", "Fairness", "Modelos de Contexto Longo", "Detecção de Desinformação", "Visão Computacional", "Processamento de Linguagem Natural"]
+  },
+
+  "education": [
+    {
+      "start": 2019, "end": 2022,
+      "degree_en": "Ph.D. in Applied Computing",
+      "degree_pt": "Doutorado em Computação Aplicada",
+      "institution": "Universidade do Vale do Rio dos Sinos (Unisinos)",
+      "detail_en": "Thesis: Porosity estimation of rocks using machine learning and hyperspectral data: a study applied to carbonate outcrops of the Salitre and Jandaíra Formations. Advisor: Luiz Gonzaga da Silveira Jr. Co-advisor: Maurício Roberto Veronez.",
+      "detail_pt": "Tese: Estimativa de porosidade de rochas utilizando aprendizado de máquina e dados hiperespectrais: um estudo aplicado aos afloramentos carbonáticos da Formação Salitre e da Formação Jandaíra. Orientador: Luiz Gonzaga da Silveira Jr. Coorientador: Maurício Roberto Veronez."
+    },
+    {
+      "start": 2017, "end": 2019,
+      "degree_en": "M.Sc. in Applied Computing",
+      "degree_pt": "Mestrado em Computação Aplicada",
+      "institution": "Universidade do Vale do Rio dos Sinos (Unisinos)",
+      "detail_en": "Thesis: MITRAS, an intelligent model for software application transformation. Advisor: João Carlos Gluz. CNPq fellowship.",
+      "detail_pt": "Dissertação: MITRAS, Modelo Inteligente de Transformação de Aplicações de Software. Orientador: João Carlos Gluz. Bolsista CNPq."
+    },
+    {
+      "start": 2009, "end": 2016,
+      "degree_en": "B.Tech. in Systems Analysis and Development",
+      "degree_pt": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+      "institution": "Universidade do Vale do Rio dos Sinos (Unisinos)",
+      "detail_en": "Final project: Effort evaluation in systems programming, a comparison between Magic XPA and C#. Advisor: Margrit Reni Krug. Outstanding student award (SBC, 2016).",
+      "detail_pt": "TCC: Avaliação de esforço na programação de sistemas, um comparativo entre Magic XPA e C#. Orientadora: Margrit Reni Krug. Aluno destaque (SBC, 2016)."
+    },
+    {
+      "start": 2004, "end": 2008,
+      "degree_en": "Technical Degree in Electronics",
+      "degree_pt": "Curso Técnico em Eletrônica",
+      "institution": "Fundação Escola Técnica Liberato Salzano Vieira da Cunha",
+      "detail_en": "",
+      "detail_pt": ""
+    }
+  ],
+
+  "positions": [
+    {
+      "start": 2023, "end": null, "kind": "academic",
+      "title_en": "Associate Professor",
+      "title_pt": "Professor Adjunto",
+      "institution": "Pontifical Catholic University of Rio Grande do Sul (PUCRS)",
+      "institution_pt": "Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)",
+      "detail_en": "School of Technology and Graduate Program in Computer Science. Co-leader of the MALTA research group. Member of the Coordinating Committee of the School of Technology undergraduate programs (since 2023) and of its Scientific Committee (2024–2025).",
+      "detail_pt": "Escola Politécnica e Programa de Pós-Graduação em Ciência da Computação. Coordenador adjunto do grupo de pesquisa MALTA. Membro da Comissão Coordenadora dos cursos de graduação da Escola Politécnica (desde 2023) e da Comissão Científica (2024–2025)."
+    },
+    {
+      "start": 2021, "end": 2022, "kind": "academic",
+      "title_en": "Assistant Professor",
+      "title_pt": "Professor Assistente",
+      "institution": "Pontifical Catholic University of Rio Grande do Sul (PUCRS)",
+      "institution_pt": "Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)",
+      "detail_en": "School of Technology. Undergraduate teaching in Computer Science, Data Science and AI, and Information Systems.",
+      "detail_pt": "Escola Politécnica. Ensino de graduação em Ciência da Computação, Ciência de Dados e IA e Sistemas de Informação."
+    },
+    {
+      "start": 2019, "end": 2022, "kind": "academic",
+      "title_en": "Researcher (DTI fellowship)",
+      "title_pt": "Pesquisador (bolsa DTI)",
+      "institution": "VizLab, Advanced Visualization and Geoinformatics Laboratory, Unisinos",
+      "institution_pt": "VizLab, Laboratório Avançado de Visualização e Geoinformática, Unisinos",
+      "detail_en": "Full-time researcher on AI applied to geosciences in Petrobras-funded projects (VisCarb, VisOrg, DeepVision).",
+      "detail_pt": "Pesquisador em dedicação integral em IA aplicada às geociências em projetos financiados pela Petrobras (VisCarb, VisOrg, DeepVision)."
+    },
+    {
+      "start": 2018, "end": 2019, "kind": "academic",
+      "title_en": "Substitute Professor",
+      "title_pt": "Professor Substituto",
+      "institution": "Institute of Informatics, Federal University of Rio Grande do Sul (UFRGS)",
+      "institution_pt": "Instituto de Informática, Universidade Federal do Rio Grande do Sul (UFRGS)",
+      "detail_en": "Department of Theoretical Informatics. Taught Fundamentals of Algorithms, Logic for Computing, and Formal Languages and Automata.",
+      "detail_pt": "Departamento de Informática Teórica. Lecionei Fundamentos de Algoritmos, Lógica para Computação e Linguagens Formais e Autômatos."
+    },
+    {
+      "start": 2017, "end": 2019, "kind": "academic",
+      "title_en": "CNPq Master's Fellow",
+      "title_pt": "Bolsista de Mestrado CNPq",
+      "institution": "Graduate Program in Applied Computing (PIPCA), Unisinos",
+      "institution_pt": "Programa Interdisciplinar de Pós-Graduação em Computação Aplicada (PIPCA), Unisinos",
+      "detail_en": "Research line: Software Engineering and Programming Languages.",
+      "detail_pt": "Linha de pesquisa: Engenharia de Software e Linguagens de Programação."
+    },
+    {
+      "start": 2015, "end": 2016, "kind": "academic",
+      "title_en": "Technical Course Instructor",
+      "title_pt": "Professor de Nível Técnico",
+      "institution": "QI Escolas e Faculdades",
+      "institution_pt": "QI Escolas e Faculdades",
+      "detail_en": "Technical course in Informatics: logic, programming, hardware fundamentals, applied mathematics, and digital literacy courses.",
+      "detail_pt": "Curso Técnico em Informática: lógica, programação, fundamentos de hardware, matemática aplicada e cursos de informática básica."
+    },
+    {
+      "start": 2013, "end": 2017, "kind": "industry",
+      "title_en": "Systems Analyst and Scrum Master",
+      "title_pt": "Analista de Sistemas e Scrum Master",
+      "institution": "CIGAM Software",
+      "institution_pt": "CIGAM Software",
+      "detail_en": "Led an agile (Scrum) development team, trained new developers, and worked on requirements analysis and systems programming for the CIGAM ERP.",
+      "detail_pt": "Liderei um time de desenvolvimento ágil (Scrum), treinei novos colaboradores e atuei em levantamento de requisitos e programação de sistemas para o ERP CIGAM."
+    },
+    {
+      "start": 2008, "end": 2012, "kind": "industry",
+      "title_en": "Software Developer",
+      "title_pt": "Programador de Sistemas",
+      "institution": "CIGAM Software",
+      "institution_pt": "CIGAM Software",
+      "detail_en": "Developed and maintained the financial module of the CIGAM ERP (Magic, uniPaaS, PL/SQL, T-SQL), including electronic invoicing (NF-e), DIRF, check custody, and bank remittance projects.",
+      "detail_pt": "Desenvolvimento e manutenção do módulo financeiro do ERP CIGAM (Magic, uniPaaS, PL/SQL, T-SQL), incluindo NF-e, DIRF, custódia de cheques e remessas bancárias."
+    }
+  ],
+
+  "grants": [
+    {
+      "start": 2025, "end": null,
+      "title_en": "Misinformation Identification with LLMs",
+      "title_pt": "Identificação de Desinformação com LLMs",
+      "role_en": "Principal Investigator",
+      "role_pt": "Coordenador",
+      "funder": "FAPERGS · CNPq",
+      "detail_en": "Domain-adapted LLM and sentence-embedding fine-tuning for health misinformation detection in Portuguese, with retrieval-augmented generation over trusted sources.",
+      "detail_pt": "LLM adaptado ao domínio da saúde e ajuste fino de sentence embeddings para detecção de desinformação em português, com geração aumentada por recuperação sobre fontes confiáveis.",
+      "page": "projects/misinformation-llms.html"
+    },
+    {
+      "start": 2025, "end": null,
+      "title_en": "Low-Resource Machine Learning",
+      "title_pt": "Aprendizado de Máquina de Baixo Custo Computacional",
+      "role_en": "Principal Investigator",
+      "role_pt": "Coordenador",
+      "funder": "Instituto Kunumi",
+      "detail_en": "Inference-time model editing and steering, machine unlearning, and context-window extrapolation for LLMs.",
+      "detail_pt": "Edição e steering de modelos em tempo de inferência, desaprendizado de máquina e extrapolação de janela de contexto em LLMs.",
+      "page": "projects/low-resource-ml.html"
+    },
+    {
+      "start": 2024, "end": null,
+      "title_en": "LLMs for Customer Relationship Quality Assessment",
+      "title_pt": "LLM para Avaliação de Qualidade de Relacionamento",
+      "role_en": "Principal Investigator",
+      "role_pt": "Coordenador",
+      "funder": "Industry partnership",
+      "funder_pt": "Parceria com a indústria",
+      "detail_en": "Zero-shot, few-shot, and fine-tuned LLMs to derive relationship-quality and after-sales indicators from customer interaction data.",
+      "detail_pt": "LLMs em zero-shot, few-shot e ajuste fino para derivar indicadores de qualidade de relacionamento e pós-venda a partir de interações com clientes."
+    },
+    {
+      "start": 2023, "end": 2025,
+      "title_en": "Bidirectional Neural Machine Translation for the Brazilian Sign Language",
+      "title_pt": "Tradução Automática Neural Bidirecional para a Língua Brasileira de Sinais",
+      "role_en": "Researcher (PI: Rodrigo C. Barros)",
+      "role_pt": "Pesquisador (Coord.: Rodrigo C. Barros)",
+      "funder": "Google Inclusion Research Award",
+      "detail_en": "Largest Libras dataset to date and neural architectures for sign-to-text and text-to-sign translation.",
+      "detail_pt": "Maior base de dados de Libras até então e arquiteturas neurais para tradução sinal-texto e texto-sinal."
+    },
+    {
+      "start": 2023, "end": 2025,
+      "title_en": "Biological subtypes of Parkinson's disease and prediction scores from multi-cohort longitudinal data using machine learning",
+      "title_pt": "Subtipos biológicos da doença de Parkinson e escores de predição a partir de dados longitudinais multicoorte com aprendizado de máquina",
+      "role_en": "Researcher (PI: Artur Schumacher-Schuh)",
+      "role_pt": "Pesquisador (Coord.: Artur Schumacher-Schuh)",
+      "funder": "Michael J. Fox Foundation",
+      "detail_en": "Unsupervised ML over genomic, transcriptomic, and neuroimaging data from the PPMI and PDBP cohorts.",
+      "detail_pt": "Aprendizado não supervisionado sobre dados genômicos, transcriptômicos e de neuroimagem das coortes PPMI e PDBP."
+    },
+    {
+      "start": 2022, "end": 2023,
+      "title_en": "Bias-resilient neural approaches",
+      "title_pt": "Desenvolvimento de abordagens neurais resilientes a vieses",
+      "role_en": "Researcher (PI: Rodrigo C. Barros)",
+      "role_pt": "Pesquisador (Coord.: Rodrigo C. Barros)",
+      "funder": "Motorola",
+      "detail_en": "Neural architectures that detect and remove bias and confounders, validated on smartphone vision, language, and multimodal applications.",
+      "detail_pt": "Arquiteturas neurais que detectam e eliminam vieses e fatores de confusão, validadas em aplicações de visão, linguagem e multimodais em smartphones."
+    },
+    {
+      "start": 2019, "end": 2022,
+      "title_en": "VisOrg: Immersive visualization system for source-rock outcrops",
+      "title_pt": "VisOrg: Sistema de Visualização Imersiva de afloramentos de rochas geradoras",
+      "role_en": "Researcher (PI: Maurício R. Veronez)",
+      "role_pt": "Pesquisador (Coord.: Maurício R. Veronez)",
+      "funder": "Petrobras (2018/00545-0)",
+      "detail_en": "",
+      "detail_pt": ""
+    },
+    {
+      "start": 2019, "end": 2022,
+      "title_en": "DeepVision: UAV-based hyperspectral remote sensing",
+      "title_pt": "DeepVision: Sensoriamento Remoto Hiperespectral Baseado em VANTs",
+      "role_en": "Researcher (PI: Maurício R. Veronez)",
+      "role_pt": "Pesquisador (Coord.: Maurício R. Veronez)",
+      "funder": "Petrobras (2018/00288-8)",
+      "detail_en": "",
+      "detail_pt": ""
+    },
+    {
+      "start": 2018, "end": 2022,
+      "title_en": "VisCarb: Interactive digital atlas with 3D visualization of multi-scale analogues",
+      "title_pt": "VisCarb: Atlas Digital Interativo com Visualização 3D de Análogos em Várias Escalas",
+      "role_en": "Researcher (PI: Luiz Gonzaga Jr.)",
+      "role_pt": "Pesquisador (Coord.: Luiz Gonzaga Jr.)",
+      "funder": "Petrobras (2017/00629-7)",
+      "detail_en": "",
+      "detail_pt": ""
+    }
+  ],
+
+  "extension": [
+    {
+      "year": 2022,
+      "title_en": "Data Collection, Preparation and Analysis in Society",
+      "title_pt": "Coleta, Preparação e Análise de Dados na Sociedade",
+      "detail_en": "Extension project with Grupo Sinosserra and open DataSUS data (SIM, SINAN, SINASC), with 15 undergraduate students. Coordinator.",
+      "detail_pt": "Projeto de extensão em parceria com o Grupo Sinosserra e dados abertos do DataSUS (SIM, SINAN, SINASC), com 15 estudantes de graduação. Coordenador."
+    },
+    {
+      "year": 2022,
+      "title_en": "Data Collection, Preparation and Analysis in Practice",
+      "title_pt": "Coleta, Preparação e Análise de Dados na Prática",
+      "detail_en": "Extension project on open government data, with 20 undergraduate students. Coordinator.",
+      "detail_pt": "Projeto de extensão com dados abertos governamentais, com 20 estudantes de graduação. Coordenador."
+    }
+  ],
+
+  "awards": [
+    { "year": 2026, "en": "Advisor of the Best Work of the Major Area, 27th Undergraduate Research Fair (Salão de Iniciação Científica), PUCRS. Student: João Pedro Martins.", "pt": "Orientador do Melhor Trabalho da Grande Área, 27º Salão de Iniciação Científica, PUCRS. Orientando: João Pedro Martins." },
+    { "year": 2026, "en": "Advisor of two Highlighted Works, 27th Undergraduate Research Fair, PUCRS. Students: Yasmin Cardozo Aguirre and João Pedro Martins.", "pt": "Orientador de dois Trabalhos Destaque, 27º Salão de Iniciação Científica, PUCRS. Orientandos: Yasmin Cardozo Aguirre e João Pedro Martins." },
+    { "year": 2026, "en": "Class patron (paraninfo) of the 3rd and 4th graduating classes of the B.Sc. in Data Science and Artificial Intelligence, PUCRS.", "pt": "Paraninfo da terceira e da quarta turmas de formandos do Bacharelado em Ciência de Dados e Inteligência Artificial, PUCRS." },
+    { "year": 2025, "en": "Advisor of a Highlighted Work, 26th Undergraduate Research Fair, PUCRS. Student: Yasmin Cardozo Aguirre.", "pt": "Orientador de Trabalho Destaque, 26º Salão de Iniciação Científica, PUCRS. Orientanda: Yasmin Cardozo Aguirre." },
+    { "year": 2025, "en": "Class patron of the 1st graduating class and honored professor of the 2nd graduating class of the B.Sc. in Data Science and Artificial Intelligence, PUCRS.", "pt": "Paraninfo da primeira turma e professor homenageado da segunda turma de formandos do Bacharelado em Ciência de Dados e Inteligência Artificial, PUCRS." },
+    { "year": 2024, "en": "Best Paper Award (first place), Computer-Aided Diagnosis, SPIE Medical Imaging 2024, for \"Semi-supervised learning for mRALE score prediction in COVID-19 chest radiographs\".", "pt": "Best Paper Award (primeiro lugar), Computer-Aided Diagnosis, SPIE Medical Imaging 2024, pelo artigo \"Semi-supervised learning for mRALE score prediction in COVID-19 chest radiographs\"." },
+    { "year": 2023, "en": "4th place, MIDRC mRALE Mastermind Challenge: AI to predict COVID severity on chest radiographs (US$ 5,000 prize).", "pt": "4º lugar, MIDRC mRALE Mastermind Challenge: IA para predição da severidade de COVID em radiografias de tórax (prêmio de US$ 5.000)." },
+    { "year": 2023, "en": "1st place in the federal public competition for a faculty position in Machine Learning and Natural Language Processing, UFRGS (Call 08/2023).", "pt": "Aprovação em 1º lugar em concurso público federal para professor do magistério superior em Aprendizado de Máquina e Processamento de Linguagem Natural, UFRGS (Edital 08/2023)." },
+    { "year": 2019, "en": "Best Demonstration, ACM SIGSPATIAL 2019.", "pt": "Best Demonstration, ACM SIGSPATIAL 2019." },
+    { "year": 2019, "en": "Runner-up for Best Presentation, IEEE International Conference on Sensing Technology (ICST 2019).", "pt": "Runner-up for Best Presentation, IEEE International Conference on Sensing Technology (ICST 2019)." },
+    { "year": 2017, "en": "2nd place in the public competition for substitute professor of Logic for Computing, UFRGS.", "pt": "Aprovação em 2º lugar no concurso para professor substituto de Lógica para Computação, UFRGS." },
+    { "year": 2016, "en": "Outstanding Student, Systems Analysis and Development, Brazilian Computer Society (SBC).", "pt": "Aluno Destaque em Análise e Desenvolvimento de Sistemas, Sociedade Brasileira de Computação (SBC)." }
+  ],
+
+  "service": {
+    "editorial": [
+      { "start": 2025, "end": null, "en": "Editorial board member, Journal of the Brazilian Computer Society", "pt": "Membro do corpo editorial, Journal of the Brazilian Computer Society" }
+    ],
+    "reviewing": [
+      { "since": 2025, "venue": "Nature Communications" },
+      { "since": 2025, "venue": "Machine Learning (Springer)" },
+      { "since": 2024, "venue": "International Journal of Data Science and Analytics" },
+      { "since": 2024, "venue": "IEEE Geoscience and Remote Sensing Letters" },
+      { "since": 2022, "venue": "Applied Artificial Intelligence" },
+      { "since": 2021, "venue": "PLoS One" },
+      { "since": 2021, "venue": "Science of the Total Environment" }
+    ],
+    "program_committees": [
+      { "venue": "International Conference on Learning Representations (ICLR)", "years": [2026] },
+      { "venue": "AAAI Conference on Artificial Intelligence", "years": [2025], "note_en": "EAAI track in 2024", "note_pt": "trilha EAAI em 2024" },
+      { "venue": "European Conference on Artificial Intelligence (ECAI)", "years": [2024, 2025] },
+      { "venue": "International Joint Conference on Neural Networks (IJCNN)", "years": [2025, 2026] },
+      { "venue": "Brazilian Conference on Intelligent Systems (BRACIS)", "years": [2025, 2026] },
+      { "venue": "Encontro Nacional de Inteligência Artificial e Computacional (ENIAC)", "years": [2022, 2024, 2025, 2026] },
+      { "venue": "Symposium on Knowledge Discovery, Mining and Learning (KDMiLe)", "years": [2026], "note_en": "Best paper committee in 2025", "note_pt": "comitê de best papers em 2025" },
+      { "venue": "Concurso de Teses e Dissertações em IA e Computacional (CTDIAC)", "years": [2024, 2026] },
+      { "venue": "Jornadas de Atualização em Informática (JAI), CSBC", "years": [2025] },
+      { "venue": "Escola Regional de Aprendizado de Máquina e IA (ERAMIA-RS)", "years": [2025] }
+    ],
+    "organization": [
+      { "year": 2026, "en": "Program Chair, ERAMIA-RS (Regional School on Machine Learning and AI, Southern Brazil)", "pt": "Program Chair, ERAMIA-RS (Escola Regional de Aprendizado de Máquina e Inteligência Artificial)" },
+      { "year": 2025, "en": "Organizer of the Code Challenge, ERAMIA-RS", "pt": "Organizador do Code Challenge, ERAMIA-RS" },
+      { "year": 2023, "en": "Co-organizer, Artificial Intelligence Workshop, PUCRS", "pt": "Coorganizador, Workshop de Inteligência Artificial, PUCRS" }
+    ],
+    "institutional": [
+      { "start": 2023, "end": null, "en": "Member of the Coordinating Committee, School of Technology undergraduate programs, PUCRS", "pt": "Membro da Comissão Coordenadora dos cursos de graduação da Escola Politécnica, PUCRS" },
+      { "start": 2024, "end": 2025, "en": "Member of the Scientific Committee, School of Technology, PUCRS", "pt": "Membro da Comissão Científica da Escola Politécnica, PUCRS" },
+      { "start": 2025, "end": 2025, "en": "External evaluator for undergraduate research scholarships, Graduate Program in Applied Computing, Unisinos", "pt": "Avaliador externo para concessão de bolsas de Iniciação Científica e Tecnológica, PPG em Computação Aplicada, Unisinos" },
+      { "start": 2023, "end": 2023, "en": "Faculty hiring committee, Computer Science, PUCRS (Call 006/2023)", "pt": "Banca de seleção de professores de Computação, PUCRS (Edital 006/2023)" },
+      { "start": 2023, "end": 2023, "en": "Evaluation panel, Undergraduate Research Fair, PUCRS", "pt": "Banca de avaliação, Salão de Iniciação Científica, PUCRS" },
+      { "start": 2016, "end": 2017, "en": "Judge, MOSTRATEC (31st and 32nd editions) and MOTIC science fairs", "pt": "Avaliador, 31ª e 32ª MOSTRATEC e V MOTIC" }
+    ],
+    "thesis_committees": [
+      { "level_en": "Ph.D. theses", "level_pt": "Teses de doutorado", "count": 3, "detail_en": "Unisinos and PUCRS, 2024–2026", "detail_pt": "Unisinos e PUCRS, 2024–2026" },
+      { "level_en": "Ph.D. qualifying exams", "level_pt": "Qualificações de doutorado", "count": 1, "detail_en": "PUCRS, 2026", "detail_pt": "PUCRS, 2026" },
+      { "level_en": "M.Sc. theses", "level_pt": "Dissertações de mestrado", "count": 5, "detail_en": "PUCRS and UDESC, 2024–2025", "detail_pt": "PUCRS e UDESC, 2024–2025" },
+      { "level_en": "Undergraduate final projects", "level_pt": "Trabalhos de conclusão de curso", "count": 10, "detail_en": "PUCRS, 2023–2025", "detail_pt": "PUCRS, 2023–2025" }
+    ]
+  },
+
+  "talks": [
+    { "year": 2025, "en": "Invited speaker, SecOps Summit", "pt": "Palestrante convidado, SecOps Summit" },
+    { "year": 2025, "en": "\"Misinformation identification with LLMs\", Semana CT&I SUS, Seminário de Marco Zero", "pt": "\"Identificação de Desinformação com LLMs\", Semana CT&I SUS, Seminário de Marco Zero" },
+    { "year": 2023, "en": "Tutorial \"Neural networks from scratch to convolutional networks\" and panel on Natural Language Processing, Artificial Intelligence Workshop, PUCRS", "pt": "Tutorial \"Redes neurais, do zero até redes convolucionais\" e painel sobre Processamento de Linguagem Natural, Workshop de Inteligência Artificial, PUCRS" },
+    { "year": 2023, "en": "\"Hyperparameter tuning on neural networks: from grid search to genetic algorithms\"", "pt": "\"Hyperparameter tuning on neural networks: from grid search to genetic algorithms\"" },
+    { "year": 2019, "en": "\"Artificial intelligence: what comes after the spring?\", ECM TEC 2019", "pt": "\"Inteligência Artificial: o que vem depois da primavera?\", ECM TEC 2019" },
+    { "year": 2018, "en": "\"Artificial intelligence and its applications\", ECM 360º", "pt": "\"Inteligência Artificial e suas Aplicações\", ECM 360º" }
+  ],
+
+  "media": [
+    { "year": 2025, "en": "\"What are the limits of AI use in academic research?\", radio/TV interview", "pt": "\"Quais os limites do uso de IA na pesquisa acadêmica?\", entrevista em rádio/TV" },
+    { "year": 2025, "en": "Programa Conexão: recommendation algorithms and the adultization of children, TV interview", "pt": "Programa Conexão: Algoritmos de Recomendação e a Adultização de Crianças, entrevista" },
+    { "year": 2024, "en": "\"Doctor Robot: medicine already uses AI to interpret clinical data and suggest treatments\", interview", "pt": "\"Doutor Robô: Medicina já usa IA para interpretar dados clínicos e sugerir tratamentos\", entrevista" },
+    { "year": 2024, "en": "Rádio Mix: Meta uses user data to train AI, radio interview", "pt": "Rádio Mix: Meta usa dados dos usuários para treinar IA, entrevista" },
+    { "year": 2024, "en": "\"Super AI: humanity's last invention?\", interview", "pt": "\"Super IA: a última invenção da humanidade?\", entrevista" },
+    { "year": 2023, "en": "\"How ChatGPT works\", interview", "pt": "\"Como funciona o ChatGPT, robô com ampla capacidade de interação\", entrevista" }
+  ],
+
+  "teaching": [
+    {
+      "institution_en": "PUCRS, Graduate Program in Computer Science",
+      "institution_pt": "PUCRS, Programa de Pós-Graduação em Ciência da Computação",
+      "period": "2023 – present",
+      "period_pt": "2023 – atual",
+      "level": "grad",
+      "courses_en": ["Deep Neural Networks", "Machine Learning", "Theory of Computing"],
+      "courses_pt": ["Redes Neurais Profundas", "Aprendizado de Máquina", "Teoria da Computação"]
+    },
+    {
+      "institution_en": "PUCRS, School of Technology (undergraduate)",
+      "institution_pt": "PUCRS, Escola Politécnica (graduação)",
+      "period": "2021 – present",
+      "period_pt": "2021 – atual",
+      "level": "under",
+      "courses_en": ["Deep Learning I", "Deep Learning II", "Machine Learning", "Machine Learning II", "Introduction to Computer Vision", "Computer Vision", "Data Collection, Preparation and Analysis", "Scientific Methodology and AI Lab", "Logic for Computing", "Databases I", "Business Intelligence"],
+      "courses_pt": ["Aprendizado Profundo I", "Aprendizado Profundo II", "Aprendizado de Máquina", "Machine Learning II", "Introdução à Visão Computacional", "Visão Computacional", "Coleta, Preparação e Análise de Dados", "Metodologia Científica e Laboratório de IA", "Lógica para Computação", "Banco de Dados I", "Inteligência de Negócio"]
+    },
+    {
+      "institution_en": "PUCRS Online, specialization courses (lato sensu)",
+      "institution_pt": "PUCRS Online, cursos de especialização (lato sensu)",
+      "period": "2021 – present",
+      "period_pt": "2021 – atual",
+      "level": "grad",
+      "courses_en": ["Deep Learning: Success Cases and Applications", "Big Data and Data Science Marketing", "AI and Leadership: Impacts on Management", "Implications of AI in Design", "Digital Universe, Neuroscience and Mental Health"],
+      "courses_pt": ["Deep Learning: Cases de Sucesso e Aplicações", "Big Data e Data Science Marketing", "Inteligência Artificial e Liderança: Impactos na Gestão", "Implicações da IA no Design", "Universo Digital, Neurociências e Saúde Mental"]
+    },
+    {
+      "institution_en": "UFRGS, Institute of Informatics (undergraduate)",
+      "institution_pt": "UFRGS, Instituto de Informática (graduação)",
+      "period": "2018 – 2019",
+      "period_pt": "2018 – 2019",
+      "level": "under",
+      "courses_en": ["Fundamentals of Algorithms", "Logic for Computing", "Formal Languages and Automata"],
+      "courses_pt": ["Fundamentos de Algoritmos", "Lógica para Computação", "Linguagens Formais e Autômatos"]
+    },
+    {
+      "institution_en": "QI Escolas e Faculdades, technical course in Informatics",
+      "institution_pt": "QI Escolas e Faculdades, curso técnico em Informática",
+      "period": "2015 – 2016",
+      "period_pt": "2015 – 2016",
+      "level": "tech",
+      "courses_en": ["Logic", "Visual Programming", "Hardware Fundamentals", "Applied Mathematics", "Office Automation", "Internet I", "Basic Computing"],
+      "courses_pt": ["Lógica", "Programação Visual", "Fundamentos de Hardware", "Matemática Aplicada à Informática", "Automação de Escritório", "Internet I", "Informática Básica"]
+    }
+  ],
+
+  "teaching_materials": [
+    { "year": 2025, "en": "Online course: Machine Learning II (PUCRS Online)", "pt": "Disciplina online: Machine Learning II (PUCRS Online)" },
+    { "year": 2022, "en": "Online course: Data Collection and Preparation (PUCRS Online)", "pt": "Disciplina online: Coleta e Preparação de Dados (PUCRS Online)" },
+    { "year": 2021, "en": "Book chapter: \"Lists in Java\", in Data Structures in Java, Sagah", "pt": "Capítulo de livro: \"Listas em Java\", em Estrutura de Dados em Java, Sagah" },
+    { "year": 2021, "en": "Course material: Data Science, correlation with the R language", "pt": "Material didático: Ciência de Dados, correlação com a linguagem R" }
+  ],
+
+  "languages": [
+    { "en": "Portuguese (native)", "pt": "Português (nativo)" },
+    { "en": "English (fluent)", "pt": "Inglês (fluente)" }
+  ]
+}

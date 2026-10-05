@@ -164,6 +164,34 @@
   });
 })();
 
+(function initCvPrint() {
+  // The CV page offers two PDF buttons that both go through the browser's
+  // print dialog. "short" adds a class that the print stylesheet uses to
+  // hide every .cv-full-only element; the title swap gives the saved PDF a
+  // sensible default filename.
+  const btns = document.querySelectorAll('[data-cv-print]');
+  if (!btns.length) return;
+  const root = document.documentElement;
+  const originalTitle = document.title;
+
+  function cleanup() {
+    root.classList.remove('cv-short');
+    document.title = originalTitle;
+  }
+  window.addEventListener('afterprint', cleanup);
+
+  btns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const short = btn.dataset.cvPrint === 'short';
+      root.classList.toggle('cv-short', short);
+      document.title = 'Lucas_Kupssinsku_CV' + (short ? '_short' : '');
+      window.print();
+      // Browsers without afterprint support still get reset on the next tick.
+      setTimeout(cleanup, 1000);
+    });
+  });
+})();
+
 (function initNewsToggle() {
   // The button's show/hide labels are both in the markup; CSS picks one
   // based on the container's news-open class.
