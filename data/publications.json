@@ -1,5 +1,84 @@
 [
   {
+    "title": "A Comparative Evaluation of Open-Weight LLMs for Geoscientific Tasks",
+    "authors": [
+      "Otávio Parraga",
+      "Vitor Hugo Garcez",
+      "Ademir Marques Jr",
+      "André Luiz Durante Spigolon",
+      "George de Barros",
+      "Luiz Gonzaga Jr",
+      "Maurício Roberto Veronez",
+      "Arthur Fachel",
+      "Eduardo Roemers de Oliveira",
+      "Sabrina Deconti Bruski",
+      "Isabel Cordeiro Borges",
+      "Rodrigo C. Barros",
+      "*Lucas S. Kupssinskü"
+    ],
+    "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (JSTARS)",
+    "year": 2026,
+    "type": "journal"
+  },
+  {
+    "title": "Benchmarking LLMs in Geoscience: A Serverless Approach using GeoBench and AWS",
+    "authors": [
+      "Otávio Parraga",
+      "Arthur Fachel",
+      "Rodolfo S. Antunes",
+      "Luiz Gonzaga Jr",
+      "Maurício Roberto Veronez",
+      "Rodrigo C. Barros",
+      "*Lucas S. Kupssinskü"
+    ],
+    "venue": "Simpósio de Infraestrutura Digital/Nuvem para Pesquisa (Pesquisa@Nuvem)",
+    "year": 2026,
+    "type": "conference"
+  },
+  {
+    "title": "Evaluation of Denoising Architectures on a Reconstructed Ultra-Low-Dose CT Dataset",
+    "authors": [
+      "D. L. Zago",
+      "Raíssa Contassot",
+      "Augusto Ochoa Ughini",
+      "Rafaela Ravazio",
+      "Rodrigo C. Barros",
+      "*Lucas S. Kupssinskü"
+    ],
+    "venue": "Encontro Nacional de Inteligência Artificial e Computacional (ENIAC)",
+    "year": 2026,
+    "type": "conference"
+  },
+  {
+    "title": "Knowledge Distillation and Composite Loss as a Low-Resource Strategy for LDCT Image Denoising",
+    "authors": [
+      "Raíssa Contassot",
+      "Augusto Ochoa Ughini",
+      "Jerusa D. Finatto",
+      "Kristen K. Arguello",
+      "Rafaela Ravazio",
+      "Otávio Parraga",
+      "Christian Mattjie",
+      "*Lucas S. Kupssinskü",
+      "Rodrigo C. Barros"
+    ],
+    "venue": "Encontro Nacional de Inteligência Artificial e Computacional (ENIAC)",
+    "year": 2026,
+    "type": "conference"
+  },
+  {
+    "title": "Isolated Sign Language Recognition in LIBRAS",
+    "authors": [
+      "Marcelo Mussi Delucis",
+      "Otávio Parraga",
+      "Rodrigo C. Barros",
+      "*Lucas S. Kupssinskü"
+    ],
+    "venue": "Brazilian Conference on Intelligent Systems (BRACIS)",
+    "year": 2025,
+    "type": "conference"
+  },
+  {
     "title": "Continual Learning for Sequential Personalization of Small Language Models: A Stability Monitoring Analysis",
     "authors": [
       "Thomas da Silva Paula",
