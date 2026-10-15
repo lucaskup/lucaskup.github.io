@@ -912,6 +912,8 @@ html.lightbox-open { overflow: hidden; }
 }
 
 .project-body p { margin-bottom: 1rem; }
+.project-body ul { padding-left: 1.4rem; margin-bottom: 1rem; }
+.project-body li { margin-bottom: .6rem; }
 
 /* Funder logo plate — fixed light background so the dark PNG
    stays visible in both dark and light themes. */

@@ -651,6 +651,7 @@ transform('projects/low-resource-ml.html', (html, file) => {
 
 transform('projects/misinformation-llms.html', (html, file) => {
   html = fillContainer(html, 'related-pubs', '', renderRelatedPubs('misinformation-llms'), file);
+  html = fillContainer(html, 'related-links', '', renderRelatedLinks('misinformation-llms'), file);
   return html;
 });
 
@@ -671,8 +672,9 @@ function renderSitemap() {
     { loc: 'prospective-students.html',         src: ['prospective-students.html'] },
     { loc: 'cv.html',                           src: ['cv.html', 'style.css', 'data/cv.json', 'data/publications.json', 'data/advisees.json'] },
     { loc: 'news/kunumi-colabs-rs.html',        src: ['news/kunumi-colabs-rs.html'] },
+    { loc: 'news/bar-2026-feevale.html',        src: ['news/bar-2026-feevale.html'] },
     { loc: 'projects/low-resource-ml.html',     src: ['projects/low-resource-ml.html', 'data/publications.json', 'data/related.json'] },
-    { loc: 'projects/misinformation-llms.html', src: ['projects/misinformation-llms.html', 'data/publications.json'] }
+    { loc: 'projects/misinformation-llms.html', src: ['projects/misinformation-llms.html', 'data/publications.json', 'data/related.json'] }
   ];
   const today = new Date().toISOString().slice(0, 10);
   const lastmod = files => {

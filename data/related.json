@@ -1,5 +1,13 @@
 [
   {
+    "project": "misinformation-llms",
+    "type": "talk",
+    "lang": "pt",
+    "title": "Desinformação com IA: resultados do projeto apresentados no BAR 2026, Universidade Feevale",
+    "source": "BAR 2026 · Feevale",
+    "url": "https://lucaskup.github.io/news/bar-2026-feevale.html"
+  },
+  {
     "project": "low-resource-ml",
     "type": "news",
     "lang": "pt",

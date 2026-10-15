@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-10-07",
+    "en": "Invited talk on misinformation detection with AI at BAR 2026, Universidade Feevale, presenting results of the Misinformation Identification with LLMs project.",
+    "pt": "Palestra sobre identificação de desinformação com IA no BAR 2026, na Universidade Feevale, apresentando resultados do projeto Identificação de Desinformação com LLMs.",
+    "url": "news/bar-2026-feevale.html"
+  },
+  {
     "date": "2026-08-28",
     "en": "Pedro Wagner defended his M.Sc. thesis, Brazilian Portuguese Sentence Encoders under Equal Budgets: A Controlled Ablation of Pre-Training Design and Supervision Allocation. He will continue in the group as a Ph.D. student. Congratulations!",
     "pt": "Pedro Wagner defendeu sua dissertação de mestrado, Brazilian Portuguese Sentence Encoders under Equal Budgets: A Controlled Ablation of Pre-Training Design and Supervision Allocation. Ele continuará no grupo como doutorando. Parabéns!"

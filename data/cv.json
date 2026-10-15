@@ -311,6 +311,7 @@
   },
 
   "talks": [
+    { "year": 2026, "en": "\"Misinformation with AI\", invited talk, BAR 2026 (Building Up An Academic Research Journey), Universidade Feevale", "pt": "\"Desinformação com IA\", palestra convidada, BAR 2026 (Building Up An Academic Research Journey), Universidade Feevale" },
     { "year": 2025, "en": "Invited speaker, SecOps Summit", "pt": "Palestrante convidado, SecOps Summit" },
     { "year": 2025, "en": "\"Misinformation identification with LLMs\", Semana CT&I SUS, Seminário de Marco Zero", "pt": "\"Identificação de Desinformação com LLMs\", Semana CT&I SUS, Seminário de Marco Zero" },
     { "year": 2023, "en": "Tutorial \"Neural networks from scratch to convolutional networks\" and panel on Natural Language Processing, Artificial Intelligence Workshop, PUCRS", "pt": "Tutorial \"Redes neurais, do zero até redes convolucionais\" e painel sobre Processamento de Linguagem Natural, Workshop de Inteligência Artificial, PUCRS" },
