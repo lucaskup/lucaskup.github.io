@@ -56,8 +56,12 @@
   const links  = document.getElementById('nav-links');
   if (!toggle || !links) return;
 
+  const mobile = window.matchMedia('(max-width: 1280px)');
+
   function setOpen(open) {
+    open = mobile.matches && open;
     links.classList.toggle('open', open);
+    links.inert = mobile.matches && !open;
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   }
@@ -67,8 +71,26 @@
   });
 
   links.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') setOpen(false);
+    if (e.target.closest('a')) setOpen(false);
   });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      e.preventDefault();
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  mobile.addEventListener('change', () => {
+    const focusWasInMenu = links.contains(document.activeElement);
+    const focusWasOnToggle = document.activeElement === toggle;
+    setOpen(false);
+    if (mobile.matches && focusWasInMenu) toggle.focus();
+    else if (!mobile.matches && focusWasOnToggle) links.querySelector('a')?.focus();
+  });
+
+  setOpen(false);
 })();
 
 (function initTabs() {

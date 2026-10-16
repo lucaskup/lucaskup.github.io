@@ -5,7 +5,7 @@
   --card:      #2d2f3f;
   --line:      #44475a;
   --fg:        #f8f8f2;
-  --comment:   #6272a4;
+  --comment:   #8b96c0;
   --cyan:      #8be9fd;
   --green:     #50fa7b;
   --orange:    #ffb86c;
@@ -42,7 +42,7 @@
 /* ── Reset & Base ────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html, body { overflow-x: hidden; }
+html, body { overflow-x: clip; }
 
 html { scroll-behavior: smooth; }
 
@@ -107,6 +107,8 @@ nav {
 }
 
 .nav-brand {
+  flex-shrink: 0;
+  white-space: nowrap;
   color: var(--purple);
   font-size: 1rem;
   font-weight: 700;
@@ -1121,10 +1123,11 @@ html.lightbox-open { overflow: hidden; }
 .member-card:hover { border-color: var(--purple); }
 
 /* ── Responsive ──────────────────────────────────────────── */
-/* The hamburger kicks in at 1100px: the homepage's ten nav links (longer
-   still in Portuguese) don't fit the fixed-height bar below that width. */
-@media (max-width: 1100px) {
-  nav { padding: 0 1rem; flex-wrap: wrap; }
+/* Keep all eleven homepage links without crowding either language. */
+@media (max-width: 1280px) {
+  nav { padding: 0 1rem; flex-wrap: wrap; align-content: flex-start; }
+
+  .nav-actions { height: 56px; }
 
   .nav-toggle { display: inline-flex; }
 
@@ -1141,7 +1144,11 @@ html.lightbox-open { overflow: hidden; }
     background: var(--surface);
   }
 
-  .nav-links.open { max-height: 70vh; }
+  .nav-links.open {
+    max-height: min(70vh, calc(100dvh - 56px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 
   .nav-links li { width: 100%; }
 

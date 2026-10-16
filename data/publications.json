@@ -76,7 +76,8 @@
     ],
     "venue": "Brazilian Conference on Intelligent Systems (BRACIS)",
     "year": 2025,
-    "type": "conference"
+    "type": "conference",
+    "url": "https://doi.org/10.1007/978-3-032-15990-8_19"
   },
   {
     "title": "Continual Learning for Sequential Personalization of Small Language Models: A Stability Monitoring Analysis",
@@ -87,7 +88,8 @@
     ],
     "venue": "Brazilian Conference on Intelligent Systems (BRACIS)",
     "year": 2026,
-    "type": "conference"
+    "type": "conference",
+    "url": "https://arxiv.org/abs/2606.27634"
   },
   {
     "title": "Anatomical Mask Conditioning for Low-Dose CT Denoising: An Architecture-Aware Investigation",
@@ -143,7 +145,8 @@
     "venue": "Brazilian Conference on Intelligent Systems (BRACIS)",
     "year": 2026,
     "type": "conference",
-    "project": "misinformation-llms"
+    "project": "misinformation-llms",
+    "url": "https://arxiv.org/abs/2608.06417"
   },
   {
     "title": "Less is More: Improved Fact-Checking on AVeriTeC with Iterative Question Generation",
@@ -160,7 +163,8 @@
     "venue": "Encontro Nacional de Inteligência Artificial e Computacional (ENIAC)",
     "year": 2026,
     "type": "conference",
-    "project": "misinformation-llms"
+    "project": "misinformation-llms",
+    "url": "https://github.com/lucasfrag/iterative-question-generation"
   },
   {
     "title": "Evaluation of Tabular Methods on Misinformation Detection",
@@ -185,7 +189,8 @@
     ],
     "venue": "Brazilian Conference on Intelligent Systems (BRACIS)",
     "year": 2026,
-    "type": "conference"
+    "type": "conference",
+    "url": "https://doi.org/10.1007/978-3-032-39882-6_27"
   },
   {
     "title": "Automated Fact-Checking in Brazilian Portuguese: Resources and Baselines",
