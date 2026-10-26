@@ -10,6 +10,15 @@ const { execSync } = require('child_process');
 
 const ROOT = __dirname;
 const OUT = path.join(ROOT, '_site');
+const SITE = 'https://lucaskup.github.io/';
+
+// News posts are discovered from the folder, so adding one never requires
+// touching this script. Slug convention: event-year-place (e.g.
+// bracis-2026-cuiaba), with its images under img/news/<slug>/.
+const newsPages = fs.readdirSync(path.join(ROOT, 'news'))
+  .filter(f => f.endsWith('.html'))
+  .sort()
+  .map(f => 'news/' + f);
 
 // ── Data ──
 const read = f => JSON.parse(fs.readFileSync(path.join(ROOT, 'data', f), 'utf8'));
@@ -227,6 +236,25 @@ function renderAlumni() {
   })));
 }
 
+// Internal links in data/*.json are written relative to the site root
+// (e.g. "news/bracis-2026-cuiaba.html"); external ones keep their scheme.
+const isExternal = url => /^[a-z][a-z0-9+.-]*:/i.test(url);
+const absoluteUrl = url => isExternal(url) ? url : SITE + url.replace(/^\/+/, '');
+
+// Fail the build on an internal link that points to a page that does not
+// exist, so a renamed or misspelled slug is caught before deploy.
+function checkInternalLinks(entries, label) {
+  for (const e of entries) {
+    if (!e.url || isExternal(e.url)) continue;
+    const target = e.url.replace(/^\/+/, '').split('#')[0];
+    if (!fs.existsSync(path.join(ROOT, target))) {
+      throw new Error(`${label}: internal link to missing page "${e.url}"`);
+    }
+  }
+}
+checkInternalLinks(news, 'data/news.json');
+checkInternalLinks(related, 'data/related.json');
+
 // ── Project pages: related publications and related content ──
 function renderRelatedPubs(projectId) {
   const typeOrder = { conference: 0, journal: 1, workshop: 2, preprint: 3 };
@@ -258,13 +286,14 @@ function renderRelatedLinks(projectId) {
     return `<p class="placeholder-note">${bil('Related content to be added.', 'Conteúdo relacionado em breve.')}</p>`;
   }
   const cards = items.map(r => {
+    const url = absoluteUrl(r.url);
     const meta = [`<span class="related-type related-type--${r.type}">${typeLabel[r.type] || r.type}</span>`];
     if (r.source) meta.push(`<span class="related-source">${r.source}</span>`);
     if (r.lang)   meta.push(`<span class="related-lang">${r.lang.toUpperCase()}</span>`);
-    return `<a class="related-card" href="${r.url}" target="_blank" rel="noopener">
+    return `<a class="related-card" href="${url}" target="_blank" rel="noopener">
       <div class="related-meta">${meta.join('')}</div>
       <p class="related-title">${r.title}</p>
-      <span class="related-host">${host(r.url)} ↗</span>
+      <span class="related-host">${host(url)} ↗</span>
     </a>`;
   }).join('\n');
   return `<div class="related-list">${cards}</div>`;
@@ -655,6 +684,23 @@ transform('projects/misinformation-llms.html', (html, file) => {
   return html;
 });
 
+// News posts: the page URL is derived from the file name, so canonical,
+// og:url and the JSON-LD url can never disagree with the actual address.
+// Images are left as written, since the cover photo varies per post.
+for (const page of newsPages) {
+  transform(page, (html, file) => {
+    const url = SITE + page;
+    const sub = (re, out) => {
+      if (!re.test(html)) throw new Error(`Missing in ${file}: ${re}`);
+      html = html.replace(re, out);
+    };
+    sub(/<link rel="canonical" href="[^"]*"/, `<link rel="canonical" href="${url}"`);
+    sub(/<meta property="og:url" content="[^"]*"/, `<meta property="og:url" content="${url}"`);
+    sub(/("@type": "NewsArticle",[\s\S]*?"url": )"[^"]*"/, `$1"${url}"`);
+    return html;
+  });
+}
+
 transform('cv.html', (html, file) => {
   html = fillContainer(html, 'cv-toc', '', renderCvToc(), file);
   html = fillContainer(html, 'cv-container', '', renderCv(), file);
@@ -666,14 +712,12 @@ transform('cv.html', (html, file) => {
 // source inputs (requires full git history; deploy.yml checks out with
 // fetch-depth: 0). Falls back to today when git is unavailable.
 function renderSitemap() {
-  const site = 'https://lucaskup.github.io/';
+  const site = SITE;
   const pages = [
     { loc: '',                                  src: ['index.html', 'style.css', 'data/news.json', 'data/projects.json', 'data/publications.json', 'data/advisees.json'] },
     { loc: 'prospective-students.html',         src: ['prospective-students.html'] },
     { loc: 'cv.html',                           src: ['cv.html', 'style.css', 'data/cv.json', 'data/publications.json', 'data/advisees.json'] },
-    { loc: 'news/kunumi-colabs-rs.html',        src: ['news/kunumi-colabs-rs.html'] },
-    { loc: 'news/bar-2026-feevale.html',        src: ['news/bar-2026-feevale.html'] },
-    { loc: 'news/bracis-2026-cuiaba.html',      src: ['news/bracis-2026-cuiaba.html'] },
+    ...newsPages.map(p => ({ loc: p, src: [p] })),
     { loc: 'projects/low-resource-ml.html',     src: ['projects/low-resource-ml.html', 'data/publications.json', 'data/related.json'] },
     { loc: 'projects/misinformation-llms.html', src: ['projects/misinformation-llms.html', 'data/publications.json', 'data/related.json'] }
   ];
