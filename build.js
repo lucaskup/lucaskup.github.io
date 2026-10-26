@@ -673,6 +673,7 @@ function renderSitemap() {
     { loc: 'cv.html',                           src: ['cv.html', 'style.css', 'data/cv.json', 'data/publications.json', 'data/advisees.json'] },
     { loc: 'news/kunumi-colabs-rs.html',        src: ['news/kunumi-colabs-rs.html'] },
     { loc: 'news/bar-2026-feevale.html',        src: ['news/bar-2026-feevale.html'] },
+    { loc: 'news/bracis-2026-cuiaba.html',      src: ['news/bracis-2026-cuiaba.html'] },
     { loc: 'projects/low-resource-ml.html',     src: ['projects/low-resource-ml.html', 'data/publications.json', 'data/related.json'] },
     { loc: 'projects/misinformation-llms.html', src: ['projects/misinformation-llms.html', 'data/publications.json', 'data/related.json'] }
   ];

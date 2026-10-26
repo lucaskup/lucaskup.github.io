@@ -1,6 +1,14 @@
 [
   {
     "project": "misinformation-llms",
+    "type": "news",
+    "lang": "pt",
+    "title": "Best Paper Award no BRACIS 2026: Latent Fact-Checking fica em primeiro lugar em Cuiabá",
+    "source": "BRACIS 2026 · Cuiabá",
+    "url": "https://lucaskup.github.io/news/bracis-2026-cuiaba.html"
+  },
+  {
+    "project": "misinformation-llms",
     "type": "talk",
     "lang": "pt",
     "title": "Desinformação com IA: resultados do projeto apresentados no BAR 2026, Universidade Feevale",
