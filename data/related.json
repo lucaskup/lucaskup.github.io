@@ -1,6 +1,14 @@
 [
   {
     "project": "misinformation-llms",
+    "type": "talk",
+    "lang": "pt",
+    "title": "Minicurso de Identificação de Desinformação com LLMs na ERAMIA-RS 2026, por Lucas Fraga",
+    "source": "ERAMIA-RS 2026 · UFCSPA",
+    "url": "news/eramia-2026-ufcspa.html"
+  },
+  {
+    "project": "misinformation-llms",
     "type": "news",
     "lang": "pt",
     "title": "Best Paper Award no BRACIS 2026: Latent Fact-Checking fica em primeiro lugar em Cuiabá",
