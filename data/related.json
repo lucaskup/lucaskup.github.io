@@ -1,6 +1,14 @@
 [
   {
     "project": "misinformation-llms",
+    "type": "news",
+    "lang": "pt",
+    "title": "Marcelo Mussi é selecionado como 2026 Google PhD Fellow, com apoio do Google.org",
+    "source": "Google PhD Fellowship 2026",
+    "url": "news/google-phd-fellowship-2026.html"
+  },
+  {
+    "project": "misinformation-llms",
     "type": "talk",
     "lang": "pt",
     "title": "Minicurso de Identificação de Desinformação com LLMs na ERAMIA-RS 2026, por Lucas Fraga",

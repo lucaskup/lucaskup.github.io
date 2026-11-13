@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05",
+  "updated": "2026-11-13",
   "profile": {
     "name": "Lucas Silveira Kupssinskü",
     "title_en": "Associate Professor · Deep Learning Researcher",
@@ -250,6 +250,7 @@
   ],
 
   "awards": [
+    { "year": 2026, "en": "Advisor of two 2026 Google PhD Fellows, with support from Google.org. Students: Arthur Sperhacke Bianchessi and Marcelo Mussi Delucis.", "pt": "Orientador de dois 2026 Google PhD Fellows, com apoio do Google.org. Orientandos: Arthur Sperhacke Bianchessi e Marcelo Mussi Delucis." },
     { "year": 2026, "en": "Best Paper Award (first place), BRACIS 2026, for \"Latent Fact-Checking: Detecting Misinformation through Activation Engineering\".", "pt": "Best Paper Award (primeiro lugar), BRACIS 2026, pelo artigo \"Latent Fact-Checking: Detecting Misinformation through Activation Engineering\"." },
     { "year": 2026, "en": "Advisor of the Best Work of the Major Area, 27th Undergraduate Research Fair (Salão de Iniciação Científica), PUCRS. Student: João Pedro Martins.", "pt": "Orientador do Melhor Trabalho da Grande Área, 27º Salão de Iniciação Científica, PUCRS. Orientando: João Pedro Martins." },
     { "year": 2026, "en": "Advisor of two Highlighted Works, 27th Undergraduate Research Fair, PUCRS. Students: Yasmin Cardozo Aguirre and João Pedro Martins.", "pt": "Orientador de dois Trabalhos Destaque, 27º Salão de Iniciação Científica, PUCRS. Orientandos: Yasmin Cardozo Aguirre e João Pedro Martins." },
