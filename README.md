@@ -14,8 +14,16 @@ and generates `sitemap.xml` with lastmod dates taken from git history.
 - `cv.html` is built entirely from `data/cv.json` (education, positions, grants,
   awards, service, talks, teaching) plus `publications.json` and `advisees.json`,
   so the CV never drifts from the rest of the site. Elements tagged
-  `cv-full-only` are dropped from the "Short CV (PDF)" print; the citation
-  count in `cv.json` (`profile.citations`) is the one number updated by hand.
+  `cv-full-only` are dropped from the "Short CV (PDF)" print.
+- Citation metrics (citations, h-index, i10-index, citations per year) come
+  from OpenAlex and live in `data/metrics.json`. The homepage hero and the CV
+  both read that file. The deploy workflow runs
+  `node scripts/update-metrics.js` before every build, so each deploy
+  publishes fresh numbers; to refresh without a content change, trigger the
+  workflow by hand (Actions → Build and deploy → Run workflow). If OpenAlex is
+  unreachable, or the citation count falls by more than 20%, the build uses
+  the committed `data/metrics.json`. Running the script locally and committing
+  the JSON updates that fallback.
 - Internal links in `data/*.json` (`news.json`, `related.json`) are written
   relative to the site root, e.g. `news/bracis-2026-cuiaba.html`. The build
   turns them into absolute URLs and fails if the target page does not exist.

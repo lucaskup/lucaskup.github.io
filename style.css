@@ -461,6 +461,208 @@ section + section { border-top: 1px solid var(--line); }
   margin-top: .4rem;
 }
 
+/* ── Citation metrics (hero: numbers line + collapsible chart) ── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.hero-metrics-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .3rem 1.4rem;
+  margin-top: 1.1rem;
+}
+
+.hero-metrics {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .3rem 1.4rem;
+  font-size: .85rem;
+  color: var(--comment);
+}
+
+.hero-metric { display: inline-flex; align-items: center; gap: .4rem; white-space: nowrap; }
+.hero-metric-n { font-size: 1.05rem; font-weight: 700; color: var(--purple); }
+
+.metric-tip-btn {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+  padding: 0;
+  border: 1px solid var(--comment);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--comment);
+  font: inherit;
+  font-size: .66rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: help;
+  transition: color .2s, border-color .2s;
+}
+
+.metric-tip-btn:hover,
+.metric-tip-btn:focus-visible { color: var(--cyan); border-color: var(--cyan); }
+
+/* Tooltips in the hero line span its width, so they fit on any screen. */
+.metric-tip {
+  position: absolute;
+  top: calc(100% + .45rem);
+  left: 0;
+  z-index: 20;
+  width: max-content;
+  max-width: min(100%, 340px);
+  padding: .55rem .7rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+  color: var(--fg);
+  font-size: .76rem;
+  line-height: 1.5;
+  text-align: left;
+  white-space: normal;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .15s, visibility .15s;
+}
+
+.metric-tip-btn:hover + .metric-tip,
+.metric-tip-btn:focus + .metric-tip,
+.metrics-marker:hover + .metric-tip,
+.metrics-marker:focus + .metric-tip,
+.metric-tip:hover { visibility: visible; opacity: 1; }
+
+/* Closed, the chart is a link-sized toggle beside the numbers; open, it
+   drops to its own row as a card. */
+.metrics summary {
+  font-size: .8rem;
+  color: var(--cyan);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.metrics summary:hover { color: var(--purple); }
+
+.metrics[open] {
+  flex-basis: 100%;
+  margin-top: .5rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.metrics[open] summary { padding: .7rem 1.1rem 0; }
+
+.metrics-bars {
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+  height: 140px;
+  margin: .3rem 1.1rem 0;
+}
+
+.metrics-bar { flex: 1 1 0; display: flex; flex-direction: column; }
+
+.metrics-bar-track {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding: 0 22%;
+}
+
+/* The value sits above the marker line that crosses its column. */
+.metrics-bar-value {
+  position: relative;
+  z-index: 2;
+  padding: 0 .25rem;
+  background: var(--card);
+  font-size: .7rem;
+  line-height: 1.1rem;
+  color: var(--comment);
+}
+
+.metrics-bar-fill {
+  width: 100%;
+  height: calc((100% - 1.1rem) * var(--r));
+  min-height: 2px;
+  background: var(--purple);
+  border-radius: 4px 4px 0 0;
+  transition: background .2s;
+}
+
+.metrics-bar:hover .metrics-bar-fill { background: var(--cyan); }
+.metrics-bar:hover .metrics-bar-value { color: var(--fg); }
+.metrics-bar--partial .metrics-bar-fill { opacity: .55; }
+
+/* Dashed vertical marker for an event year (the Ph.D. defense). */
+.metrics-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--comment);
+  font: inherit;
+  cursor: help;
+  z-index: 1;
+}
+
+.metrics-marker::after {
+  content: '';
+  flex: 1;
+  border-left: 2px dashed var(--orange);
+}
+
+.metrics-marker-label {
+  font-size: .68rem;
+  line-height: 1.1rem;
+  white-space: nowrap;
+  transition: color .2s;
+}
+
+.metrics-marker:hover .metrics-marker-label,
+.metrics-marker:focus-visible .metrics-marker-label { color: var(--fg); }
+
+.metrics-marker-tip {
+  top: 1.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 220px;
+}
+
+.metrics-bar-year {
+  border-top: 1px solid var(--line);
+  padding-top: .25rem;
+  font-size: .7rem;
+  color: var(--comment);
+  text-align: center;
+}
+
+.metrics-source {
+  margin: .7rem 1.1rem .8rem;
+  font-size: .75rem;
+  color: var(--comment);
+}
+
 /* ── Tabs (Advisees / Alumni) ────────────────────────────── */
 .tabs { display: flex; gap: .5rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
 
@@ -1248,7 +1450,7 @@ html.lightbox-open { overflow: hidden; }
 
 .cv-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: .8rem;
   margin: 1.6rem 0 .5rem;
 }
@@ -1265,6 +1467,15 @@ html.lightbox-open { overflow: hidden; }
 
 .cv-stat-n { font-size: 1.4rem; font-weight: 700; color: var(--purple); line-height: 1.1; }
 .cv-stat-label { font-size: .75rem; color: var(--comment); }
+
+/* h-index and i10-index tiles: the tooltip hangs below its own tile. */
+.cv-stat { position: relative; }
+.cv-stat-label .metric-tip-btn { margin-left: .4rem; vertical-align: middle; }
+.cv-stat .metric-tip { top: calc(100% + .35rem); left: -1px; right: -1px; width: auto; max-width: none; }
+
+@media (max-width: 600px) {
+  .cv-stats { grid-template-columns: repeat(2, 1fr); }
+}
 
 .cv-section { padding-top: 2.4rem; }
 
@@ -1380,7 +1591,8 @@ html.lightbox-open { overflow: hidden; }
   .cv-header { grid-template-columns: 1fr; gap: .2rem; }
   .cv-header h1 { font-size: 20pt; }
   .cv-mission { margin-top: .7rem; padding: .5rem .8rem; font-size: 11pt; border-left-color: #4c1d95; background: #fff; border: 1px solid #d4d4d8; border-left: 3px solid #4c1d95; }
-  .cv-stats { grid-template-columns: repeat(6, 1fr); gap: .4rem; margin: .8rem 0 0; }
+  .cv-stats { grid-template-columns: repeat(4, 1fr); gap: .4rem; margin: .8rem 0 0; }
+  .metric-tip-btn, .metric-tip { display: none; }
   .cv-stat { padding: .4rem .5rem; border-color: #d4d4d8; }
   .cv-stat-n { font-size: 12pt; }
   .cv-stat-label { font-size: 7.5pt; }

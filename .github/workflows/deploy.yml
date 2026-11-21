@@ -25,6 +25,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      # Refresh the citation metrics from OpenAlex. If the API is down or the
+      # response looks wrong, the script exits without writing and the build
+      # uses the data/metrics.json committed in the repo.
+      - name: Refresh citation metrics
+        continue-on-error: true
+        run: node scripts/update-metrics.js
       - name: Prerender site
         run: node build.js
       - uses: actions/configure-pages@v5

@@ -27,6 +27,7 @@ const news = read('news.json');
 const projects = read('projects.json');
 const advisees = read('advisees.json');
 const related = read('related.json');
+const metrics = read('metrics.json');
 
 // ── Shared templates (mirrors of the former client-side renderers) ──
 const bil = (en, pt) => `<span class="lang lang-en">${en}</span><span class="lang lang-pt" lang="pt-BR">${pt}</span>`;
@@ -221,6 +222,90 @@ function renderPublications() {
   return tabsHtml(tabs, 'pub-list');
 }
 
+// ── Citation metrics (data/metrics.json, refreshed by scripts/update-metrics.js) ──
+const metricsNum = n => bil(n.toLocaleString('en-US'), n.toLocaleString('pt-BR'));
+const metricsUpdated = new Date(metrics.updated + 'T00:00:00');
+const metricsUpdatedLabel = bil(
+  metricsUpdated.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
+  metricsUpdated.toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' })
+);
+
+// A "?" button whose explanation shows on hover, keyboard focus, or tap.
+const metricTip = (id, nameEn, namePt, en, pt) =>
+  `<button type="button" class="metric-tip-btn" aria-describedby="${id}">` +
+  `<span aria-hidden="true">?</span>` +
+  `<span class="visually-hidden">${bil('About the ' + nameEn, 'Sobre o ' + namePt)}</span></button>` +
+  `<span class="metric-tip" role="tooltip" id="${id}">${bil(en, pt)}</span>`;
+
+const hIndexTip = () => metricTip('tip-h-index', 'h-index', 'índice h',
+  `The largest number <em>h</em> such that <em>h</em> publications have at least <em>h</em> citations each. An h-index of ${metrics.h_index} means ${metrics.h_index} publications with ${metrics.h_index} or more citations.`,
+  `O maior número <em>h</em> tal que <em>h</em> publicações têm pelo menos <em>h</em> citações cada. Um índice h de ${metrics.h_index} indica ${metrics.h_index} publicações com ${metrics.h_index} ou mais citações.`);
+
+const i10IndexTip = () => metricTip('tip-i10-index', 'i10-index', 'índice i10',
+  'The number of publications with at least 10 citations.',
+  'O número de publicações com pelo menos 10 citações.');
+
+// Hero: the three numbers in one line, followed by the collapsible yearly chart.
+function renderHeroMetrics() {
+  const m = metrics;
+
+  const stat = (value, label, tipHtml = '') =>
+    `<span class="hero-metric"><strong class="hero-metric-n">${metricsNum(value)}</strong> ${label}${tipHtml}</span>`;
+
+  const stats = [
+    stat(m.citations, bil('citations', 'citações')),
+    stat(m.h_index, bil('h-index', 'índice h'), hIndexTip()),
+    stat(m.i10_index, bil('i10-index', 'índice i10'), i10IndexTip())
+  ].join('\n');
+
+  return `<div class="hero-metrics-row">
+    <p class="hero-metrics">
+    ${stats}
+    </p>
+    ${renderCitationsChart()}
+  </div>`;
+}
+
+// Collapsible chart of citations per year; closed, it is a link-sized toggle
+// at the end of the numbers line.
+function renderCitationsChart() {
+  const m = metrics;
+
+  // Dashed marker on the year of the Ph.D. defense, taken from data/cv.json.
+  const phd = cv.education.find(e => /^Ph\.D\./.test(e.degree_en));
+  const marker = `<button type="button" class="metrics-marker" aria-describedby="tip-phd">` +
+    `<span class="metrics-marker-label">${bil('Ph.D.', 'Doutorado')}</span></button>` +
+    `<span class="metric-tip metrics-marker-tip" role="tooltip" id="tip-phd">${bil(
+      `${phd.degree_en}, ${phd.institution}. Defended in ${phd.end}.`,
+      `${phd.degree_pt}, ${phd.institution}. Defesa em ${phd.end}.`)}</span>`;
+
+  // The year of the last refresh is still accumulating citations.
+  const currentYear = metricsUpdated.getFullYear();
+  const max = Math.max(1, ...m.by_year.map(y => y.citations));
+  const bars = m.by_year.map(y => {
+    const partial = y.year === currentYear;
+    return `<li class="metrics-bar${partial ? ' metrics-bar--partial' : ''}" style="--r:${(y.citations / max).toFixed(4)}">
+        <span class="metrics-bar-track">
+          ${y.year === phd.end ? marker : ''}
+          <span class="metrics-bar-value">${metricsNum(y.citations)}<span class="visually-hidden">${bil(' citations in', ' citações em')}</span></span>
+          <span class="metrics-bar-fill"></span>
+        </span>
+        <span class="metrics-bar-year">${y.year}${partial ? '*' : ''}</span>
+      </li>`;
+  }).join('\n');
+  const partialNote = m.by_year.some(y => y.year === currentYear)
+    ? ` · ${bil(`*${currentYear} in progress`, `*${currentYear} em andamento`)}`
+    : '';
+
+  return `<details class="metrics" id="citations">
+    <summary id="citations-title">${bil('Citations per year', 'Citações por ano')}</summary>
+    <ol class="metrics-bars" aria-labelledby="citations-title">
+    ${bars}
+    </ol>
+    <p class="metrics-source">${bil('Source', 'Fonte')}: <a href="${m.profile}" target="_blank" rel="noopener">${m.source}</a> · ${bil('updated', 'atualizado em')} ${metricsUpdatedLabel}${partialNote}</p>
+  </details>`;
+}
+
 function renderAdvisees() {
   return tabsHtml(advisees.current.map(group => ({
     label: levelLabel[group.level] || group.level,
@@ -379,16 +464,12 @@ function renderCvHeader() {
   const L = p.links;
   const nJournal = cvPubs.filter(x => x.type === 'journal').length;
   const nConf = cvPubs.filter(x => x.type === 'conference' || x.type === 'workshop').length;
-  const cit = p.citations;
-  const citDate = new Date(cit.date + 'T00:00:00');
-  const citWhen = bil(
-    citDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
-    citDate.toLocaleDateString('pt-BR', { month: 'short', year: 'numeric' })
-  );
   const stats = [
     [nJournal, bil('journal articles', 'artigos em periódicos')],
     [nConf, bil('conference papers', 'artigos em conferências')],
-    [cit.count, bil(`citations · ${cit.source}, ${citWhen}`, `citações · ${cit.source}, ${citWhen}`)],
+    [metricsNum(metrics.citations), `${bil('citations', 'citações')} · ${metrics.source}, ${metricsUpdatedLabel}`],
+    [metricsNum(metrics.h_index), bil('h-index', 'índice h') + hIndexTip()],
+    [metricsNum(metrics.i10_index), bil('i10-index', 'índice i10') + i10IndexTip()],
     [advisees.alumni.length, bil('supervisions completed', 'orientações concluídas')],
     [cvOngoing, bil('supervisions ongoing', 'orientações em andamento')],
     [cv.grants.length, bil('funded projects', 'projetos financiados')]
@@ -649,7 +730,7 @@ function fillContainer(html, id, extraAttrs, content, file) {
 // Copy the source tree, then rewrite the pages that have dynamic sections.
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT);
-const EXCLUDE = new Set(['.git', '.github', '.claude', '_site', 'node_modules', 'build.js', '.gitignore', 'README.md']);
+const EXCLUDE = new Set(['.git', '.github', '.claude', '_site', 'node_modules', 'build.js', 'scripts', '.gitignore', 'README.md']);
 for (const entry of fs.readdirSync(ROOT)) {
   if (EXCLUDE.has(entry)) continue;
   fs.cpSync(path.join(ROOT, entry), path.join(OUT, entry), { recursive: true });
@@ -666,6 +747,7 @@ transform('index.html', (html, file) => {
   html = fillContainer(html, 'news-container', '', renderNews(), file);
   html = fillContainer(html, 'project-list', ' class="project-list"', renderProjects(), file);
   html = fillContainer(html, 'publications-container', '', renderPublications(), file);
+  html = fillContainer(html, 'hero-metrics-container', '', renderHeroMetrics(), file);
   html = fillContainer(html, 'advisees-container', '', renderAdvisees(), file);
   html = fillContainer(html, 'alumni-container', '', renderAlumni(), file);
   html = replaceOnce(html, '</head>', renderJsonLd() + '\n</head>', file);
@@ -714,9 +796,9 @@ transform('cv.html', (html, file) => {
 function renderSitemap() {
   const site = SITE;
   const pages = [
-    { loc: '',                                  src: ['index.html', 'style.css', 'data/news.json', 'data/projects.json', 'data/publications.json', 'data/advisees.json'] },
+    { loc: '',                                  src: ['index.html', 'style.css', 'data/news.json', 'data/projects.json', 'data/publications.json', 'data/advisees.json', 'data/metrics.json'] },
     { loc: 'prospective-students.html',         src: ['prospective-students.html'] },
-    { loc: 'cv.html',                           src: ['cv.html', 'style.css', 'data/cv.json', 'data/publications.json', 'data/advisees.json'] },
+    { loc: 'cv.html',                           src: ['cv.html', 'style.css', 'data/cv.json', 'data/publications.json', 'data/advisees.json', 'data/metrics.json'] },
     ...newsPages.map(p => ({ loc: p, src: [p] })),
     { loc: 'projects/low-resource-ml.html',     src: ['projects/low-resource-ml.html', 'data/publications.json', 'data/related.json'] },
     { loc: 'projects/misinformation-llms.html', src: ['projects/misinformation-llms.html', 'data/publications.json', 'data/related.json'] }

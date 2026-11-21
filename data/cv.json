@@ -17,7 +17,6 @@
       "lattes": "https://lattes.cnpq.br/7949995756060059",
       "pucrs": "https://www.pucrs.br/pesquisadores/lucas-silveira-kupssinsku/"
     },
-    "citations": { "count": 545, "source": "Google Scholar", "date": "2026-01-12" },
     "mission_en": "I develop methods to correct, adapt, and verify language models without retraining, and I train researchers who build those methods with rigor.",
     "mission_pt": "Desenvolvo métodos para corrigir, adaptar e verificar modelos de linguagem sem retreinamento, e formo pesquisadores que constroem esses métodos com rigor.",
     "summary_en": "Associate Professor at PUCRS and researcher at the Graduate Program in Computer Science (CAPES 7), where I co-lead the Machine Learning Theory and Applications Research Group (MALTA). Ph.D. in Applied Computing from Unisinos. I coordinate research projects in machine learning and deep learning focused on fairness, LLMs, machine unlearning, representation engineering, long-context models, and misinformation detection, with support from Petrobras, Motorola, the Michael J. Fox Foundation, Kunumi, FAPERGS, and CNPq. Before academia, I spent nine years in industry as a developer, systems analyst, and Scrum Master, and I have taught at every level, from technical courses to graduate programs.",
