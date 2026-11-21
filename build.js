@@ -90,6 +90,10 @@ const pubTabLabel = {
 };
 
 // BibTeX entry for a publication, used by the copy button on each card.
+// Line icons that inherit the text color (used on the CV action buttons).
+const ICON_DOWNLOAD = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>';
+const ICON_FILE = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>';
+
 const escAttr = s => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;').replace(/\n/g, '&#10;');
@@ -498,9 +502,9 @@ function renderCvHeader() {
       <p class="cv-links">${links}</p>
     </div>
     <div class="cv-actions">
-      <button type="button" class="btn btn-cv" data-cv-print="full">⬇ ${bil('Full CV (PDF)', 'CV completo (PDF)')}</button>
-      <button type="button" class="btn btn-cv" data-cv-print="short">⬇ ${bil('Short CV (PDF)', 'CV resumido (PDF)')}</button>
-      <a class="btn btn-lattes" href="${L.lattes}" target="_blank" rel="noopener">📄 Lattes</a>
+      <button type="button" class="btn btn-cv" data-cv-print="full">${ICON_DOWNLOAD} ${bil('Full CV (PDF)', 'CV completo (PDF)')}</button>
+      <button type="button" class="btn btn-cv" data-cv-print="short">${ICON_DOWNLOAD} ${bil('Short CV (PDF)', 'CV resumido (PDF)')}</button>
+      <a class="btn btn-lattes" href="${L.lattes}" target="_blank" rel="noopener">${ICON_FILE} Lattes</a>
     </div>
     <p class="cv-updated">${bil('Last updated', 'Última atualização')}: ${updatedLabel}</p>
   </header>
@@ -730,7 +734,7 @@ function fillContainer(html, id, extraAttrs, content, file) {
 // Copy the source tree, then rewrite the pages that have dynamic sections.
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT);
-const EXCLUDE = new Set(['.git', '.github', '.claude', '_site', 'node_modules', 'build.js', 'scripts', '.gitignore', 'README.md']);
+const EXCLUDE = new Set(['.git', '.github', '.claude', '_site', 'node_modules', 'build.js', 'scripts', 'local', '.gitignore', 'README.md']);
 for (const entry of fs.readdirSync(ROOT)) {
   if (EXCLUDE.has(entry)) continue;
   fs.cpSync(path.join(ROOT, entry), path.join(OUT, entry), { recursive: true });

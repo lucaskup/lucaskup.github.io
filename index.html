@@ -23,6 +23,8 @@
         var d = document.documentElement;
         d.setAttribute('data-theme', localStorage.getItem('theme') ||
           (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+        var p = localStorage.getItem('palette');
+        if (p === 'omarchy') d.setAttribute('data-palette', p);
         var l = localStorage.getItem('lang');
         if (l) { d.setAttribute('data-lang', l); if (l === 'pt') d.lang = 'pt-BR'; }
       } catch (e) {}
@@ -55,7 +57,7 @@
         <span class="lang-label">PT</span>
       </button>
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light mode" title="Toggle light mode">
-        <span class="theme-icon">🌙</span>
+        <span class="theme-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
       </button>
       <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span class="nav-toggle-bar"></span>
@@ -126,26 +128,26 @@
             <a class="btn btn-scholar"
                href="https://scholar.google.com/citations?user=Uona1HYAAAAJ"
                target="_blank" rel="noopener">
-              📚 Google Scholar
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg> Google Scholar
             </a>
             <a class="btn btn-pucrs"
                href="https://www.pucrs.br/pesquisadores/lucas-silveira-kupssinsku/"
                target="_blank" rel="noopener">
-              🎓 <span class="lang lang-en">PUCRS Profile</span><span class="lang lang-pt" lang="pt-BR">Perfil PUCRS</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg> <span class="lang lang-en">PUCRS Profile</span><span class="lang lang-pt" lang="pt-BR">Perfil PUCRS</span>
             </a>
             <a class="btn btn-lattes"
                href="https://lattes.cnpq.br/7949995756060059"
                target="_blank" rel="noopener">
-              📄 <span class="lang lang-en">Lattes CV</span><span class="lang lang-pt" lang="pt-BR">Currículo Lattes</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> <span class="lang lang-en">Lattes CV</span><span class="lang lang-pt" lang="pt-BR">Currículo Lattes</span>
             </a>
             <a class="btn btn-orcid"
                href="https://orcid.org/0000-0003-2580-3996"
                target="_blank" rel="noopener">
-              🆔 ORCID
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6.17 15a3 3 0 0 1 5.66 0"/><path d="M16 10h2"/><path d="M16 14h2"/></svg> ORCID
             </a>
             <a class="btn btn-email"
                href="mailto:lucas.kupssinsku@pucrs.br">
-              ✉️ <span class="lang lang-en">Email</span><span class="lang lang-pt" lang="pt-BR">E-mail</span>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> <span class="lang lang-en">Email</span><span class="lang lang-pt" lang="pt-BR">E-mail</span>
             </a>
           </div>
           <div id="hero-metrics-container"></div>
@@ -355,7 +357,7 @@
     </p>
   </footer>
 
-  <script src="js/toggles.js?v=6"></script>
+  <script src="js/toggles.js?v=9"></script>
   <script>
     // News, projects, publications, advisees, and alumni are prerendered into
     // this page by build.js (run in CI); toggles.js wires up their tabs and

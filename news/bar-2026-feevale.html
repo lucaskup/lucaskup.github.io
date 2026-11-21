@@ -36,6 +36,8 @@
         var d = document.documentElement;
         d.setAttribute('data-theme', localStorage.getItem('theme') ||
           (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+        var p = localStorage.getItem('palette');
+        if (p === 'omarchy') d.setAttribute('data-palette', p);
         var l = localStorage.getItem('lang');
         if (l) { d.setAttribute('data-lang', l); if (l === 'pt') d.lang = 'pt-BR'; }
       } catch (e) {}
@@ -74,7 +76,7 @@
         <span class="lang-label">PT</span>
       </button>
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light mode" title="Toggle light mode">
-        <span class="theme-icon">🌙</span>
+        <span class="theme-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
       </button>
       <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span class="nav-toggle-bar"></span>
@@ -264,7 +266,7 @@
     <p>© <span id="copy-year"></span> <span>Lucas Silveira Kupssinskü</span> · PUCRS · Porto Alegre, Brazil</p>
   </footer>
 
-  <script src="../js/toggles.js?v=6"></script>
+  <script src="../js/toggles.js?v=9"></script>
   <script>
     document.getElementById('copy-year').textContent = new Date().getFullYear();
   </script>

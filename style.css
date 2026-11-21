@@ -39,6 +39,10 @@
 :root[data-theme="light"] .level-grad       { background: rgba(109,40,217,.10); }
 :root[data-theme="light"] .level-under      { background: rgba(21,128,61,.10); }
 
+/* ── Fonts (self-hosted, so the site looks the same on every system) ── */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('fonts/inter-latin-wght-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: italic; font-weight: 100 900; font-display: swap; src: url('fonts/inter-latin-wght-italic.woff2') format('woff2'); }
+
 /* ── Reset & Base ────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -49,7 +53,7 @@ html { scroll-behavior: smooth; }
 body {
   background-color: var(--bg);
   color: var(--fg);
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -307,16 +311,25 @@ section + section { border-top: 1px solid var(--line); }
   transition: all .2s;
 }
 
-.btn-scholar  { border-color: var(--cyan);   color: var(--cyan); }
-.btn-pucrs    { border-color: var(--green);  color: var(--green); }
-.btn-lattes   { border-color: var(--yellow); color: var(--yellow); }
-.btn-email    { border-color: var(--orange); color: var(--orange); }
-.btn-orcid    { border-color: var(--purple); color: var(--purple); }
+/* Profile buttons share one neutral outline; the accent shows on hover. */
+.btn { border-color: var(--line); color: var(--fg); }
 
 .btn:hover {
-  background: var(--line);
-  color: var(--fg);
-  border-color: var(--fg);
+  background: transparent;
+  color: var(--purple);
+  border-color: var(--purple);
+}
+
+/* Line icons: sized by the surrounding text and drawn in its color. */
+.icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* ── Research Interests ──────────────────────────────────── */
@@ -506,8 +519,12 @@ section + section { border-top: 1px solid var(--line); }
   font-weight: 700;
   line-height: 1;
   cursor: help;
+  position: relative;
   transition: color .2s, border-color .2s;
 }
+
+/* Invisible margin around the button so it is easy to tap on a phone. */
+.metric-tip-btn::after { content: ''; position: absolute; inset: -.6rem; }
 
 .metric-tip-btn:hover,
 .metric-tip-btn:focus-visible { color: var(--cyan); border-color: var(--cyan); }
@@ -743,6 +760,24 @@ footer {
 }
 
 footer span { color: var(--purple); }
+
+/* Palette switch in the footer (built by js/toggles.js) */
+.palette-switch { margin-top: .9rem; font-size: .72rem; opacity: .7; transition: opacity .2s; }
+.palette-switch:hover, .palette-switch:focus-within { opacity: 1; }
+.palette-switch span { color: inherit; }
+
+.palette-switch button {
+  background: none;
+  border: 0;
+  padding: 0 .15rem;
+  color: var(--comment);
+  font: inherit;
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.palette-switch button:hover { color: var(--cyan); }
+.palette-switch button[aria-pressed="true"] { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ── Language toggle (EN/PT) ─────────────────────────────── */
 [data-lang="en"] .lang-pt { display: none; }
@@ -1415,7 +1450,7 @@ html.lightbox-open { overflow: hidden; }
 
 .cv-actions { display: flex; flex-direction: column; gap: .5rem; }
 .cv-actions .btn { justify-content: center; }
-.btn-cv { border-color: var(--purple); color: var(--purple); cursor: pointer; font: inherit; background: none; }
+.btn-cv { cursor: pointer; font-family: inherit; background: none; }
 
 .cv-updated {
   grid-column: 1 / -1;
@@ -1616,4 +1651,70 @@ html.lightbox-open { overflow: hidden; }
   .cv-short .cv-section { padding-top: .8rem; }
   .cv-short .cv-item { padding: .25rem 0; }
   .cv-short .cv-list li { padding-top: .15rem; padding-bottom: .15rem; }
+}
+
+/* ── Omarchy palette (Tokyo Night) ───────────────────────────
+   Selected with the footer switch, which sets data-palette on <html>.
+   One blue accent, square corners, thin borders, and JetBrains Mono on
+   headings and UI labels. Screen only, so print keeps its own palette. */
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: italic; font-weight: 400; font-display: swap; src: url('fonts/jetbrains-mono-latin-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/jetbrains-mono-latin-700-normal.woff2') format('woff2'); }
+
+@media screen {
+  :root[data-palette="omarchy"] {
+    --bg: #1a1b26; --surface: #13141c; --card: #1e202e; --line: #33384f;
+    --fg: #c0caf5; --comment: #7f89b3;
+    --purple: #7aa2f7; --cyan: #7dcfff; --green: #9ece6a; --orange: #ff9e64;
+    --pink: #bb9af7; --red: #f7768e; --yellow: #e0af68;
+    --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  }
+  :root[data-palette="omarchy"][data-theme="light"] {
+    --bg: #e1e2e7; --surface: #d5d6db; --card: #f3f4f8; --line: #b4b8cc;
+    --fg: #343b58; --comment: #4f5880;
+    --purple: #2854c5; --cyan: #005f80; --green: #48622d; --orange: #8f4a00;
+    --pink: #6f3fc8; --red: #b23326; --yellow: #6d5126;
+  }
+
+  [data-palette="omarchy"] *, [data-palette="omarchy"] *::before, [data-palette="omarchy"] *::after { border-radius: 0 !important; }
+  [data-palette="omarchy"] body { font-size: 15.5px; line-height: 1.65; }
+  [data-palette="omarchy"] :is(h1, h2, h3, h4, nav, .btn, .tag, .badge, .tab-btn, .bibtex-btn, .news-date, .news-toggle,
+    .pub-meta, .person-degree, .person-year, .lecture-level, .project-status, .project-timeline,
+    .project-tag, .hero-role, .hero-metrics, .metrics, .cv-stat, .cv-when, .cv-toc, .related-meta,
+    .lang-toggle, footer) { font-family: var(--mono); }
+
+  [data-palette="omarchy"] nav { border-bottom-width: 1px; }
+  /* Monospace links are wider; tighten them so the row fits above the 1280px menu breakpoint. */
+  [data-palette="omarchy"] .nav-links { gap: 1.1rem; }
+  [data-palette="omarchy"] .nav-links a { font-size: .76rem; letter-spacing: 0; }
+  [data-palette="omarchy"] .nav-brand { font-size: .92rem; }
+  [data-palette="omarchy"] section { padding: 56px 0; }
+  [data-palette="omarchy"] :is(.section-title, .cv-h) { font-size: 1.05rem; text-transform: lowercase; letter-spacing: .5px; }
+  [data-palette="omarchy"] .section-title { margin-bottom: 1.6rem; }
+  /* The second declaration gives the decorative "#" an empty text alternative,
+     so screen readers skip it; browsers without that syntax keep the first. */
+  [data-palette="omarchy"] :is(.section-title, .cv-h)::before { content: '#'; content: '#' / ''; color: var(--comment); }
+
+  [data-palette="omarchy"] .avatar { border-width: 2px; }
+  [data-palette="omarchy"] .hero-info h1 { font-size: 1.7rem; }
+  [data-palette="omarchy"] .hero-info h1 span { color: var(--purple); }
+  [data-palette="omarchy"] .hero-role { font-size: .88rem; }
+
+  [data-palette="omarchy"] .btn { border-width: 1px; font-weight: 500; font-size: .78rem; }
+
+  [data-palette="omarchy"] :is(.pub-card, .project-card, .related-card, .callout, .hero-mission, .cv-mission) { border: 1px solid var(--line); }
+  [data-palette="omarchy"] :is(.pub-card, .project-card, .related-card, .person-card, .lecture-card):hover { border-color: var(--purple); transform: none; }
+  [data-palette="omarchy"] :is(.badge, .lecture-level, .project-status, .related-type) {
+    background: color-mix(in srgb, currentColor 12%, transparent) !important; font-weight: 500;
+  }
+  [data-palette="omarchy"] .tag:hover { border-color: var(--purple); }
+  [data-palette="omarchy"] .tab-btn.active, [data-palette="omarchy"] .tab-btn:hover { border-color: var(--purple); color: var(--purple); }
+  [data-palette="omarchy"] .metric-tip { box-shadow: none; }
+
+  /* Photo viewer: always dark, in Tokyo Night tones. */
+  [data-palette="omarchy"] .lightbox { background: #0e0e14; color: #c0caf5; }
+  [data-palette="omarchy"] .lightbox::backdrop { background: #0e0e14; }
+  [data-palette="omarchy"] :is(.lightbox-btn, .lightbox-close) { background: rgba(26, 27, 38, .75); color: #c0caf5; }
+  [data-palette="omarchy"] :is(.lightbox-btn, .lightbox-close):hover { border-color: #7aa2f7; color: #7aa2f7; }
 }

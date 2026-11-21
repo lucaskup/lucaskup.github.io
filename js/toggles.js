@@ -1,6 +1,9 @@
 /* Shared theme + language + mobile-nav toggles for the project pages.
    Each initializer is a no-op when its elements are absent on the page. */
 
+const ICON_MOON = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
+const ICON_SUN = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>';
+
 (function initTheme() {
   const root = document.documentElement;
   const btn  = document.getElementById('theme-toggle');
@@ -11,7 +14,7 @@
 
   function apply(theme) {
     root.setAttribute('data-theme', theme);
-    if (icon) icon.textContent = theme === 'light' ? '☀️' : '🌙';
+    if (icon) icon.innerHTML = theme === 'light' ? ICON_SUN : ICON_MOON;
     btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
   }
 
@@ -22,6 +25,52 @@
     apply(next);
     localStorage.setItem('theme', next);
   });
+})();
+
+// Palette switch (Dracula / Omarchy): a discreet pair of text buttons added
+// to the footer. The inline script in each page's <head> applies the stored
+// palette before first paint; this only builds the control and saves changes.
+(function initPalette() {
+  const root = document.documentElement;
+  const footer = document.querySelector('footer');
+  if (!footer) return;
+  const PALETTES = ['dracula', 'omarchy'];
+  const current = () => root.getAttribute('data-palette') === 'omarchy' ? 'omarchy' : 'dracula';
+
+  const wrap = document.createElement('p');
+  wrap.className = 'palette-switch';
+  wrap.setAttribute('role', 'group');
+  wrap.setAttribute('aria-label', 'Color theme');
+  wrap.innerHTML = '<span class="lang lang-en">theme</span><span class="lang lang-pt" lang="pt-BR">tema</span>:';
+
+  const buttons = PALETTES.map((name) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = name;
+    b.addEventListener('click', () => {
+      if (name === 'omarchy') root.setAttribute('data-palette', name);
+      else root.removeAttribute('data-palette');
+      try { localStorage.setItem('palette', name); } catch (e) {}
+      sync();
+    });
+    wrap.append(' ', b);
+    return b;
+  });
+
+  // The tab icon follows the palette; the path prefix (../ on inner pages)
+  // is kept from the page's own <link>.
+  const favicon = document.querySelector('link[rel="icon"]');
+
+  function sync() {
+    buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.textContent === current())));
+    if (favicon) {
+      const file = current() === 'omarchy' ? 'favicon-omarchy.svg' : 'favicon.svg';
+      favicon.setAttribute('href', favicon.getAttribute('href').replace(/favicon(-omarchy)?\.svg/, file));
+    }
+  }
+
+  sync();
+  footer.appendChild(wrap);
 })();
 
 (function initLanguage() {
