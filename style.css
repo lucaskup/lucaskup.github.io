@@ -1611,10 +1611,12 @@ html.lightbox-open { overflow: hidden; }
 @media print {
   @page { margin: 16mm 15mm; }
 
+  /* Sober document: white page, black text, grey for secondary text and
+     rules. No theme colors reach the paper, whichever palette is active. */
   :root, :root[data-theme="dark"], :root[data-theme="light"] {
-    --bg: #fff; --surface: #fff; --card: #fff; --line: #d4d4d8;
-    --fg: #111; --comment: #555; --cyan: #0e5f78; --green: #166534;
-    --orange: #9a3412; --pink: #9d174d; --purple: #4c1d95; --red: #991b1b; --yellow: #854d0e;
+    --bg: #fff; --surface: #fff; --card: #fff; --line: #c8c8c8;
+    --fg: #111; --comment: #444; --cyan: #111; --green: #111;
+    --orange: #333; --pink: #111; --purple: #111; --red: #111; --yellow: #333;
   }
 
   html, body { background: #fff; color: #111; font-size: 10.5pt; }
@@ -1625,10 +1627,10 @@ html.lightbox-open { overflow: hidden; }
 
   .cv-header { grid-template-columns: 1fr; gap: .2rem; }
   .cv-header h1 { font-size: 20pt; }
-  .cv-mission { margin-top: .7rem; padding: .5rem .8rem; font-size: 11pt; border-left-color: #4c1d95; background: #fff; border: 1px solid #d4d4d8; border-left: 3px solid #4c1d95; }
+  .cv-mission { margin-top: .7rem; padding: 0 0 0 .8rem; font-size: 11pt; font-style: italic; background: #fff; border: 0; border-left: 2px solid #111; border-radius: 0; }
   .cv-stats { grid-template-columns: repeat(4, 1fr); gap: .4rem; margin: .8rem 0 0; }
   .metric-tip-btn, .metric-tip { display: none; }
-  .cv-stat { padding: .4rem .5rem; border-color: #d4d4d8; }
+  .cv-stat { padding: .4rem .5rem; border-color: #c8c8c8; border-radius: 0; }
   .cv-stat-n { font-size: 12pt; }
   .cv-stat-label { font-size: 7.5pt; }
 
@@ -1639,10 +1641,14 @@ html.lightbox-open { overflow: hidden; }
   .cv-item { padding: .35rem 0; }
   .cv-text, .cv-title, .cv-sub, .cv-detail, .cv-list, .cv-pubs { font-size: 10pt; }
   .cv-detail { color: #444; }
-  .tag { border-color: #d4d4d8; }
+  .tag { border-color: #c8c8c8; background: #fff; }
+  .badge, .lecture-level, .project-status {
+    background: transparent !important; border: .5pt solid #999; color: #111 !important;
+  }
 
   a { color: inherit !important; text-decoration: none; }
-  .cv-links a, .cv-contact a, .cv-pub-title a { color: var(--cyan) !important; }
+  /* Links stay recognizable with one dark navy, the only color on the page. */
+  .cv-links a, .cv-contact a, .cv-pub-title a { color: #1d3557 !important; }
 
   .cv-short .cv-full-only { display: none !important; }
   .cv-short .cv-short-only { display: block; }

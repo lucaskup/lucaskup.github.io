@@ -498,7 +498,7 @@ function renderCvHeader() {
       <h1>${p.name}</h1>
       <p class="cv-role">${bil(p.title_en, p.title_pt)}</p>
       <p class="cv-affil">${bil(p.affiliation_en, p.affiliation_pt)}</p>
-      <p class="cv-contact"><a href="mailto:${p.email}">${p.email}</a> · ${p.phone} · ${bil(p.address_en, p.address_pt)}</p>
+      <p class="cv-contact"><a href="mailto:${p.email}">${p.email}</a> · ${p.phone}</p>
       <p class="cv-links">${links}</p>
     </div>
     <div class="cv-actions">
