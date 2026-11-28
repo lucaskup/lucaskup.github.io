@@ -11,12 +11,6 @@
           "github": "https://github.com/usbMarc"
         },
         {
-          "name": "Laís Vieira de Souza",
-          "coadvisee": true,
-          "topic": "Modelagem preditiva de parâmetros geoquímicos de rochas geradoras de hidrocarbonetos com integração de dados espectrais e aprendizado de máquina",
-          "start": 2025
-        },
-        {
           "name": "Amanda Pestana da Silva",
           "coadvisee": true,
           "topic": "Comparação Do Desempenho Entre Modelos Desenvolvidos Por Meio De Aprendizado De Máquina E A Morse Fall Scale Versão Brasileira Na Predição De Quedas Em Pacientes Adultos E Pessoas Idosas Hospitalizadas",
@@ -32,6 +26,12 @@
           "name": "Pedro Wagner",
           "coadvisee": false,
           "topic": "A definir",
+          "start": 2026
+        },
+        {
+          "name": "Vladimir Barcelos Dorneles Junior",
+          "coadvisee": true,
+          "topic": "Graph Neural Networks in Reservoir Modeling",
           "start": 2026
         }
       ]
@@ -82,8 +82,8 @@
         {
           "name": "Yasmin Aguirre",
           "coadvisee": false,
-          "topic": "Aplicação de Machine Learning com Radiômica e Deep Learning na Classificação de Lesões de Pele",
-          "start": 2024,
+          "topic": "Long Context",
+          "start": 2026,
           "github": "https://github.com/4gu1rr3",
           "website": "http://lattes.cnpq.br/8464337074401045"
         },
@@ -92,6 +92,18 @@
           "coadvisee": false,
           "topic": "Vision Language Models aplicados às Geociências",
           "start": 2024
+        },
+        {
+          "name": "Rafael Brondani Prestes",
+          "coadvisee": false,
+          "topic": "Machine Unlearning",
+          "start": 2026
+        },
+        {
+          "name": "Marcelo Martins Felisberto",
+          "coadvisee": false,
+          "topic": "Machine Unlearning",
+          "start": 2026
         }
       ]
     }
@@ -228,11 +240,28 @@
       "github": "https://github.com/ArthurSBianchessi"
     },
     {
+      "name": "Yasmin Aguirre",
+      "coadvisee": false,
+      "level": "Undergraduate",
+      "topic": "Aplicação de Machine Learning com Radiômica e Deep Learning na Classificação de Lesões de Pele",
+      "start": 2024,
+      "finish": 2025,
+      "github": "https://github.com/4gu1rr3",
+      "website": "http://lattes.cnpq.br/8464337074401045"
+    },
+    {
       "name": "Bernardo Zamin",
       "level": "Undergraduate",
       "topic": "Aplicação de Keypoints em Videos de Linguagem de Sinais (Libras)",
       "start": 2024,
       "finish": 2024
+    },
+    {
+      "name": "Bernardo Zamin",
+      "level": "Undergraduate",
+      "topic": "Prompt Injection em Agentes Baseados em LLM",
+      "start": 2026,
+      "finish": 2026
     },
     {
       "name": "Vitor Lamas Esposito",
